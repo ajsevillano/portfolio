@@ -1,10 +1,9 @@
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import styles from '../styles/Home.module.scss';
 
 export default function Home() {
   return (
     <>
-      <h1>Homepage</h1>
+      <h1 className={styles.h1}>Homepage</h1>
     </>
   );
 }
