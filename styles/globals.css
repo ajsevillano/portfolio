@@ -8,10 +8,10 @@ body {
 }
 
 body {
-  background-color: #cccccc;
+  background-color: #ffffff;
   font-family: 'Lato', sans-serif;
-  max-width: 1300px;
-  margin: auto;
+  /* max-width: 1200px; */
+  /* margin: auto; */
 }
 
 * {
