@@ -13,10 +13,10 @@
   font-weight: 900;
   font-size: 100px;
   margin: 0.5rem 0;
-  background: #1a51a3;
-  background: -webkit-linear-gradient(to right, #1a51a3 0%, #e33b4b 100%);
-  background: -moz-linear-gradient(to right, #1a51a3 0%, #e33b4b 100%);
-  background: linear-gradient(to right, #1a51a3 0%, #e33b4b 100%);
+  background: #66328e;
+  background: -webkit-linear-gradient(to right, #66328e 0%, #e33b4b 100%);
+  background: -moz-linear-gradient(to right, #66328e 0%, #e33b4b 100%);
+  background: linear-gradient(to right, #66328e 0%, #e33b4b 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -31,12 +31,13 @@
 }
 
 .h2 {
-  font-size: 24px;
+  font-size: 22px;
   color: #30363a;
   font-weight: 400;
   line-height: 40px;
   max-width: 900px;
   text-align: center;
+  margin-top: 0;
   @media screen and (max-width: 768px) {
     max-width: 90%;
   }
@@ -49,10 +50,11 @@
 }
 
 .presentation {
-  font-weight: 600;
+  font-weight: 800;
   font-size: 1.5rem;
   line-height: 1rem;
   color: #2a2b57;
+  font-family: 'Lato', sans-serif;
 }
 
 .image {
@@ -63,15 +65,5 @@
 }
 
 .span {
-  color: #8e44ad;
-}
-
-.name {
-  background: #1a51a3;
-  background: -webkit-linear-gradient(to right, #1a51a3 0%, #e33b4b 100%);
-  background: -moz-linear-gradient(to right, #1a51a3 0%, #e33b4b 100%);
-  background: linear-gradient(to right, #1a51a3 0%, #e33b4b 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #66328e;
 }
