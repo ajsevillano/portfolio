@@ -16,7 +16,7 @@ const Header = () => {
           learning something new. In love with ⚛️
           <span className={styles.span}>React.js</span>
         </h2>
-        <Button />
+        <Button variant="primary" />
       </div>
       <div>Nada por ahora</div>
     </>
