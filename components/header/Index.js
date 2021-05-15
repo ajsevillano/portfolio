@@ -28,7 +28,6 @@ const Header = () => {
           </Button>
         </div>
       </div>
-      <div>Nada por ahora</div>
     </>
   );
 };
