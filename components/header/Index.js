@@ -8,7 +8,7 @@ const Header = () => {
         <div className={styles.imgContainer}>
           <img className={styles.image} src="./profile.png" alt="Me" />
           <p className={styles.presentation}>
-            Hello there! I'm Antonio Sevillano,
+            Hello there! I'm Antonio Sevillano
           </p>
         </div>
 
@@ -19,7 +19,7 @@ const Header = () => {
           ⚛️
           <span className={styles.span}>React.js</span>
         </h2>
-        <div className="button-Container">
+        <div className={styles.buttonContainer}>
           <Button variant="primary" text="Contact me" />
           <Button variant="outline" text="See my work" />
         </div>

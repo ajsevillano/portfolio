@@ -10,6 +10,9 @@
 .primary {
   background-color: #e33b4b;
   color: white;
+  &:hover {
+    background-color: #f0616f;
+  }
 }
 
 .outline {
