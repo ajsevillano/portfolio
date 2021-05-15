@@ -1,28 +1,21 @@
 import styles from './Header.module.scss';
-import { useState, useEffect } from 'react';
-import axios from 'axios';
 
 const Header = () => {
-  const ApiUrl = 'https://api.github.com/users/ajsevillano/repos';
-  const [data, setData] = useState([]);
-  const mapTheData = data.map((proyects) => (
-    <p key={proyects.id}>{proyects.name}</p>
-  ));
-  useEffect(() => {
-    setTimeout(async function fetchData() {
-      const proyects = await axios.get(ApiUrl);
-      setData(proyects.data);
-      return proyects;
-    }, 150);
-  }, []);
-
   return (
     <>
       <div className={styles.header}>
-        <h1 className={styles.h1}>Hi, I'm Antonio</h1>
-        <h2>Front-end web developer</h2>
+        <div className={styles.imgContainer}>
+          <img className={styles.image} src="./profile.jpg" alt="Me" />
+          <p className={styles.p}>ANTONIO SEVILLANO</p>
+        </div>
+
+        <h1 className={styles.h1}>Frontend web developer</h1>
+        <h2 className={styles.h2}>
+          Hi there,I'm Antonio, a selft-taught web developer in love with ⚛️
+          <span className={styles.span}>React.js</span>
+        </h2>
       </div>
-      <div>{mapTheData}</div>
+      <div>Nada por ahora</div>
     </>
   );
 };
