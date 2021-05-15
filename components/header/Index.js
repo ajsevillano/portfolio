@@ -1,4 +1,5 @@
 import styles from './Header.module.scss';
+import Button from '../Button';
 
 const Header = () => {
   return (
@@ -15,6 +16,7 @@ const Header = () => {
           with ⚛️
           <span className={styles.span}>React.js</span>
         </h2>
+        <Button />
       </div>
       <div>Nada por ahora</div>
     </>
