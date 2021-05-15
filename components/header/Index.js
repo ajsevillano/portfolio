@@ -1,5 +1,6 @@
 import styles from './Header.module.scss';
 import Button from '../Button';
+import { IoChevronDownCircleOutline } from 'react-icons/io5';
 
 const Header = () => {
   return (
@@ -20,8 +21,11 @@ const Header = () => {
           <span className={styles.span}>React.js</span>
         </h2>
         <div className={styles.buttonContainer}>
-          <Button variant="primary" text="Contact me" />
-          <Button variant="outline" text="See my work" />
+          <Button variant="primary">Contact me</Button>
+          <Button variant="outline">
+            <IoChevronDownCircleOutline size={30} />
+            See my work
+          </Button>
         </div>
       </div>
       <div>Nada por ahora</div>
