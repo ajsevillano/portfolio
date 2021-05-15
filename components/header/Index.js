@@ -11,7 +11,8 @@ const Header = () => {
 
         <h1 className={styles.h1}>Frontend web developer</h1>
         <h2 className={styles.h2}>
-          Hi there,I'm Antonio, a selft-taught web developer in love with ⚛️
+          A selft-taught Web Developer, always learning something new. In love
+          with ⚛️
           <span className={styles.span}>React.js</span>
         </h2>
       </div>
