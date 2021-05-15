@@ -7,7 +7,9 @@ const Header = () => {
       <div className={styles.header}>
         <div className={styles.imgContainer}>
           <img className={styles.image} src="./profile.png" alt="Me" />
-          <p className={styles.presentation}>Hi! I'm Antonio Sevillano</p>
+          <p className={styles.presentation}>
+            Hello there! I'm Antonio Sevillano,
+          </p>
         </div>
 
         <h1 className={styles.h1}>Frontend web developer</h1>
@@ -16,7 +18,10 @@ const Header = () => {
           learning something new. In love with ⚛️
           <span className={styles.span}>React.js</span>
         </h2>
-        <Button variant="primary" />
+        <div className="button-Container">
+          <Button variant="primary" text="Contact me" />
+          <Button variant="outline" text="See my work" />
+        </div>
       </div>
       <div>Nada por ahora</div>
     </>
