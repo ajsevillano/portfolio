@@ -16,8 +16,17 @@
 }
 
 .img {
-  width: 358px;
+  width: 100%;
   border-radius: 4px;
   height: auto;
   margin: auto;
+}
+
+.project {
+  width: 92%;
+  margin: auto;
+}
+
+.projectName {
+  font-size: 18px;
 }
