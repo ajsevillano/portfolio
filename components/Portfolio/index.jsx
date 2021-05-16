@@ -6,6 +6,18 @@ import { useState, useEffect } from 'react';
 const Portfolio = () => {
   const [repoData, setRepoData] = useState('');
 
+  useEffect(async () => {
+    try {
+      const resp = await axios.get(
+        'https://api.github.com/users/ajsevillano/repos'
+      );
+      setRepoData(resp.data);
+    } catch (err) {
+      // Error Handler
+      console.error(err);
+    }
+  }, [repoData]);
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.project}>
