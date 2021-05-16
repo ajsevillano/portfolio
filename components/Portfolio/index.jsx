@@ -1,7 +1,11 @@
 import styles from './Portfolio.module.scss';
 import Image from 'next/image';
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 
 const Portfolio = () => {
+  const [repoData, setRepoData] = useState('');
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.project}>
