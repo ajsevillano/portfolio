@@ -36,3 +36,6 @@ yarn-error.log*
 #Scripts
 acp.sh
 sass.sh
+
+#images
+/public
