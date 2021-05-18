@@ -13,7 +13,7 @@ const Portfolio = () => {
   useEffect(async () => {
     try {
       const resp = await axios.get(
-        'https://api.github.com/users/ajsevillano/repos?sort=created&direction=desc&per_page=6'
+        'https://api.github.com/users/ajsevillano/repos?sort=created&direction=desc&per_page=9'
       );
       setRepoData(resp.data);
     } catch (err) {
