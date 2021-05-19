@@ -25,6 +25,11 @@
 .project {
   width: 92%;
   margin: auto;
+  transition: transform 0.4s;
+  cursor: pointer;
+  &:hover {
+    transform: translateY(-10px);
+  }
 }
 
 .projectName {
