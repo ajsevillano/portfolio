@@ -4,11 +4,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: auto;
+  padding: 4rem 0;
+  transform: rotateX(2deg);
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .textWrapper {
   color: white;
   font-weight: 600;
+  margin-left: 1rem;
+  @media screen and (max-width: 768px) {
+    width: 90%;
+    text-align: center;
+    margin-left: 0;
+
+    h1 {
+      font-size: 38px;
+    }
+  }
   h1 {
     font-size: 40px;
     line-height: 40px;
@@ -46,8 +63,10 @@
 
 .imgWrapper {
   width: 400px;
-
   img {
     width: 100%;
+  }
+  @media screen and (max-width: 768px) {
+    width: 80%;
   }
 }

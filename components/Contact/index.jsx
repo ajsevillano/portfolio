@@ -8,7 +8,7 @@ const Contact = () => {
         <Image src="/me.png" alt="Picture of me" width={600} height={450} />
       </div>
       <div className={styles.textWrapper}>
-        <h1>I'd love to hear from you</h1>
+        <h1>Something about me</h1>
         <p>Please feel free to ask how I can help your business</p>
         <input type="text" />
         <button>Contact </button>
