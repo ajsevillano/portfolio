@@ -10,12 +10,20 @@ const Portfolio = () => {
     e.target.src = '/portfolio-default.png';
   };
 
+  const filterRepositories = (data) => {
+    return data.filter(
+      (project) =>
+        project.name !== 'ajsevillano' && project.name !== 'danicampos.es'
+    );
+  };
+
   useEffect(async () => {
     try {
       const resp = await axios.get(
-        'https://api.github.com/users/ajsevillano/repos?sort=created&direction=desc&per_page=9'
+        'https://api.github.com/users/ajsevillano/repos?sort=created&direction=desc&per_page=11'
       );
-      setRepoData(resp.data);
+
+      setRepoData(filterRepositories(resp.data));
     } catch (err) {
       // Error Handler
       console.error(err);
