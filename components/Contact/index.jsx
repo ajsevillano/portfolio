@@ -9,9 +9,13 @@ const Contact = () => {
       </div>
       <div className={styles.textWrapper}>
         <h1>Something about me</h1>
-        <p>Please feel free to ask how I can help your business</p>
-        <input type="text" />
-        <button>Contact </button>
+        <p>
+          My name is Antonio Sevillano, I'm a self-taught spanish web developer
+          living in the UK for the last 8 years. Despite having some backend
+          coding knowledge from a long time ago, I recently embrace and felt in
+          love with frontend developing and since then, I haven't stopped
+          learning and pulishing my skills (specially with React.js).
+        </p>
       </div>
     </div>
   );
