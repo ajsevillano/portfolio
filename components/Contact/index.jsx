@@ -14,7 +14,7 @@ const Contact = () => {
           living in the UK for the last 8 years. Despite having some backend
           coding knowledge from a long time ago, I recently embrace and felt in
           love with frontend developing and since then, I haven't stopped
-          learning and pulishing my skills (specially with React.js).
+          learning and pulishing my skills (specially with React.js ⚛️).
         </p>
       </div>
     </div>

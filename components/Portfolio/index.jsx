@@ -1,21 +1,10 @@
 import styles from './Portfolio.module.scss';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import { replaceImgWithError, filterRepositories } from './Portfolio.utils';
 
 const Portfolio = () => {
   const [repoData, setRepoData] = useState();
-
-  const replaceImgWithError = (e) => {
-    e.target.onerror = null;
-    e.target.src = '/portfolio-default.png';
-  };
-
-  const filterRepositories = (data) => {
-    return data.filter(
-      (project) =>
-        project.name !== 'ajsevillano' && project.name !== 'danicampos.es'
-    );
-  };
 
   useEffect(async () => {
     try {
