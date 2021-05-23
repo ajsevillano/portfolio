@@ -4,8 +4,12 @@ export const replaceImgWithError = (e) => {
 };
 
 export const filterRepositories = (data) => {
-  return data.filter(
+  //Define with projects will be filtered on the portfolio
+  const filteredProjects = ['ajsevillano', 'danicampos.es'];
+
+  const final = data.filter(
     (project) =>
-      project.name !== 'ajsevillano' && project.name !== 'danicampos.es'
+      !filteredProjects.some((filter) => project.name.includes(filter))
   );
+  return final;
 };
