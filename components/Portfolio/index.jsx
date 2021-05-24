@@ -1,11 +1,7 @@
 import styles from './Portfolio.module.scss';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import {
-  replaceImgWithError,
-  filterRepositories,
-  numberOfFilters,
-} from './Portfolio.utils';
+import { replaceImgWithError, filterRepositories } from './Portfolio.utils';
 
 const Portfolio = () => {
   const [repoData, setRepoData] = useState();
@@ -13,7 +9,7 @@ const Portfolio = () => {
   useEffect(async () => {
     try {
       const resp = await axios.get(
-        `https://api.github.com/users/ajsevillano/repos?sort=created&direction=desc&per_page=${numberOfFilters}`
+        `https://api.github.com/users/ajsevillano/repos?sort=created&direction=desc&per_page=11`
       );
       setRepoData(filterRepositories(resp.data));
     } catch (err) {

@@ -21,7 +21,7 @@ const Header = () => {
           <span className={styles.span}>React.js</span>
         </h2>
         <div className={styles.buttonContainer}>
-          <Button variant="primary">Contact me</Button>
+          <Button variant="primary">Let's talk!</Button>
           <Button variant="outline">
             <IoChevronDownCircleOutline size={30} />
             See my work
