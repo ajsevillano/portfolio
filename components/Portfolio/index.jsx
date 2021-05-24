@@ -29,7 +29,8 @@ const Portfolio = () => {
             onError={replaceImgWithError}
             alt="foo"
           />
-          <p className={styles.projectName}>{data.name}</p>
+          <h3 className={styles.projectName}>{data.name}</h3>
+          <span className={styles.project_description}>{data.description}</span>
         </div>
       ))}
     </div>
