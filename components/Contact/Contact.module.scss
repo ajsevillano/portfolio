@@ -1,15 +1,33 @@
 .wrapper {
   background-color: #e33b4b;
-  height: 440px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: auto;
   padding: 4rem 0;
-  transform: rotateX(2deg);
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
+  }
+}
+
+.wave {
+  width: 100%;
+  /*height from the svg file*/
+  height: 140px;
+  bottom: 0;
+  left: 0;
+  background: url('/wave.svg');
+  animation: waves 10s linear infinite;
+}
+
+@keyframes waves {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    /* from width of the svg file */
+    background-position: 1600px;
   }
 }
 
