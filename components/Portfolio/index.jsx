@@ -3,6 +3,9 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { replaceImgWithError, filterRepositories } from './Portfolio.utils';
 
+//Components
+import Card from './Card/index';
+
 const Portfolio = () => {
   const [repoData, setRepoData] = useState();
 
@@ -21,17 +24,12 @@ const Portfolio = () => {
   return (
     <div className={styles.wrapper}>
       {repoData?.map((data) => (
-        <div key={data.id} className={styles.project}>
-          <img
-            className={styles.img}
-            src={`/${data.name}.png`}
-            alt={data.name}
-            onError={replaceImgWithError}
-            alt="foo"
-          />
-          <h3 className={styles.projectName}>{data.name}</h3>
-          <span className={styles.project_description}>{data.description}</span>
-        </div>
+        <Card
+          keyId={data.id}
+          name={data.name}
+          description={data.description}
+          handleImgError={replaceImgWithError}
+        ></Card>
       ))}
     </div>
   );
