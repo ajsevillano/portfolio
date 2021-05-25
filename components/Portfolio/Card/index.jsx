@@ -2,7 +2,7 @@ import styles from './Card.module.scss';
 
 const Card = ({ keyId, name, description, handleImgError }) => {
   return (
-    <div key={keyId} className={styles.card}>
+    <div className={styles.card}>
       <img
         className={styles.img}
         src={`/${name}.png`}

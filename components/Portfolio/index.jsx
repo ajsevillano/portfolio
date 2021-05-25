@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { replaceImgWithError, filterRepositories } from './Portfolio.utils';
 
 //Components
-import Card from './Card/index';
+import Card from './Card';
 
 const Portfolio = () => {
   const [repoData, setRepoData] = useState();
@@ -25,7 +25,7 @@ const Portfolio = () => {
     <div className={styles.wrapper}>
       {repoData?.map((data) => (
         <Card
-          keyId={data.id}
+          key={data.id}
           name={data.name}
           description={data.description}
           handleImgError={replaceImgWithError}
