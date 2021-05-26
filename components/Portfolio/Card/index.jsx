@@ -1,6 +1,6 @@
 import styles from './Card.module.scss';
 
-const Card = ({ keyId, name, description, handleImgError }) => {
+const Card = ({ name, description, handleImgError }) => {
   return (
     <div className={styles.card}>
       <img
