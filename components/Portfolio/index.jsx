@@ -22,16 +22,21 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <div className={styles.wrapper}>
-      {repoData?.map((data) => (
-        <Card
-          key={data.id}
-          name={data.name}
-          description={data.description}
-          handleImgError={replaceImgWithError}
-        ></Card>
-      ))}
-    </div>
+    <>
+      <div className={styles.sectionTitle}>
+        <h2>Recent work</h2>
+      </div>
+      <div className={styles.wrapper}>
+        {repoData?.map((data) => (
+          <Card
+            key={data.id}
+            name={data.name}
+            description={data.description}
+            handleImgError={replaceImgWithError}
+          ></Card>
+        ))}
+      </div>
+    </>
   );
 };
 
