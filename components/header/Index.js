@@ -24,7 +24,7 @@ const Header = () => {
           <Button variant="primary">Let's talk!</Button>
           <Button variant="outline">
             <IoChevronDownCircleOutline size={30} />
-            See my work
+            <span>See my work</span>
           </Button>
         </div>
       </div>

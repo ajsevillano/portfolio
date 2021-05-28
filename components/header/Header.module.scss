@@ -84,6 +84,10 @@
 
 .buttonContainer {
   display: flex;
+  span {
+    margin: 0;
+    margin-left: 0.5rem;
+  }
   @media screen and (max-width: 768px) {
     flex-direction: column;
   }

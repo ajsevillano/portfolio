@@ -12,21 +12,9 @@
 
 .sectionTitle {
   display: flex;
-  margin: 2rem auto;
-  align-items: flex-start;
-  max-width: 1170px;
+  margin: 1.5rem auto;
+  align-items: center;
+  justify-content: center;
   text-transform: uppercase;
-  h2::before {
-    content: '';
-    width: 110px;
-    height: 1px;
-    background: #e33b4b;
-    display: inline-block;
-    margin-bottom: 8px;
-    margin-right: 1rem;
-  }
-
-  @media screen and (max-width: 768px) {
-    margin-left: 1rem;
-  }
+  font-size: 20px;
 }
