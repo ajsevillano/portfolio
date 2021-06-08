@@ -3,8 +3,12 @@ import styles from './Card.module.scss';
 const Card = ({ name, description, handleImgError }) => {
   return (
     <div className={styles.card}>
-      <div className={styles.linksLayer}>
-        <div className={styles.capa}></div>
+      <div className={styles.imgContainer}>
+        <div className={styles.hoverContainer}>
+          <div className={styles.hoverContent}>
+            <a href="http://www.google.es">Hola</a>
+          </div>
+        </div>
         <img
           className={styles.img}
           src={`/${name}.png`}
