@@ -33,6 +33,7 @@ const Portfolio = () => {
             name={data.name}
             description={data.description}
             handleImgError={replaceImgWithError}
+            url={data.html_url}
           ></Card>
         ))}
       </div>
