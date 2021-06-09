@@ -13,6 +13,6 @@ export const replaceImgWithError = (e) => {
 };
 
 export const filterDemoUrl = (repoDataId, demoWebUrl) => {
-  const demoUrlData = demoWebUrl.filter((data) => data.id === repoDataId);
-  return demoUrlData.map((data) => data.url);
+  const demoUrlData = demoWebUrl?.filter((data) => data.id === repoDataId);
+  return demoUrlData?.map((data) => data.url);
 };
