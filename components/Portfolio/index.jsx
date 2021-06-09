@@ -22,7 +22,8 @@ const Portfolio = () => {
   ];
 
   const filterDemoUrl = (repoDataId) => {
-    return demoUrl.filter((data) => data.id === repoDataId);
+    const demoUrlData = demoUrl.filter((data) => data.id === repoDataId);
+    return demoUrlData.map((data) => data.url);
   };
 
   useEffect(async () => {
