@@ -3,7 +3,11 @@ import styles from './Portfolio.module.scss';
 //Utils
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import { replaceImgWithError, filterRepositories } from './Portfolio.utils';
+import {
+  replaceImgWithError,
+  filterRepositories,
+  filterDemoUrl,
+} from './Portfolio.utils';
 
 //Components
 import Card from './Card';
@@ -11,11 +15,6 @@ import Card from './Card';
 const Portfolio = () => {
   const [repoData, setRepoData] = useState();
   const [demoWebUrl, setDemoWebUrl] = useState();
-
-  const filterDemoUrl = (repoDataId) => {
-    const demoUrlData = demoWebUrl.filter((data) => data.id === repoDataId);
-    return demoUrlData.map((data) => data.url);
-  };
 
   //Github repositories
   useEffect(async () => {
@@ -49,7 +48,7 @@ const Portfolio = () => {
       <div className={styles.wrapper}>
         {repoData?.map((data) => (
           <Card
-            demoUrl={filterDemoUrl(data.id)}
+            demoUrl={filterDemoUrl(data.id, demoWebUrl)}
             key={data.id}
             name={data.name}
             description={data.description}
