@@ -15,13 +15,14 @@ import Card from './Card';
 const Portfolio = () => {
   const [repoData, setRepoData] = useState();
   const [demoWebUrl, setDemoWebUrl] = useState();
+  const gitHubApiUrl =
+    'https://api.github.com/users/ajsevillano/repos?sort=created&direction=desc&per_page=11';
+  const demosUrls = '/demourl.json';
 
-  //Github repositories
+  //Fetch Github repositories
   useEffect(async () => {
     try {
-      const resp = await axios.get(
-        `https://api.github.com/users/ajsevillano/repos?sort=created&direction=desc&per_page=11`
-      );
+      const resp = await axios.get(gitHubApiUrl);
       setRepoData(filterRepositories(resp.data));
     } catch (err) {
       // Error Handler
@@ -29,10 +30,10 @@ const Portfolio = () => {
     }
   }, []);
 
-  //Demos urls data file
+  //Fetch demos urls data
   useEffect(async () => {
     try {
-      const resp = await axios.get('/demourl.json');
+      const resp = await axios.get(demosUrls);
       setDemoWebUrl(resp.data);
     } catch (err) {
       // Error Handler
