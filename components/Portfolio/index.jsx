@@ -19,26 +19,26 @@ const Portfolio = () => {
     'https://api.github.com/users/ajsevillano/repos?sort=created&direction=desc&per_page=11';
   const demosUrls = '/demourl.json';
 
-  //Fetch Github repositories
-  useEffect(async () => {
+  const fetchData = async (apiUrl, setter) => {
     try {
-      const resp = await axios.get(gitHubApiUrl);
-      setRepoData(filterRepositories(resp.data));
+      const resp = await axios.get(apiUrl);
+      apiUrl === gitHubApiUrl
+        ? setter(filterRepositories(resp.data))
+        : setter(resp.data);
     } catch (err) {
       // Error Handler
       console.error(err);
     }
+  };
+
+  //Fetch Github repositories
+  useEffect(() => {
+    fetchData(gitHubApiUrl, setRepoData);
   }, []);
 
   //Fetch demos urls data
-  useEffect(async () => {
-    try {
-      const resp = await axios.get(demosUrls);
-      setDemoWebUrl(resp.data);
-    } catch (err) {
-      // Error Handler
-      console.error(err);
-    }
+  useEffect(() => {
+    fetchData(demosUrls, setDemoWebUrl);
   }, []);
 
   return (
