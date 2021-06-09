@@ -7,13 +7,13 @@ const Card = ({ name, description, handleImgError, url, demoUrl }) => {
       <div className={styles.imgContainer}>
         <div className={styles.hoverContainer}>
           <div className={styles.hoverContent}>
-            <a href={demoUrl}>
+            <a href={demoUrl} target="_blank">
               <Button variant="secundary">
                 <img src="/link.svg" alt="An SVG of an eye" /> See demo
               </Button>
             </a>
 
-            <a href={url}>
+            <a href={url} target="_blank">
               <Button variant="secundary">
                 <img src="/github.svg" alt="An SVG of an eye" /> See code
               </Button>

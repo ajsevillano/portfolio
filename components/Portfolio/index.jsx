@@ -1,25 +1,17 @@
+//Styles
 import styles from './Portfolio.module.scss';
+//Utils
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { replaceImgWithError, filterRepositories } from './Portfolio.utils';
+//Data
+import { demoUrl } from '../../data';
 
 //Components
 import Card from './Card';
 
 const Portfolio = () => {
   const [repoData, setRepoData] = useState();
-
-  const demoUrl = [
-    { id: 362217174, url: 'http://www.ajsevillano.com' },
-    { id: 361238021, url: 'http://www.ajsevillano.com' },
-    { id: 357897050, url: 'http://www.ajsevillano.com' },
-    { id: 354868893, url: 'http://www.ajsevillano.com' },
-    { id: 351733523, url: 'http://www.ajsevillano.com' },
-    { id: 337684354, url: 'http://www.ajsevillano.com' },
-    { id: 334662367, url: 'http://www.ajsevillano.com' },
-    { id: 322001903, url: 'http://www.ajsevillano.com' },
-    { id: 302134704, url: 'http://www.ajsevillano.com' },
-  ];
 
   const filterDemoUrl = (repoDataId) => {
     const demoUrlData = demoUrl.filter((data) => data.id === repoDataId);
