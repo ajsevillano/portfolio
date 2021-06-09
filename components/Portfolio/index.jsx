@@ -21,8 +21,8 @@ const Portfolio = () => {
     { id: 302134704, url: 'http://www.ajsevillano.com' },
   ];
 
-  const filterDemoUrl = () => {
-    return demoUrl.filter((data) => data.id === 362217174);
+  const filterDemoUrl = (repoDataId) => {
+    return demoUrl.filter((data) => data.id === repoDataId);
   };
 
   useEffect(async () => {
@@ -45,6 +45,7 @@ const Portfolio = () => {
       <div className={styles.wrapper}>
         {repoData?.map((data) => (
           <Card
+            demoUrl={filterDemoUrl(data.id)}
             key={data.id}
             name={data.name}
             description={data.description}
