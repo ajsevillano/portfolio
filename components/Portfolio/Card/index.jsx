@@ -2,15 +2,16 @@ import styles from './Card.module.scss';
 import Button from '../../Button';
 
 const Card = ({ name, description, handleImgError, url, demoUrl }) => {
-  console.log(demoUrl);
   return (
     <div className={styles.card}>
       <div className={styles.imgContainer}>
         <div className={styles.hoverContainer}>
           <div className={styles.hoverContent}>
-            <Button variant="secundary">
-              <img src="/link.svg" alt="An SVG of an eye" /> See demo
-            </Button>
+            <a href={demoUrl}>
+              <Button variant="secundary">
+                <img src="/link.svg" alt="An SVG of an eye" /> See demo
+              </Button>
+            </a>
 
             <a href={url}>
               <Button variant="secundary">
