@@ -12,34 +12,34 @@ import {
 //Components
 import Card from './Card';
 
-const Portfolio = () => {
-  const [repoData, setRepoData] = useState();
-  const [demoWebUrl, setDemoWebUrl] = useState();
-  const gitHubApiUrl =
-    'https://api.github.com/users/ajsevillano/repos?sort=created&direction=desc&per_page=11';
-  const demosUrls = '/demourl.json';
+const Portfolio = ({ repoData }) => {
+  // const [repoData, setRepoData] = useState();
+  // const [demoWebUrl, setDemoWebUrl] = useState();
+  // const gitHubApiUrl =
+  //   'https://api.github.com/users/ajsevillano/repos?sort=created&direction=desc&per_page=11';
+  // const demosUrls = '/demourl.json';
 
-  const fetchData = async (apiUrl, setter) => {
-    try {
-      const resp = await axios.get(apiUrl);
-      apiUrl === gitHubApiUrl
-        ? setter(filterRepositories(resp.data))
-        : setter(resp.data);
-    } catch (err) {
-      // Error Handler
-      console.error(err);
-    }
-  };
+  // const fetchData = async (apiUrl, setter) => {
+  //   try {
+  //     const resp = await axios.get(apiUrl);
+  //     apiUrl === gitHubApiUrl
+  //       ? setter(filterRepositories(resp.data))
+  //       : setter(resp.data);
+  //   } catch (err) {
+  //     // Error Handler
+  //     console.error(err);
+  //   }
+  // };
 
-  //Fetch Github repositories
-  useEffect(() => {
-    fetchData(gitHubApiUrl, setRepoData);
-  }, []);
+  // //Fetch Github repositories
+  // useEffect(() => {
+  //   fetchData(gitHubApiUrl, setRepoData);
+  // }, []);
 
-  //Fetch demos urls data
-  useEffect(() => {
-    fetchData(demosUrls, setDemoWebUrl);
-  }, []);
+  // //Fetch demos urls data
+  // useEffect(() => {
+  //   fetchData(demosUrls, setDemoWebUrl);
+  // }, []);
 
   return (
     <>
@@ -49,7 +49,7 @@ const Portfolio = () => {
       <div className={styles.wrapper}>
         {repoData?.map((data) => (
           <Card
-            demoUrl={filterDemoUrl(data.id, demoWebUrl)}
+            // demoUrl={filterDemoUrl(data.id, demoWebUrl)}
             key={data.id}
             name={data.name}
             description={data.description}
