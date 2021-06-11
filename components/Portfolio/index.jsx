@@ -12,7 +12,7 @@ import {
 //Components
 import Card from './Card';
 
-const Portfolio = ({ repoData }) => {
+const Portfolio = ({ repoData, demodata }) => {
   // const [repoData, setRepoData] = useState();
   // const [demoWebUrl, setDemoWebUrl] = useState();
   // const gitHubApiUrl =
@@ -49,7 +49,7 @@ const Portfolio = ({ repoData }) => {
       <div className={styles.wrapper}>
         {repoData?.map((data) => (
           <Card
-            // demoUrl={filterDemoUrl(data.id, demoWebUrl)}
+            demoUrl={filterDemoUrl(data.id, demodata)}
             key={data.id}
             name={data.name}
             description={data.description}
