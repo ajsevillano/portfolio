@@ -1,7 +1,7 @@
-import styles from './Contact.module.scss';
+import styles from './About.module.scss';
 import Image from 'next/image';
 
-const Contact = () => {
+const About = () => {
   return (
     <>
       <div className={styles.wave}></div>
@@ -26,4 +26,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default About;
