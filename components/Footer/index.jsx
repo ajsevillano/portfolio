@@ -1,5 +1,7 @@
-const index = () => {
-  return <div></div>;
+import Section from '../Layouts/Section';
+
+const Footer = () => {
+  return <Section>esto es el footer</Section>;
 };
 
-export default index;
+export default Footer;

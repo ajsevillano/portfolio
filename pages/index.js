@@ -2,6 +2,7 @@
 import Header from '../components/header/Index';
 import Portfolio from '../components/Portfolio';
 import About from '../components/About';
+import Footer from '../components/Footer';
 import { filterRepositories } from '../components/Portfolio/Portfolio.utils';
 import { demoUrl } from '../data';
 
@@ -26,6 +27,7 @@ export default function Home({ repoData, demodata }) {
       <Header />
       <Portfolio repoData={repoData} demodata={demodata} />
       <About />
+      <Footer />
     </>
   );
 }
