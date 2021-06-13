@@ -1,13 +1,8 @@
 //Styles
 import styles from './Portfolio.module.scss';
 //Utils
-import axios from 'axios';
-import { useState, useEffect } from 'react';
-import {
-  replaceImgWithError,
-  filterRepositories,
-  filterDemoUrl,
-} from './Portfolio.utils';
+
+import { replaceImgWithError, filterDemoUrl } from './Portfolio.utils';
 
 //Components
 import Card from './Card';
