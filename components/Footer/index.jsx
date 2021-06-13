@@ -1,11 +1,11 @@
-import Section from '../Layouts/Section';
+import Wrapper from '../Layouts/Wrapper';
 import styles from './Footer.module.scss';
 
 const Footer = () => {
   return (
-    <Section background="#292929">
+    <Wrapper background="#292929">
       <h1 className={styles.title}>Hola</h1>
-    </Section>
+    </Wrapper>
   );
 };
 

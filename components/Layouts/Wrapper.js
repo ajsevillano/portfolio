@@ -1,6 +1,6 @@
-import styles from './Section.module.scss';
+import styles from './Wrapper.module.scss';
 
-const Section = ({ children, background }) => {
+const Wrapper = ({ children, background }) => {
   return (
     <div
       className={styles.Wrapper}
@@ -13,4 +13,4 @@ const Section = ({ children, background }) => {
   );
 };
 
-export default Section;
+export default Wrapper;

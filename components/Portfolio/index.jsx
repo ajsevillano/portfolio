@@ -8,7 +8,7 @@ import Card from './Card';
 const Portfolio = ({ repoData, demodata }) => {
   return (
     <>
-      <div className={styles.sectionTitle}>
+      <div className={styles.WrapperTitle}>
         <h2>Recent work</h2>
       </div>
       <div className={styles.wrapper}>
