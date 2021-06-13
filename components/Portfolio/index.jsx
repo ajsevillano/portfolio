@@ -1,41 +1,11 @@
 //Styles
 import styles from './Portfolio.module.scss';
 //Utils
-
 import { replaceImgWithError, filterDemoUrl } from './Portfolio.utils';
-
 //Components
 import Card from './Card';
 
 const Portfolio = ({ repoData, demodata }) => {
-  // const [repoData, setRepoData] = useState();
-  // const [demoWebUrl, setDemoWebUrl] = useState();
-  // const gitHubApiUrl =
-  //   'https://api.github.com/users/ajsevillano/repos?sort=created&direction=desc&per_page=11';
-  // const demosUrls = '/demourl.json';
-
-  // const fetchData = async (apiUrl, setter) => {
-  //   try {
-  //     const resp = await axios.get(apiUrl);
-  //     apiUrl === gitHubApiUrl
-  //       ? setter(filterRepositories(resp.data))
-  //       : setter(resp.data);
-  //   } catch (err) {
-  //     // Error Handler
-  //     console.error(err);
-  //   }
-  // };
-
-  // //Fetch Github repositories
-  // useEffect(() => {
-  //   fetchData(gitHubApiUrl, setRepoData);
-  // }, []);
-
-  // //Fetch demos urls data
-  // useEffect(() => {
-  //   fetchData(demosUrls, setDemoWebUrl);
-  // }, []);
-
   return (
     <>
       <div className={styles.sectionTitle}>
