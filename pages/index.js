@@ -4,7 +4,7 @@ import Portfolio from '../components/Portfolio';
 import About from '../components/About';
 import Footer from '../components/Footer';
 import { filterRepositories } from '../components/Portfolio/Portfolio.utils';
-import { demoUrl } from '../data';
+import { customFields } from '../data';
 
 export const getStaticProps = async () => {
   const res = await fetch(
@@ -16,7 +16,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       repoData: repoDataFinal,
-      demodata: demoUrl,
+      demodata: customFields,
     },
   };
 };

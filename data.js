@@ -1,4 +1,4 @@
-export const demoUrl = [
+export const customFields = [
   { id: 362217174, url: 'https://xenodochial-payne-fabb1a.netlify.app/' },
   { id: 361238021, url: '' },
   { id: 357897050, url: 'https://silly-leakey-7be228.netlify.app/' },

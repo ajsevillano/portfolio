@@ -1,7 +1,7 @@
 //Styles
 import styles from './Portfolio.module.scss';
 //Utils
-import { replaceImgWithError, filterDemoUrl } from './Portfolio.utils';
+import { replaceImgWithError, filtercustomFields } from './Portfolio.utils';
 //Components
 import Card from './Card';
 
@@ -14,7 +14,7 @@ const Portfolio = ({ repoData, demodata }) => {
       <div className={styles.wrapper}>
         {repoData?.map((data) => (
           <Card
-            demoUrl={filterDemoUrl(data.id, demodata)}
+            customFields={filtercustomFields(data.id, demodata)}
             key={data.id}
             name={data.name}
             description={data.description}

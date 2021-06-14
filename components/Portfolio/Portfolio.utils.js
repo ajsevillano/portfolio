@@ -12,7 +12,7 @@ export const replaceImgWithError = (e) => {
   e.target.src = '/portfolio-default.png';
 };
 
-export const filterDemoUrl = (repoDataId, demoWebUrl) => {
-  const demoUrlData = demoWebUrl?.filter((data) => data.id === repoDataId);
-  return demoUrlData?.map((data) => data.url);
+export const filtercustomFields = (repoDataId, demoWebUrl) => {
+  const customFieldsData = demoWebUrl?.filter((data) => data.id === repoDataId);
+  return customFieldsData?.map((data) => data.url);
 };
