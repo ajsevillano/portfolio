@@ -4,18 +4,23 @@ import { FaGithub, FaEnvelope, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <Wrapper background="#292929" justifycontent="space-around">
-      <div className={styles.worktogether}>Contact me</div>
+    <Wrapper background="#292929" justifycontent="space-evenly">
+      <div>
+        <h1 className={styles.contactMe}>Contact me</h1>
+        <p className={styles.subTitle}>
+          I'm open to frontend jobs and freelance projects
+        </p>
+      </div>
       <div className={styles.socialIcons}>
-        <div className="contactEmail">
+        <div className={styles.contactEmail}>
           <FaEnvelope size="2rem" />
           <p>contact@ajsevillano.com</p>
         </div>
-        <div className="Github">
+        <div className={styles.github}>
           <FaGithub size="2rem" />
           <p>My github</p>
         </div>
-        <div className="twitter">
+        <div className={styles.twitter}>
           <FaTwitter size="2rem" />
           <p>On twitter</p>
         </div>

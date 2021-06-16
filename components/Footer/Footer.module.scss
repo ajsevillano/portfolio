@@ -3,3 +3,29 @@
   color: white;
   padding: 5rem 0;
 }
+
+.socialIcons {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactEmail,
+.github,
+.twitter {
+  display: flex;
+  align-items: center;
+  p {
+    margin-left: 1rem;
+  }
+}
+
+.contactMe {
+  font-size: 40px;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.subTitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.5);
+}
