@@ -5,6 +5,7 @@ import About from '../components/About';
 import Footer from '../components/Footer';
 import { filterRepositories } from '../components/Portfolio/Portfolio.utils';
 import { customFields } from '../data';
+import CopyRight from '../components/CopyRight';
 
 export const getStaticProps = async () => {
   const res = await fetch(
@@ -28,6 +29,7 @@ export default function Home({ repoData, demodata }) {
       <Portfolio repoData={repoData} demodata={demodata} />
       <About />
       <Footer />
+      <CopyRight />
     </>
   );
 }
