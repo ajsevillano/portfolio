@@ -16,18 +16,18 @@ const Footer = () => {
         </div>
       </div>
       <div className={styles.socialIcons}>
-        <div className={styles.contactEmail}>
+        <div className={styles.email}>
           <FaEnvelope size="2rem" />
           <p className={styles.emailLaptop}>contacto@ajsevillano.com</p>
           <p className={styles.emailMobile}>contact</p>
         </div>
         <div className={styles.github}>
           <FaGithub size="2rem" />
-          <p>My github</p>
+          <p className={styles.githubText}>My github</p>
         </div>
         <div className={styles.twitter}>
           <FaTwitter size="2rem" />
-          <p>On twitter</p>
+          <p className={styles.twitterText}>On twitter</p>
         </div>
       </div>
     </Wrapper>
