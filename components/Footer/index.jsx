@@ -11,7 +11,9 @@ const Footer = () => {
         <p className={styles.subTitle}>
           I'm open to frontend jobs and freelance projects
         </p>
-        <Button>Get in touch</Button>
+        <div className={styles.buttoncontainer}>
+          <Button>Get in touch</Button>
+        </div>
       </div>
       <div className={styles.socialIcons}>
         <div className={styles.contactEmail}>
