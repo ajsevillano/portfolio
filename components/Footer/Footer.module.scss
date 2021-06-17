@@ -28,9 +28,34 @@
 .twitter {
   display: flex;
   align-items: center;
+}
+
+.github,
+.twitter {
   p {
     margin-left: 1rem;
     font-size: 1.5rem;
+  }
+}
+
+.emailLaptop,
+.emailMobile,
+.github,
+.twitter {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+
+.emailLaptop {
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.emailMobile {
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: block;
   }
 }
 

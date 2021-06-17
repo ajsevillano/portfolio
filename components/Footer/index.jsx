@@ -18,7 +18,8 @@ const Footer = () => {
       <div className={styles.socialIcons}>
         <div className={styles.contactEmail}>
           <FaEnvelope size="2rem" />
-          <p>contacto@ajsevillano.com</p>
+          <p className={styles.emailLaptop}>contacto@ajsevillano.com</p>
+          <p className={styles.emailMobile}>contact</p>
         </div>
         <div className={styles.github}>
           <FaGithub size="2rem" />
