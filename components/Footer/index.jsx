@@ -18,16 +18,39 @@ const Footer = () => {
       <div className={styles.socialIcons}>
         <div className={styles.email}>
           <FaEnvelope size="2rem" />
-          <p className={styles.emailLaptop}>contacto@ajsevillano.com</p>
-          <p className={styles.emailMobile}>contact</p>
+          <a
+            className={styles.emailMobile}
+            href="mailto:correo@ajsevillano.com"
+          >
+            contact
+          </a>
+          <a
+            className={styles.emailLaptop}
+            href="mailto:correo@ajsevillano.com"
+          >
+            contacto@ajsevillano.com
+          </a>
         </div>
         <div className={styles.github}>
           <FaGithub size="2rem" />
-          <p className={styles.githubText}>My github</p>
+
+          <a
+            className={styles.githubText}
+            href="http://www.github.com/ajsevillano"
+            target="_blank"
+          >
+            My github
+          </a>
         </div>
         <div className={styles.twitter}>
           <FaTwitter size="2rem" />
-          <p className={styles.twitterText}>On twitter</p>
+          <a
+            className={styles.twitterText}
+            href="http://www.twitter.com/ajsevillano"
+            target="_blank"
+          >
+            On twitter
+          </a>
         </div>
       </div>
     </Wrapper>
