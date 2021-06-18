@@ -5,7 +5,7 @@ import { replaceImgWithError, filtercustomFields } from './Portfolio.utils';
 //Components
 import Card from './Card';
 
-const Portfolio = ({ repoData, demodata }) => {
+const Portfolio = ({ repoData, customdata }) => {
   return (
     <>
       <div className={styles.WrapperTitle}>
@@ -14,7 +14,7 @@ const Portfolio = ({ repoData, demodata }) => {
       <div className={styles.wrapper}>
         {repoData?.map((data) => (
           <Card
-            customFields={filtercustomFields(data.id, demodata)}
+            customFields={filtercustomFields(data.id, customdata)}
             key={data.id}
             name={data.name}
             description={data.description}

@@ -17,16 +17,16 @@ export const getStaticProps = async () => {
   return {
     props: {
       repoData: repoDataFinal,
-      demodata: customFields,
+      customdata: customFields,
     },
   };
 };
 
-export default function Home({ repoData, demodata }) {
+export default function Home({ repoData, customdata }) {
   return (
     <>
       <Header />
-      <Portfolio repoData={repoData} demodata={demodata} />
+      <Portfolio repoData={repoData} customdata={customdata} />
       <About />
       <Footer />
       <CopyRight />
