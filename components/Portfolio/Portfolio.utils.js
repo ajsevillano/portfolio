@@ -14,5 +14,5 @@ export const replaceImgWithError = (e) => {
 
 export const filtercustomFields = (repoDataId, demoWebUrl) => {
   const customFieldsData = demoWebUrl?.filter((data) => data.id === repoDataId);
-  return customFieldsData?.map((data) => data.url);
+  return customFieldsData?.map((data) => [data.url, data.img]);
 };
