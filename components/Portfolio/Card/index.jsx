@@ -24,7 +24,7 @@ const Card = ({ name, description, handleImgError, url, customFields }) => {
         </div>
         <img
           className={styles.img}
-          src={`/${name}2.png`}
+          src={projectImg}
           alt={name}
           onError={handleImgError}
         />
