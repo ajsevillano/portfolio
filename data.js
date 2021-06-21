@@ -1,5 +1,10 @@
 export const customFields = [
   {
+    id: 378864454,
+    url: '',
+    img: '/portfolio-default.png',
+  },
+  {
     id: 362217174,
     url: 'https://xenodochial-payne-fabb1a.netlify.app/',
     img: '/top-videogames.png',

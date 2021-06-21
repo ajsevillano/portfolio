@@ -23,6 +23,7 @@ export const getStaticProps = async () => {
 };
 
 export default function Home({ repoData, customdata }) {
+  console.log(repoData);
   return (
     <>
       <Header />
