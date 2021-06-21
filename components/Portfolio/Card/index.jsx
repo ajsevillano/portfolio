@@ -2,15 +2,12 @@ import styles from './Card.module.scss';
 import Button from '../../Button';
 
 const Card = ({ name, description, handleImgError, url, customFields }) => {
-  const demoUrl = customFields.map((data) => data[0]);
-  const projectImg = customFields.map((data) => data[1]);
-
   return (
     <div className={styles.card}>
       <div className={styles.imgContainer}>
         <div className={styles.hoverContainer}>
           <div className={styles.hoverContent}>
-            <a href={demoUrl} target="_blank">
+            <a href={customFields.map((data) => data.url)} target="_blank">
               <Button variant="secundary">
                 <img src="/link.svg" alt="Demo Link" /> See demo
               </Button>
@@ -25,7 +22,7 @@ const Card = ({ name, description, handleImgError, url, customFields }) => {
         </div>
         <img
           className={styles.img}
-          src={projectImg}
+          src={customFields.map((data) => data.img)}
           alt={name}
           onError={handleImgError}
         />
