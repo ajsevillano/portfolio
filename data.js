@@ -2,7 +2,7 @@ export const customFields = [
   {
     id: 378864454,
     url: '',
-    img: '/portfolio-default.png',
+    img: '/project-progress.png',
   },
   {
     id: 362217174,

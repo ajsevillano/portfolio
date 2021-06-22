@@ -3,9 +3,9 @@ import Header from '../components/header/Index';
 import Portfolio from '../components/Portfolio';
 import About from '../components/About';
 import Footer from '../components/Footer';
-import { filterRepositories } from '../components/Portfolio/Portfolio.utils';
-import { customFields } from '../data';
 import CopyRight from '../components/CopyRight';
+//Utils
+import { filterRepositories } from '../components/Portfolio/Portfolio.utils';
 
 export const getStaticProps = async () => {
   const res = await fetch(
@@ -17,17 +17,15 @@ export const getStaticProps = async () => {
   return {
     props: {
       repoData: repoDataFinal,
-      customdata: customFields,
     },
   };
 };
 
-export default function Home({ repoData, customdata }) {
-  console.log(repoData);
+export default function Home({ repoData }) {
   return (
     <>
       <Header />
-      <Portfolio repoData={repoData} customdata={customdata} />
+      <Portfolio repoData={repoData} />
       <About />
       <Footer />
       <CopyRight />
