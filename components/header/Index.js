@@ -1,10 +1,19 @@
 import styles from './Header.module.scss';
 import Button from '../Button';
+import Head from 'next/head';
 import { IoChevronDownCircleOutline } from 'react-icons/io5';
 
 const Header = () => {
   return (
     <>
+      <Head>
+        <title>Antonio Sevillano - FrontEnd web developer</title>
+        <meta
+          name="description"
+          content="Antonio Sevillano - FrontEnd web developer"
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className={styles.header}>
         <div className={styles.imgContainer}>
           <img className={styles.image} src="./profile.png" alt="Me" />
