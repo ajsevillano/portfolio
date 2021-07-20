@@ -31,13 +31,13 @@ export const customFields = [
   },
   {
     id: 337684354,
-    url: 'https://www.ajsevillano.com/projects/pim/',
+    url: 'https://management-app.ajsevillano.com',
     img: '/catalogue-management-app.png',
   },
   { id: 334662367, url: '', img: 'firebase-authentication.png' },
   {
     id: 322001903,
-    url: 'https://www.ajsevillano.com/projects/music-player/',
+    url: 'https://elastic-ramanujan-ebba21.netlify.app/',
     img: '/react-music-player.png',
   },
   {
