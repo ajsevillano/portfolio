@@ -11,7 +11,7 @@ export const customFields = [
   },
   {
     id: 361238021,
-    url: 'https://portfolio.ajsevillano.com',
+    url: 'https://www.ajsevillano.com',
     img: '/portfolio.png',
   },
   {
