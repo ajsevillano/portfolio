@@ -4,7 +4,6 @@ import Image from 'next/image';
 const About = () => {
   return (
     <>
-      <div className={styles.wave}></div>
       <div className={styles.wrapper}>
         <div className={styles.imgWrapper}>
           <Image src="/me.png" alt="Picture of me" width={600} height={450} />
