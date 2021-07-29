@@ -4,7 +4,7 @@ import Portfolio from '../components/Portfolio';
 import About from '../components/About';
 import Footer from '../components/Footer';
 import CopyRight from '../components/CopyRight';
-import Wave from '../components/separators/wave';
+import Wave from '../components/separators/Wave';
 //Utils
 import { filterRepositories } from '../components/Portfolio/Portfolio.utils';
 
