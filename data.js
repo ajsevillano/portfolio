@@ -31,7 +31,7 @@ export const customFields = [
   },
   {
     id: 337684354,
-    url: 'https://management-app.ajsevillano.com',
+    url: 'https://lucid-agnesi-b35889.netlify.app/',
     img: '/catalogue-management-app.png',
   },
   { id: 334662367, url: '', img: 'firebase-authentication.png' },
