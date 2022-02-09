@@ -7,10 +7,14 @@ const Header = () => {
   return (
     <>
       <Head>
-        <title>Antonio Sevillano - FrontEnd web developer</title>
+        <title>Antonio Sevillano - FullStack web developer</title>
         <meta
           name="description"
-          content="Antonio Sevillano - FrontEnd web developer"
+          content="Antonio Sevillano - Fullstack developer"
+        />
+        <meta
+          name="google-site-verification"
+          content="bc-C1EEIl4rOH0VMnH1Fj7p61l9sMLPXEuD0Q3bHsv0"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -23,9 +27,9 @@ const Header = () => {
             </p>
           </div>
 
-          <h1 className={styles.h1}>Frontend web developer</h1>
+          <h1 className={styles.h1}>FullStack web developer</h1>
           <h2 className={styles.h2}>
-            A self-taught 🧔🏻 Web Developer, passionate about what I do, and
+            A self-taught 🧔🏻 Software Developer, passionate about what I do, and
             always learning something new. I like to help business to bring
             ideas to life. In love with ⚛️
             <span className={styles.span}>React.js</span>
