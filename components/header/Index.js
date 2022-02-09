@@ -29,9 +29,9 @@ const Header = () => {
 
           <h1 className={styles.h1}>FullStack web developer</h1>
           <h2 className={styles.h2}>
-            A self-taught 🧔🏻 Software Developer, passionate about what I do, and
-            always learning something new. I like to help business to bring
-            ideas to life. In love with ⚛️
+            School of code student & self-taught 🧔🏻 Software Developer,
+            passionate about what I do, and always learning something new. I
+            like to help business to bring ideas to life. In love with ⚛️
             <span className={styles.span}>React.js</span>
           </h2>
           <div className={styles.buttonContainer}>

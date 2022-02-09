@@ -7,7 +7,7 @@ export const customFields = [
   {
     id: 439105172,
     url: '',
-    img: '/project-progress.png',
+    img: '/users-CRUD.png',
   },
   {
     id: 378864454,
