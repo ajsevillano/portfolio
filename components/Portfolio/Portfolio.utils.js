@@ -1,6 +1,10 @@
 export const filterRepositories = (data) => {
   //Define with projects will be filtered on the portfolio
-  const filteredProjects = ['ajsevillano', 'danicampos.es'];
+  const filteredProjects = [
+    'ajsevillano',
+    'rest-api-node-express-jwt',
+    'firebase-authentication',
+  ];
   return data.filter(
     (project) =>
       !filteredProjects.some((filter) => project.name.includes(filter))

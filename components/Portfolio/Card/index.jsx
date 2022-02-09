@@ -16,7 +16,7 @@ const Card = ({ name, description, handleImgError, url, customFields }) => {
       <div className={styles.imgContainer}>
         <div className={styles.hoverContainer}>
           <div className={styles.hoverContent}>
-            <a href={demoUrl} target="_blank">
+            <a href={!demoUrl ? null : demoUrl} target="_blank">
               {checkDemoUrlExist}
             </a>
 
