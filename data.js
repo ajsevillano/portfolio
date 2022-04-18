@@ -1,5 +1,10 @@
 export const customFields = [
   {
+    id: 472492763,
+    url: '',
+    img: '/project-progress.png',
+  },
+  {
     id: 455672935,
     url: '',
     img: '/quiz-app.png',

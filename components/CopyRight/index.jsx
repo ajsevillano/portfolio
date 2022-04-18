@@ -5,7 +5,7 @@ const CopyRight = () => {
   return (
     <Wrapper background="#101114">
       <p className={styles.copyrightText}>
-        © 2021 Antonio Sevillano - This project is under MIT license
+        © 2022 Antonio Sevillano - This project is under MIT license
       </p>
     </Wrapper>
   );

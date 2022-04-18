@@ -5,6 +5,7 @@ export const filterRepositories = (data) => {
     'ajsevillano',
     'rest-api-node-express-jwt',
     'portfolio',
+    'firebase-authentication',
   ];
   return data.filter(
     (project) =>

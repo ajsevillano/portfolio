@@ -16,7 +16,7 @@ const About = () => {
             having some IT background, I recently embraced and felt in love with
             frontend developing and since then, I haven't stopped learning and
             working in diferent projects to polish my skills (specially with
-            React.js ⚛️). I'm the proud dad of a 1 year old 👶🏻 girl called
+            React.js ⚛️). I'm the proud dad of a 2 year old 👶🏻 girl called
             Mireia.
           </p>
         </div>

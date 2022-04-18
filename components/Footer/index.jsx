@@ -1,6 +1,12 @@
 import Wrapper from '../Layouts/Wrapper';
 import styles from './Footer.module.scss';
-import { FaGithub, FaEnvelope, FaTwitter } from 'react-icons/fa';
+import {
+  FaGithub,
+  FaEnvelope,
+  FaTwitter,
+  FaLink,
+  FaLinkedin,
+} from 'react-icons/fa';
 import Button from '../Button';
 
 const Footer = () => {
@@ -40,6 +46,17 @@ const Footer = () => {
             target="_blank"
           >
             My github
+          </a>
+        </div>
+        <div className={styles.github}>
+          <FaLinkedin size="2rem" />
+
+          <a
+            className={styles.githubText}
+            href="https://www.linkedin.com/in/ajsevillano/"
+            target="_blank"
+          >
+            Linkedin
           </a>
         </div>
         <div className={styles.twitter}>

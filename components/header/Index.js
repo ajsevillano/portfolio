@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <>
       <Head>
-        <title>Antonio Sevillano - FullStack web developer</title>
+        <title>Antonio Sevillano - Software developer</title>
         <meta
           name="description"
           content="Antonio Sevillano - Fullstack developer"
@@ -27,7 +27,7 @@ const Header = () => {
             </p>
           </div>
 
-          <h1 className={styles.h1}>FullStack web developer</h1>
+          <h1 className={styles.h1}>Software developer</h1>
           <h2 className={styles.h2}>
             School of code student & self-taught 🧔🏻 Software Developer,
             passionate about what I do, and always learning something new. I
