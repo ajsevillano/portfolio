@@ -27,11 +27,11 @@ const Header = () => {
             </p>
           </div>
 
-          <h1 className={styles.h1}>Software developer</h1>
+          <h1 className={styles.h1}>Software Engineer</h1>
           <h2 className={styles.h2}>
-            School of code student & self-taught 🧔🏻 Software Developer,
-            passionate about what I do, and always learning something new. I
-            like to help business to bring ideas to life. In love with ⚛️
+            School of code student & self-taught 🧔🏻 Software Engineer,
+            passionate about what I do, and always learning something new. In
+            love with ⚛️
             <span className={styles.span}>React.js</span>
           </h2>
           <div className={styles.buttonContainer}>

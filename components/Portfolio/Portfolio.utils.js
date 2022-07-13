@@ -1,6 +1,7 @@
 export const filterRepositories = (data) => {
   //Define with projects will be filtered on the portfolio
   const filteredProjects = [
+    'aws-amplify-next-12',
     'quiz-app',
     'ajsevillano',
     'rest-api-node-express-jwt',
