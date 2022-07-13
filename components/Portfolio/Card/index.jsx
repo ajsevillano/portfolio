@@ -1,5 +1,6 @@
 import styles from './Card.module.scss';
 import Button from '../../Button';
+import Image from 'next/image';
 
 const Card = ({ name, description, handleImgError, url, customFields }) => {
   const [{ url: demoUrl }] = customFields;
@@ -27,11 +28,13 @@ const Card = ({ name, description, handleImgError, url, customFields }) => {
             </a>
           </div>
         </div>
-        <img
-          className={styles.img}
+        <Image
           src={projectImage}
           alt={name}
-          onError={handleImgError}
+          className={styles.img}
+          width={358}
+          height={224}
+          layout="responsive"
         />
       </div>
 
