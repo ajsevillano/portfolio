@@ -1,10 +1,5 @@
 export const customFields = [
   {
-    id: 512754335,
-    url: '',
-    img: '/react-native-weather.png',
-  },
-  {
     id: 491245212,
     url: '',
     img: '/react-native-weather.png',
