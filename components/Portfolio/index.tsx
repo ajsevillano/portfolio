@@ -8,14 +8,25 @@ import Card from './Card';
 // Data
 import customFields from '../../data';
 
-function Portfolio({ repoData }: any) {
+interface Props {
+  repoData: [];
+}
+
+interface DataProps {
+  id: number;
+  name: string;
+  description: string;
+  html_url: string;
+}
+
+function Portfolio({ repoData }: Props) {
   return (
     <>
       <div className={styles.WrapperTitle}>
         <h2>Recent work</h2>
       </div>
       <div className={styles.wrapper}>
-        {repoData?.map((data: any) => (
+        {repoData?.map((data: DataProps) => (
           <Card
             customFields={filtercustomFields(data.id, customFields)}
             key={data.id}

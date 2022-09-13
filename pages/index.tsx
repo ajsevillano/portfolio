@@ -9,6 +9,10 @@ import Wave from '../components/Wave';
 // Utils
 import { filterRepositories } from '../components/Portfolio/Portfolio.utils';
 
+interface Props {
+  repoData: [];
+}
+
 const requestHeaders: HeadersInit = new Headers();
 requestHeaders.set('Authorization', process.env.GITHUB_API_KEY as string);
 
@@ -29,7 +33,7 @@ export const getStaticProps = async () => {
   };
 };
 
-export default function Home({ repoData }: any) {
+export default function Home({ repoData }: Props) {
   return (
     <>
       <Header />

@@ -1,4 +1,10 @@
-export const filterRepositories = (data: any) => {
+interface ObjectTypes {
+  id: number;
+  url: string;
+  img: string;
+}
+
+export const filterRepositories = (data: any[]) => {
   // Define with projects will be filtered on the portfolio
   const filteredProjects = [
     'eme-website-mockup',
@@ -13,17 +19,22 @@ export const filterRepositories = (data: any) => {
     'firebase-authentication',
   ];
   return data.filter(
-    (project: any) =>
+    (project: { name: string | string[] }) =>
       // eslint-disable-next-line @typescript-eslint/comma-dangle, implicit-arrow-linebreak
-      !filteredProjects.some((filter) => project.name.includes(filter))
+      !filteredProjects.some((filter) => project.name.includes(filter)),
   );
 };
 
-export const replaceImgWithError = (e: any) => {
+export const replaceImgWithError = (e: {
+  target: { onerror: null; src: string };
+}) => {
   e.target.onerror = null;
   e.target.src = '/portfolio-default.png';
 };
 
-export const filtercustomFields = (repoDataId: any, demoWebUrl: any[]) =>
+export const filtercustomFields = (
+  repoDataId: number,
+  demoWebUrl: ObjectTypes[],
+) =>
   // eslint-disable-next-line implicit-arrow-linebreak
   demoWebUrl?.filter((data) => data.id === repoDataId);

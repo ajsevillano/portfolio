@@ -1,7 +1,13 @@
 import React from 'react';
 import styles from './Wrapper.module.scss';
 
-function Wrapper({ children, background, justifycontent = 'center' }: any) {
+interface Props {
+  background: string;
+  justifycontent: string;
+  children: JSX.Element | JSX.Element[] | string;
+}
+
+function Wrapper({ children, background, justifycontent = 'center' }: Props) {
   return (
     <div
       className={styles.Wrapper}
