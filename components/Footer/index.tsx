@@ -1,24 +1,19 @@
+import React from 'react';
+import { FaGithub, FaEnvelope, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import Button from '../Button';
 import Wrapper from '../Layouts/Wrapper';
 import styles from './Footer.module.scss';
-import {
-  FaGithub,
-  FaEnvelope,
-  FaTwitter,
-  FaLink,
-  FaLinkedin,
-} from 'react-icons/fa';
-import Button from '../Button';
 
-const Footer = () => {
+function Footer() {
   return (
     <Wrapper background="#292929" justifycontent="space-evenly">
       <div>
         <h1 className={styles.contactMe}>Contact me</h1>
         <p className={styles.subTitle}>
-          I'm open to frontend jobs and freelance projects
+          I&apos;m open to frontend jobs and freelance projects
         </p>
         <div className={styles.buttoncontainer}>
-          <Button>Get in touch</Button>
+          <Button variant="">Get in touch</Button>
         </div>
       </div>
       <div className={styles.socialIcons}>
@@ -44,6 +39,7 @@ const Footer = () => {
             className={styles.githubText}
             href="http://www.github.com/ajsevillano"
             target="_blank"
+            rel="noreferrer"
           >
             My github
           </a>
@@ -55,6 +51,7 @@ const Footer = () => {
             className={styles.githubText}
             href="https://www.linkedin.com/in/ajsevillano/"
             target="_blank"
+            rel="noreferrer"
           >
             Linkedin
           </a>
@@ -65,6 +62,7 @@ const Footer = () => {
             className={styles.twitterText}
             href="http://www.twitter.com/ajsevillano"
             target="_blank"
+            rel="noreferrer"
           >
             On twitter
           </a>
@@ -72,6 +70,6 @@ const Footer = () => {
       </div>
     </Wrapper>
   );
-};
+}
 
 export default Footer;

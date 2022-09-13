@@ -1,21 +1,23 @@
-//components
-import Header from '../components/header/Index';
+import React from 'react';
+// components
+import Header from '../components/Header';
 import Portfolio from '../components/Portfolio';
 import About from '../components/About';
 import Footer from '../components/Footer';
 import CopyRight from '../components/CopyRight';
 import Wave from '../components/Wave';
-//Utils
+// Utils
 import { filterRepositories } from '../components/Portfolio/Portfolio.utils';
+
+const requestHeaders: HeadersInit = new Headers();
+requestHeaders.set('Authorization', process.env.GITHUB_API_KEY as string);
 
 export const getStaticProps = async () => {
   const res = await fetch(
     'https://api.github.com/users/ajsevillano/repos?sort=created&direction=desc&per_page=20',
     {
-      headers: {
-        Authorization: process.env.GITHUB_API_KEY,
-      },
-    }
+      headers: requestHeaders,
+    },
   );
   const Data = await res.json();
   const repoDataFinal = filterRepositories(Data);
@@ -27,7 +29,7 @@ export const getStaticProps = async () => {
   };
 };
 
-export default function Home({ repoData }) {
+export default function Home({ repoData }: any) {
   return (
     <>
       <Header />

@@ -1,6 +1,7 @@
+import React from 'react';
 import styles from './Wrapper.module.scss';
 
-const Wrapper = ({ children, background, justifycontent = 'center' }) => {
+function Wrapper({ children, background, justifycontent = 'center' }: any) {
   return (
     <div
       className={styles.Wrapper}
@@ -12,6 +13,6 @@ const Wrapper = ({ children, background, justifycontent = 'center' }) => {
       {children}
     </div>
   );
-};
+}
 
 export default Wrapper;

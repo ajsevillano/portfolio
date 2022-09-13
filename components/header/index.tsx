@@ -1,9 +1,10 @@
-import styles from './Header.module.scss';
-import Button from '../Button';
+import React from 'react';
 import Head from 'next/head';
 import { IoChevronDownCircleOutline } from 'react-icons/io5';
+import styles from './Header.module.scss';
+import Button from '../Button';
 
-const Header = () => {
+function Header() {
   return (
     <>
       <Head>
@@ -23,7 +24,7 @@ const Header = () => {
           <div className={styles.imgContainer}>
             <img className={styles.image} src="./profile.png" alt="Me" />
             <p className={styles.presentation}>
-              Hello there! I'm Antonio Sevillano
+              Hello there! I&apos;m Antonio Sevillano
             </p>
           </div>
 
@@ -35,7 +36,7 @@ const Header = () => {
             <span className={styles.span}>React.js</span>
           </h2>
           <div className={styles.buttonContainer}>
-            <Button variant="primary">Let's talk!</Button>
+            <Button variant="primary">Let&apos;s talk!</Button>
             <Button variant="outline">
               <IoChevronDownCircleOutline size={30} />
               <span>See my work</span>
@@ -45,6 +46,6 @@ const Header = () => {
       </section>
     </>
   );
-};
+}
 
 export default Header;

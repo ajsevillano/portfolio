@@ -1,4 +1,10 @@
-export const customFields = [
+interface ObjectTypes {
+  id: number;
+  url: string;
+  img: string;
+}
+
+const customFields: ObjectTypes[] = [
   {
     id: 535287633,
     url: '',
@@ -71,3 +77,5 @@ export const customFields = [
     img: '/api.uniondistribuidora.com.png',
   },
 ];
+
+export default customFields;
