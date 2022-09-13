@@ -1,6 +1,7 @@
 export const filterRepositories = (data) => {
   //Define with projects will be filtered on the portfolio
   const filteredProjects = [
+    'eme-website-mockup',
     'storybook-base',
     'reddit-clone-next-amplify',
     'amplify-template',

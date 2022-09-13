@@ -10,7 +10,7 @@ import { filterRepositories } from '../components/Portfolio/Portfolio.utils';
 
 export const getStaticProps = async () => {
   const res = await fetch(
-    'https://api.github.com/users/ajsevillano/repos?sort=created&direction=desc&per_page=19',
+    'https://api.github.com/users/ajsevillano/repos?sort=created&direction=desc&per_page=20',
     {
       headers: {
         Authorization: process.env.GITHUB_API_KEY,
