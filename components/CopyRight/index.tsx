@@ -4,7 +4,7 @@ import styles from './CopyRight.module.scss';
 
 function CopyRight() {
   return (
-    <Wrapper background="#101114">
+    <Wrapper background="#101114" justifycontent="center">
       <p className={styles.copyrightText}>
         © 2022 Antonio Sevillano - This project is under MIT license
       </p>
