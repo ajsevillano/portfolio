@@ -1,29 +1,40 @@
+import React from 'react';
+import Image from 'next/image';
 import styles from './Card.module.scss';
 import Button from '../../Button';
-import Image from 'next/image';
 
-const Card = ({ name, description, handleImgError, url, customFields }) => {
+function Card({ name, description, handleImgError, url, customFields }: any) {
   const [{ url: demoUrl }] = customFields;
   const [{ img: projectImage }] = customFields;
 
   const checkDemoUrlExist = !demoUrl ? null : (
     <Button variant="secundary">
-      <img src="/link.svg" alt="Demo Link" /> See demo
+      <div>
+        <img src="/link.svg" alt="Demo Link" /> See demo
+      </div>
     </Button>
   );
+
+  console.log(handleImgError);
 
   return (
     <div className={styles.card}>
       <div className={styles.imgContainer}>
         <div className={styles.hoverContainer}>
           <div className={styles.hoverContent}>
-            <a href={!demoUrl ? null : demoUrl} target="_blank">
+            <a
+              href={!demoUrl ? null : demoUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
               {checkDemoUrlExist}
             </a>
 
-            <a href={url} target="_blank">
+            <a href={url} target="_blank" rel="noreferrer">
               <Button variant="secundary">
-                <img src="/github.svg" alt="Github" /> See code
+                <div>
+                  <img src="/github.svg" alt="Github" /> See code
+                </div>
               </Button>
             </a>
           </div>
@@ -42,6 +53,6 @@ const Card = ({ name, description, handleImgError, url, customFields }) => {
       <span className={styles.project_description}>{description}</span>
     </div>
   );
-};
+}
 
 export default Card;
