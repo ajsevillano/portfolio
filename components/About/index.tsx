@@ -17,8 +17,8 @@ function About() {
             years. Despite having some IT background, I recently embraced and
             felt in love with frontend developing and since then, I haven&apos;t
             stopped learning and working in diferent projects to polish my
-            skills (specially with React.js ⚛️). I&apos;m the proud dad of a 2
-            year old 👶🏻 girl called Mireia.
+            skills (specially with React.js ⚛️). I&apos;m the proud dad of a 3
+            year old 👧🏻 girl called Mireia.
           </p>
         </div>
       </div>
