@@ -15,8 +15,6 @@ function Card({ name, description, handleImgError, url, customFields }: any) {
     </Button>
   );
 
-  console.log(handleImgError);
-
   return (
     <div className={styles.card}>
       <div className={styles.imgContainer}>

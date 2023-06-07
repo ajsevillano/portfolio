@@ -17,21 +17,52 @@
   font-weight: 900;
   font-size: 95px;
   margin: 0 0;
-  background: #66328e;
-  background: -webkit-linear-gradient(to right, #66328e 0%, #e33b4b 100%);
-  background: -moz-linear-gradient(to right, #66328e 0%, #e33b4b 100%);
-  background: linear-gradient(to right, #66328e 0%, #e33b4b 100%);
+
+  background: -webkit-linear-gradient(
+    45deg,
+    #e33b4b 40%,
+    #66328e 50%,
+    #fa5959 75%,
+    #66328e
+  );
+  background: -moz-linear-gradient(
+    45deg,
+    #e33b4b 40%,
+    #66328e 50%,
+    #fa5959 75%,
+    #66328e
+  );
+  background: linear-gradient(
+    45deg,
+    #e33b4b 40%,
+    #66328e 50%,
+    #fa5959 75%,
+    #66328e
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: -5px;
   text-align: center;
+  background-size: 300% 300%;
+  animation: gradientAnimation 4s ease both;
   @media screen and (max-width: 768px) {
     // max-width: 90%;
     font-size: 4rem;
     letter-spacing: 0px;
     line-height: 56px;
     margin-bottom: 34px;
+  }
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
