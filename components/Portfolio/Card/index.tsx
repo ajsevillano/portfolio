@@ -3,7 +3,7 @@ import Image from 'next/image';
 import styles from './Card.module.scss';
 import Button from '../../Button';
 
-function Card({ name, description, handleImgError, url, customFields }: any) {
+function Card({ name, description, url, customFields }: any) {
   const [{ url: demoUrl }] = customFields;
   const [{ img: projectImage }] = customFields;
 
