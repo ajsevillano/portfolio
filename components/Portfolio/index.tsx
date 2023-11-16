@@ -9,7 +9,8 @@ import Card from './Card';
 import customFields from '../../data';
 
 interface Props {
-  repoData: [];
+  repoData: DataProps[] | [];
+  custom: any;
 }
 
 interface DataProps {
@@ -19,7 +20,7 @@ interface DataProps {
   html_url: string;
 }
 
-function Portfolio({ repoData }: Props) {
+function Portfolio({ repoData, custom = customFields }: Props) {
   return (
     <>
       <div className={styles.WrapperTitle}>
@@ -28,7 +29,7 @@ function Portfolio({ repoData }: Props) {
       <div className={styles.wrapper}>
         {repoData?.map((data: DataProps) => (
           <Card
-            customFields={filtercustomFields(data.id, customFields)}
+            customFields={filtercustomFields(data.id, custom)}
             key={data.id}
             name={data.name}
             description={data.description}

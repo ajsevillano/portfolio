@@ -9,7 +9,7 @@ function Card({ name, description, url, customFields }: any) {
 
   const checkDemoUrlExist = !demoUrl ? null : (
     <Button variant="secundary">
-      <div>
+      <div data-testid="demo-link">
         <img src="/link.svg" alt="Demo Link" /> See demo
       </div>
     </Button>
@@ -28,7 +28,12 @@ function Card({ name, description, url, customFields }: any) {
               {checkDemoUrlExist}
             </a>
 
-            <a href={url} target="_blank" rel="noreferrer">
+            <a
+              href={url}
+              target="_blank"
+              rel="noreferrer"
+              data-testid="code-link"
+            >
               <Button variant="secundary">
                 <div>
                   <img src="/github.svg" alt="Github" /> See code
