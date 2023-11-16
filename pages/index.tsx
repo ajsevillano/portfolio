@@ -31,7 +31,7 @@ export default function Home({ repoData }: Props) {
   return (
     <>
       <Header />
-      <Portfolio repoData={repoData} />
+      <Portfolio repoData={repoData} custom={undefined} />
       <Wave />
       <About />
       <Footer />
