@@ -27,14 +27,14 @@ function Portfolio({ repoData, custom = customFields }: Props) {
         <h2>Recent work</h2>
       </div>
       <div className={styles.wrapper}>
-        {repoData?.map((data: DataProps) => (
+        {repoData?.map(({ id, name, description, html_url }) => (
           <Card
-            customFields={filtercustomFields(data.id, custom)}
-            key={data.id}
-            name={data.name}
-            description={data.description}
+            customFields={filtercustomFields(id, custom)}
+            key={id}
+            name={name}
+            description={description}
             handleImgError={replaceImgWithError}
-            url={data.html_url}
+            url={html_url}
           />
         ))}
       </div>

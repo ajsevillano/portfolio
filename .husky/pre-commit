@@ -1,0 +1,51 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Colours vars
+RED='\033[31m'
+REDBG='\033[41m\033[37m'
+GREEN='\033[32m'
+GREENBG='\033[42m\033[37m'
+WHITEBG='\033[47m\033[37m'
+# Clean Colors
+NC='\033[0m'
+
+# Check for env or env.local files
+echo -e "${WHITEBG}  CHECK  ${NC} Checking that .env or .env.local files are not being committed... ${NC}"
+if git diff --cached --name-only | grep -E '(\.env|\.env.local)' >/dev/null 2>&1 ; then
+  echo -e "${REDBG} ERROR ${NC} ${RED}You are attempting to commit an .env or .env.local file which should not be committed."
+  exit 1
+fi
+echo -e "${GREENBG}  PASS   ${NC} ${GREEN}Not env or .env.local files detected.Good stuff!${NC}"
+echo ""
+
+# Check for eslint errors
+echo -e "${WHITEBG}  CHECK  ${NC} Checking for ESLINT errors... ${NC}"
+if ! npx eslint --ext .js,.jsx,.ts,.tsx . ; then
+  echo -e "${REDBG} ERROR ${NC} ${RED}Eslint errors detected, please check them before commit"
+  exit 1
+fi
+echo -e "${GREENBG}  PASS   ${NC} ${GREEN}Not lint errors detected.${NC}"
+
+echo ""
+
+# Check for typescript errors
+echo -e "${WHITEBG}  CHECK  ${NC} Checking for Typescript errors... ${NC}"
+if ! npx tsc ; then
+  echo -e "${REDBG} ERROR ${NC} ${RED}Typescript errors detected, please check them before commit"
+  exit 1
+fi
+echo -e "${GREENBG}  PASS   ${NC} ${GREEN}Not Typescript errors detected.${NC}"
+
+echo ""
+
+# Run jest to check all test are passing.
+echo -e "${WHITEBG}  CHECK  ${NC} Checking the tests on the project before committing ${NC}"
+./node_modules/.bin/jest --colors --silent ||
+(
+    echo -e "${REDBG} ERROR ${NC} ${RED}Some tests are failing. Please fix the tests and try to commit again.${NC}";
+    false;
+)
+
+# If everything passes... Now we can commit
+echo -e "${GREENBG}  PASS  ${NC} ${GREEN}All the tests have passed. Committing now.${NC}"
