@@ -7,6 +7,7 @@ interface ObjectTypes {
 export const filterRepositories = (data: any[]) => {
   // Define with projects will be filtered on the portfolio
   const filteredProjects = [
+    'next-auth-auth0-test-app',
     'pokemon.app.vanilla.js.soc',
     'reddit-clone-next12-amplify-youtube-task3',
     'storybook-base',

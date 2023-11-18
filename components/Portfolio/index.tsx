@@ -5,8 +5,6 @@ import styles from './Portfolio.module.scss';
 import { replaceImgWithError, filtercustomFields } from './Portfolio.utils';
 // Components
 import Card from './Card';
-// Data
-import customFields from '../../data';
 
 interface Props {
   repoData: DataProps[] | [];
@@ -20,7 +18,7 @@ interface DataProps {
   html_url: string;
 }
 
-function Portfolio({ repoData, custom = customFields }: Props) {
+function Portfolio({ repoData, custom }: Props) {
   return (
     <>
       <div className={styles.WrapperTitle}>

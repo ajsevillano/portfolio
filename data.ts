@@ -1,80 +1,85 @@
 interface ObjectTypes {
   id: number;
-  url: string;
-  img: string;
+  URLDemo: string;
+  imgDemo: string;
 }
 
 const customFields: ObjectTypes[] = [
   {
+    id: 715777960,
+    URLDemo: '',
+    imgDemo: '/project-progress.png',
+  },
+  {
     id: 535287633,
-    url: '',
-    img: '/react-native-weather.png',
+    URLDemo: '',
+    imgDemo: '/react-native-weather.png',
   },
   {
     id: 491245212,
-    url: '',
-    img: '/react-native-weather.png',
+    URLDemo: '',
+    imgDemo: '/react-native-weather.png',
   },
   {
     id: 472492763,
-    url: '',
-    img: '/project-progress.png',
+    URLDemo: '',
+    imgDemo: '/project-progress.png',
   },
   {
     id: 455672935,
-    url: '',
-    img: '/quiz-app.png',
+    URLDemo: '',
+    imgDemo: '/quiz-app.png',
   },
   {
     id: 439105172,
-    url: '',
-    img: '/users-CRUD.png',
+    URLDemo: '',
+    imgDemo: '/users-CRUD.png',
   },
   {
     id: 378864454,
-    url: '',
-    img: '/project-progress.png',
+    URLDemo: '',
+    imgDemo: '/project-progress.png',
   },
   {
     id: 362217174,
-    url: 'https://xenodochial-payne-fabb1a.netlify.app/',
-    img: '/top-videogames.png',
+    URLDemo: 'https://xenodochial-payne-fabb1a.netlify.app/',
+    imgDemo: '/top-videogames.png',
   },
   {
     id: 361238021,
-    url: 'https://www.ajsevillano.com',
-    img: '/portfolio.png',
+    URLDemo: 'https://www.ajsevillano.com',
+    imgDemo: '/portfolio.png',
   },
   {
     id: 357897050,
-    url: 'https://silly-leakey-7be228.netlify.app/',
-    img: '/button-component.png',
+    URLDemo: 'https://silly-leakey-7be228.netlify.app/',
+    imgDemo: '/button-component.png',
   },
   {
     id: 354868893,
-    url: 'https://gifted-bhaskara-71af9e.netlify.app/',
-    img: '/animated-portfolio.png',
+    URLDemo: 'https://gifted-bhaskara-71af9e.netlify.app/',
+    imgDemo: '/animated-portfolio.png',
   },
   {
     id: 351733523,
-    url: 'https://lucid-goldberg-c11d8e.netlify.app/',
-    img: '/password-generator.png',
+    URLDemo: 'https://lucid-goldberg-c11d8e.netlify.app/',
+    imgDemo: '/password-generator.png',
   },
   {
     id: 337684354,
-    url: 'https://lucid-agnesi-b35889.netlify.app/',
-    img: '/catalogue-management-app.png',
+    URLDemo: 'https://lucid-agnesi-b35889.netlify.app/',
+    imgDemo: '/catalogue-management-app.png',
   },
-  { id: 334662367, url: '', img: 'firebase-authentication.png' },
+  { id: 334662367, URLDemo: '', imgDemo: 'firebase-authentication.png' },
   {
     id: 322001903,
-    url: 'https://elastic-ramanujan-ebba21.netlify.app/',
-    img: '/react-music-player.png',
+    URLDemo: 'https://elastic-ramanujan-ebba21.netlify.app/',
+    imgDemo: '/react-music-player.png',
   },
   {
     id: 302134704,
-    url: 'http://api.uniondistribuidora.com/',
-    img: '/api.uniondistribuidora.com.png',
+    URLDemo: 'http://api.uniondistribuidora.com/',
+    imgDemo: '/api.uniondistribuidora.com.png',
   },
 ];
 

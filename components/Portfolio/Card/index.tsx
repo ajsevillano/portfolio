@@ -5,7 +5,7 @@ import Button from '../../Button';
 
 function Card({ name, description, url, customFields }: any) {
   const [{ url: demoUrl }] = customFields;
-  const [{ img: projectImage }] = customFields;
+  const [{ imgDemo: projectImage }] = customFields;
 
   const checkDemoUrlExist = !demoUrl ? null : (
     <Button variant="secundary">
