@@ -23,8 +23,9 @@ function Card({
 }: DataProps) {
   const checkDemoUrlExist = !demoUrl ? null : (
     <Button variant="secundary">
-      <div data-testid="demo-link">
-        <img src="/link.svg" alt="Demo Link" /> See demo
+      <div className={styles.imgWrapper} data-testid="demo-link">
+        <img className={styles.buttonImg} src="/link.svg" alt="Demo Link" />
+        <p className={styles.buttonText}>See demo</p>
       </div>
     </Button>
   );
@@ -45,8 +46,13 @@ function Card({
               data-testid="code-link"
             >
               <Button variant="secundary">
-                <div>
-                  <img src="/github.svg" alt="Github" /> See code
+                <div className={styles.imgWrapper}>
+                  <img
+                    className={styles.buttonImg}
+                    src="/github.svg"
+                    alt="Github"
+                  />
+                  <p className={styles.buttonText}>See code</p>
                 </div>
               </Button>
             </a>
