@@ -1,13 +1,13 @@
-// Libraries
 import React from 'react';
-import { filteredGithubArray, enhanceGithubObject } from '../utils/home.utils';
 // components
-import Header from '../components/Header';
-import Portfolio from '../components/Portfolio';
-import About from '../components/About';
-import Footer from '../components/Footer';
-import CopyRight from '../components/CopyRight';
-import Wave from '../components/Wave';
+import Header from '@components/Header';
+import Portfolio from '@components/Portfolio';
+import About from '@components/About';
+import Footer from '@components/Footer';
+import CopyRight from '@components/CopyRight';
+import Wave from '@components/Wave';
+// Utils
+import { filteredGithubArray, enhanceGithubObject } from '../utils/home.utils';
 // Data
 import customFields from '../data';
 // Types
