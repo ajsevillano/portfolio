@@ -1,13 +1,12 @@
 import React from 'react';
 // Styles
 import styles from './Portfolio.module.scss';
-// Utils
-
 // Components
 import Card from './Card';
 
+// Types
 interface Props {
-  newArray: DataProps[] | [];
+  reposArray: DataProps[] | [];
 }
 
 interface DataProps {
@@ -15,26 +14,26 @@ interface DataProps {
   name: string;
   description: string;
   html_url: string;
-  URLDemo: string;
-  imgDemo: string;
+  demoURL: string;
+  projectThumbnail: string;
 }
 
-function Portfolio({ newArray }: Props) {
+function Portfolio({ reposArray }: Props) {
   return (
     <>
       <div className={styles.WrapperTitle}>
         <h2>Recent work</h2>
       </div>
       <div className={styles.wrapper}>
-        {newArray?.map(
-          ({ id, name, description, html_url, URLDemo, imgDemo }) => (
+        {reposArray?.map(
+          ({ id, name, description, html_url, demoURL, projectThumbnail }) => (
             <Card
               key={id}
               name={name}
               description={description}
-              url={html_url}
-              demoUrl={URLDemo}
-              imgDemo={imgDemo}
+              gitHubUrl={html_url}
+              demoUrl={demoURL}
+              projectThumbnail={projectThumbnail}
             />
           ),
         )}

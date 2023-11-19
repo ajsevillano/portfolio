@@ -12,7 +12,7 @@ import customFields from '../data';
 import FILTERED_PROJECTS from '../config';
 
 interface Props {
-  filteredGithubArrayWithCustomFields: [];
+  projectsData: [];
 }
 
 interface ObjectTypes {
@@ -21,21 +21,41 @@ interface ObjectTypes {
   imgDemo?: string | null;
 }
 
-function enhanceGithubObject(githubObj: ObjectTypes, arrayCustom: any) {
+interface ArrayCustomTypes {
+  id: number;
+  URLDemo: string;
+  imgDemo: string;
+}
+
+interface GithubArrayWithCustomFieldsTypes {
+  id: number;
+  name: string;
+  description: string;
+  html_url: string;
+  demoURL: string;
+  projectThumbnail: string;
+}
+
+function enhanceGithubObject(
+  githubObj: ObjectTypes,
+  arrayCustom: ArrayCustomTypes[],
+) {
   const customObj = arrayCustom.find(
-    (custom: any) => custom.id === githubObj.id,
+    (custom: ArrayCustomTypes) => custom.id === githubObj.id,
   );
 
   return {
     ...githubObj,
-    URLDemo: customObj?.URLDemo || null,
-    imgDemo: customObj?.imgDemo || null,
+    demoURL: customObj?.URLDemo || null,
+    projectThumbnail: customObj?.imgDemo || null,
   };
 }
 
-function filteredGithubArray(githubArrayWithCustomFields: any) {
+function filteredGithubArray(
+  githubArrayWithCustomFields: GithubArrayWithCustomFieldsTypes[],
+) {
   const final = githubArrayWithCustomFields.filter(
-    (githubObj: any) =>
+    (githubObj: GithubArrayWithCustomFieldsTypes) =>
       // eslint-disable-next-line implicit-arrow-linebreak
       !FILTERED_PROJECTS.some(
         (filteredProject) => filteredProject.id === githubObj.id,
@@ -46,7 +66,7 @@ function filteredGithubArray(githubArrayWithCustomFields: any) {
 
 export const getStaticProps = async () => {
   const res = await fetch(
-    'https://api.github.com/users/ajsevillano/repos?sort=created&direction=desc&per_page=21',
+    'https://api.github.com/users/ajsevillano/repos?sort=created&direction=desc',
   );
   const Data = await res.json();
 
@@ -63,19 +83,16 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      filteredGithubArrayWithCustomFields,
+      projectsData: filteredGithubArrayWithCustomFields,
     },
   };
 };
 
-export default function Home({
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  filteredGithubArrayWithCustomFields,
-}: Props) {
+export default function Home({ projectsData }: Props) {
   return (
     <>
       <Header />
-      <Portfolio newArray={filteredGithubArrayWithCustomFields} />
+      <Portfolio reposArray={projectsData} />
       <Wave />
       <About />
       <Footer />

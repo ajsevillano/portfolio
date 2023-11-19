@@ -1,9 +1,26 @@
+// Libraries
 import React from 'react';
 import Image from 'next/image';
+// Styles
 import styles from './Card.module.scss';
+// Components
 import Button from '../../Button';
 
-function Card({ name, description, url, demoUrl, imgDemo }: any) {
+interface DataProps {
+  name: string;
+  description: string;
+  gitHubUrl: string;
+  demoUrl: string | null;
+  projectThumbnail: string;
+}
+
+function Card({
+  name,
+  description,
+  gitHubUrl,
+  demoUrl,
+  projectThumbnail,
+}: DataProps) {
   const checkDemoUrlExist = !demoUrl ? null : (
     <Button variant="secundary">
       <div data-testid="demo-link">
@@ -17,16 +34,12 @@ function Card({ name, description, url, demoUrl, imgDemo }: any) {
       <div className={styles.imgContainer}>
         <div className={styles.hoverContainer}>
           <div className={styles.hoverContent}>
-            <a
-              href={!demoUrl ? null : demoUrl}
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href={demoUrl || ''} target="_blank" rel="noreferrer">
               {checkDemoUrlExist}
             </a>
 
             <a
-              href={url}
+              href={gitHubUrl}
               target="_blank"
               rel="noreferrer"
               data-testid="code-link"
@@ -40,7 +53,7 @@ function Card({ name, description, url, demoUrl, imgDemo }: any) {
           </div>
         </div>
         <Image
-          src={imgDemo}
+          src={!projectThumbnail ? '/project-progress.png' : projectThumbnail}
           alt={name}
           className={styles.img}
           width={358}
@@ -50,7 +63,9 @@ function Card({ name, description, url, demoUrl, imgDemo }: any) {
       </div>
 
       <h3 className={styles.projectName}>{name}</h3>
-      <span className={styles.project_description}>{description}</span>
+      <span className={styles.project_description}>
+        {!description ? 'No description provided yet' : description}
+      </span>
     </div>
   );
 }

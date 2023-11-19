@@ -70,7 +70,7 @@ const customFields: ObjectTypes[] = [
     URLDemo: 'https://lucid-agnesi-b35889.netlify.app/',
     imgDemo: '/catalogue-management-app.png',
   },
-  { id: 334662367, URLDemo: '', imgDemo: 'firebase-authentication.png' },
+  { id: 334662367, URLDemo: '', imgDemo: '/firebase-authentication.png' },
   {
     id: 322001903,
     URLDemo: 'https://elastic-ramanujan-ebba21.netlify.app/',

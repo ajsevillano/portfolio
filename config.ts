@@ -1,4 +1,9 @@
-const FILTERED_PROJECTS: any[] = [
+interface FilteredProjects {
+  id: number;
+  name: string;
+}
+
+const FILTERED_PROJECTS: FilteredProjects[] = [
   { id: 642080564, name: 'pokemon.app.vanilla.js.soc' },
   { id: 518827884, name: 'reddit-clone-next12-amplify-youtube-task3' },
   { id: 514653446, name: 'storybook-base' },

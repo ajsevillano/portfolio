@@ -14,9 +14,9 @@ describe('Card', () => {
       <Card
         name={name}
         description={description}
-        url={url}
+        gitHubUrl={url}
         demoUrl={URLDemo}
-        imgDemo={imgDemo}
+        projectThumbnail={imgDemo}
       />,
     );
     const projectName = screen.getByText(name);
@@ -30,9 +30,9 @@ describe('Card', () => {
       <Card
         name={name}
         description={description}
-        url={url}
+        gitHubUrl={url}
         demoUrl={URLDemo}
-        imgDemo={imgDemo}
+        projectThumbnail={imgDemo}
       />,
     );
     const projectImage = screen.getByAltText(name);
@@ -45,9 +45,9 @@ describe('Card', () => {
       <Card
         name={name}
         description={description}
-        url={url}
+        gitHubUrl={url}
         demoUrl={URLDemo}
-        imgDemo={imgDemo}
+        projectThumbnail={imgDemo}
       />,
     );
     const demoLink = screen.getByTestId('demo-link');
@@ -59,9 +59,9 @@ describe('Card', () => {
       <Card
         name={name}
         description={description}
-        url={url}
+        gitHubUrl={url}
         demoUrl={null}
-        imgDemo={imgDemo}
+        projectThumbnail={imgDemo}
       />,
     );
     const demoLink = screen.queryByText('See demo');
@@ -73,9 +73,9 @@ describe('Card', () => {
       <Card
         name={name}
         description={description}
-        url={url}
+        gitHubUrl={url}
         demoUrl={URLDemo}
-        imgDemo={imgDemo}
+        projectThumbnail={imgDemo}
       />,
     );
     const githubLink = screen.getByTestId('code-link');
