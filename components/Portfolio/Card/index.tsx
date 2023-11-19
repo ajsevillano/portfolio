@@ -3,10 +3,7 @@ import Image from 'next/image';
 import styles from './Card.module.scss';
 import Button from '../../Button';
 
-function Card({ name, description, url, customFields }: any) {
-  const [{ url: demoUrl }] = customFields;
-  const [{ imgDemo: projectImage }] = customFields;
-
+function Card({ name, description, url, demoUrl, imgDemo }: any) {
   const checkDemoUrlExist = !demoUrl ? null : (
     <Button variant="secundary">
       <div data-testid="demo-link">
@@ -43,7 +40,7 @@ function Card({ name, description, url, customFields }: any) {
           </div>
         </div>
         <Image
-          src={projectImage}
+          src={imgDemo}
           alt={name}
           className={styles.img}
           width={358}

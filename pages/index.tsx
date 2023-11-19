@@ -6,14 +6,12 @@ import About from '../components/About';
 import Footer from '../components/Footer';
 import CopyRight from '../components/CopyRight';
 import Wave from '../components/Wave';
-// Utils
-import { filterRepositories } from '../components/Portfolio/Portfolio.utils';
+
 // Data
 import customFields from '../data';
 import FILTERED_PROJECTS from '../config';
 
 interface Props {
-  repoData: [];
   filteredGithubArrayWithCustomFields: [];
 }
 
@@ -30,8 +28,8 @@ function enhanceGithubObject(githubObj: ObjectTypes, arrayCustom: any) {
 
   return {
     ...githubObj,
-    URLDemo: customObj?.url || null,
-    imgDemo: customObj?.img || null,
+    URLDemo: customObj?.URLDemo || null,
+    imgDemo: customObj?.imgDemo || null,
   };
 }
 
@@ -51,7 +49,6 @@ export const getStaticProps = async () => {
     'https://api.github.com/users/ajsevillano/repos?sort=created&direction=desc&per_page=21',
   );
   const Data = await res.json();
-  const repoDataFinal = filterRepositories(Data);
 
   const arrayGithub = Data;
   const arrayCustom = customFields;
@@ -66,21 +63,19 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      repoData: repoDataFinal,
       filteredGithubArrayWithCustomFields,
     },
   };
 };
 
 export default function Home({
-  repoData,
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   filteredGithubArrayWithCustomFields,
 }: Props) {
   return (
     <>
       <Header />
-      <Portfolio repoData={repoData} custom={customFields} />
+      <Portfolio newArray={filteredGithubArrayWithCustomFields} />
       <Wave />
       <About />
       <Footer />
