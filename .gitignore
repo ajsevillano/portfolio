@@ -39,3 +39,6 @@ styles/App.css.map
 #Scripts
 acp.sh
 sass.sh
+
+#TS
+tsconfig.tsbuildinfo

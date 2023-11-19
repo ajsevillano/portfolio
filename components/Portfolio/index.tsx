@@ -3,19 +3,11 @@ import React from 'react';
 import styles from './Portfolio.module.scss';
 // Components
 import Card from './Card';
-
 // Types
+import { GithubArrayWithCustomFieldsTypes as DataProps } from '../../types/home';
+
 interface Props {
   reposArray: DataProps[] | [];
-}
-
-interface DataProps {
-  id: number;
-  name: string;
-  description: string;
-  html_url: string;
-  demoURL: string;
-  projectThumbnail: string;
 }
 
 function Portfolio({ reposArray }: Props) {
