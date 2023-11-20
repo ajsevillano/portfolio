@@ -1,4 +1,5 @@
 .Button {
+  position: relative;
   border: none;
   font-size: 19px;
   padding: 1rem 2.3rem;
@@ -33,12 +34,57 @@
   color: #2a2b57;
   font-weight: 600;
   font-size: 1rem;
+
   //TODO: take out to make sizes variant
   padding: 0.7rem 2.3rem;
+  &::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -10px;
+    width: 110%;
+    height: 120%;
+    background: linear-gradient(
+      45deg,
+      #753387 40%,
+      #e33b4b 50%,
+      #b14a92 60%,
+      #fa5959 75%,
+      #753387 100%
+    );
+    background-size: 800%;
+    z-index: -1;
+    border-radius: 50px;
+    transform: rotate(0deg);
+    pointer-events: none;
+    filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
   &:hover {
-    background-color: #e4e4e4;
+    &::before {
+      opacity: 1;
+      animation: glowing 60s ease-out infinite;
+    }
   }
   &:active {
     transform: scale(0.9);
+  }
+  &:active:before {
+    transform: scale(0.9);
+    background: rgb(226, 226, 226);
+    filter: none;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 400% 0;
+  }
+  50% {
+    background-position: 800% 0;
+  }
+  100% {
+    background-position: 400% 0;
   }
 }
