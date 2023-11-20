@@ -42,3 +42,6 @@ sass.sh
 
 #TS
 tsconfig.tsbuildinfo
+
+#Husky
+.husky/
