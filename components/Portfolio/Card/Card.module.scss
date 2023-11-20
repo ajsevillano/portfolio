@@ -63,3 +63,15 @@
     text-decoration: none;
   }
 }
+
+.imgWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .buttonImg {
+    margin-right: 0.5rem;
+  }
+  .buttonText {
+    margin: 0.3rem 0;
+  }
+}

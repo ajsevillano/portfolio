@@ -1,37 +1,54 @@
 import React from 'react';
 // components
-import Header from '../components/Header';
-import Portfolio from '../components/Portfolio';
-import About from '../components/About';
-import Footer from '../components/Footer';
-import CopyRight from '../components/CopyRight';
-import Wave from '../components/Wave';
+import Header from '@components/Header';
+import Portfolio from '@components/Portfolio';
+import About from '@components/About';
+import Footer from '@components/Footer';
+import CopyRight from '@components/CopyRight';
+import Wave from '@components/Wave';
 // Utils
-import { filterRepositories } from '../components/Portfolio/Portfolio.utils';
+import { filteredGithubArray, enhanceGithubObject } from '../utils/home.utils';
+// Data
+import customFields from '../data';
+// Types
+import { ObjectTypes } from '../types/home';
 
 interface Props {
-  repoData: [];
+  projectsData: [];
 }
 
 export const getStaticProps = async () => {
   const res = await fetch(
-    'https://api.github.com/users/ajsevillano/repos?sort=created&direction=desc&per_page=21',
+    'https://api.github.com/users/ajsevillano/repos?sort=created&direction=desc',
   );
   const Data = await res.json();
-  const repoDataFinal = filterRepositories(Data);
+
+  const arrayGithubProjects = Data;
+  const arrayCustomFields = customFields;
+
+  // Map the github projects array and add the custom fields
+  const githubArrayWithCustomFields = arrayGithubProjects.map(
+    (githubObj: ObjectTypes) =>
+      enhanceGithubObject(githubObj, arrayCustomFields),
+  );
+
+  // After adding the custom fields, filter the projects that I don't want to show
+  const filteredGithubArrayWithCustomFields = filteredGithubArray(
+    githubArrayWithCustomFields,
+  );
 
   return {
     props: {
-      repoData: repoDataFinal,
+      projectsData: filteredGithubArrayWithCustomFields,
     },
   };
 };
 
-export default function Home({ repoData }: Props) {
+export default function Home({ projectsData }: Props) {
   return (
     <>
       <Header />
-      <Portfolio repoData={repoData} custom={undefined} />
+      <Portfolio reposArray={projectsData} />
       <Wave />
       <About />
       <Footer />

@@ -1,42 +1,34 @@
 import React from 'react';
 // Styles
 import styles from './Portfolio.module.scss';
-// Utils
-import { replaceImgWithError, filtercustomFields } from './Portfolio.utils';
 // Components
 import Card from './Card';
-// Data
-import customFields from '../../data';
+// Types
+import { GithubArrayWithCustomFieldsTypes as DataProps } from '../../types/home';
 
 interface Props {
-  repoData: DataProps[] | [];
-  custom: any;
+  reposArray: DataProps[] | [];
 }
 
-interface DataProps {
-  id: number;
-  name: string;
-  description: string;
-  html_url: string;
-}
-
-function Portfolio({ repoData, custom = customFields }: Props) {
+function Portfolio({ reposArray }: Props) {
   return (
     <>
       <div className={styles.WrapperTitle}>
         <h2>Recent work</h2>
       </div>
       <div className={styles.wrapper}>
-        {repoData?.map(({ id, name, description, html_url }) => (
-          <Card
-            customFields={filtercustomFields(id, custom)}
-            key={id}
-            name={name}
-            description={description}
-            handleImgError={replaceImgWithError}
-            url={html_url}
-          />
-        ))}
+        {reposArray?.map(
+          ({ id, name, description, html_url, demoURL, projectThumbnail }) => (
+            <Card
+              key={id}
+              name={name}
+              description={description}
+              gitHubUrl={html_url}
+              demoUrl={demoURL}
+              projectThumbnail={projectThumbnail}
+            />
+          ),
+        )}
       </div>
     </>
   );
