@@ -12,13 +12,16 @@ function About() {
         <div className={styles.introText}>
           <h1 className={styles.header}>The guy behind the beard</h1>
           <p className={styles.text}>
-            My name is Antonio (Most people known me as Sevi), I&apos;m a
-            self-taught spanish web developer living in the UK for the last 8
-            years. Despite having some IT background, I recently embraced and
-            felt in love with frontend developing and since then, I haven&apos;t
-            stopped learning and working in diferent projects to polish my
-            skills (specially with React.js ⚛️). I&apos;m the proud dad of a 3
-            year old 👧🏻 girl called Mireia.
+            My name is Antonio, although most people know me as Sevi. I&apos;m a
+            self-taught spanish software engineer who has been living in the UK
+            for the past 10 years. Coming from a IT background I had some
+            knwoledge of coding but It was during the pandemic when I decided to
+            take my career to the next level and become a software engineer. I
+            haven&apos;t stopped learning and working in diferent projects to
+            polish my skills since then. Currently, I work as a software
+            engineer for Percayso, a data enrichment company in the insurance
+            sector. I&apos;m the proud dad of a 3 year old 👧🏻 girl called
+            Mireia.
           </p>
         </div>
       </div>
