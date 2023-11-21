@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import CoffeAnimation from '@components/CoffeeAnimation';
 import React from 'react';
 import styles from './About.module.scss';
 
@@ -8,9 +9,11 @@ function About() {
       <div className={styles.container}>
         <div className={styles.imgMe}>
           <Image src="/me.png" alt="Picture of me" width={600} height={450} />
+          <CoffeAnimation />
         </div>
         <div className={styles.introText}>
           <h1 className={styles.header}>The guy behind the beard</h1>
+
           <p className={styles.text}>
             My name is Antonio, although most people know me as Sevi. I&apos;m a
             self-taught spanish software engineer who has been living in the UK
