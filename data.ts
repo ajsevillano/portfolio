@@ -1,6 +1,6 @@
 interface ObjectTypes {
   id: number;
-  URLDemo: string;
+  URLDemo: string | null;
   imgDemo: string;
 }
 
@@ -8,7 +8,7 @@ const customFields: ObjectTypes[] = [
   {
     id: 715777960,
     URLDemo: '',
-    imgDemo: '/project-progress.png',
+    imgDemo: '/next-auth-auth0.png',
   },
   {
     id: 535287633,
@@ -81,6 +81,12 @@ const customFields: ObjectTypes[] = [
     URLDemo: 'http://api.uniondistribuidora.com/',
     imgDemo: '/api.uniondistribuidora.com.png',
   },
+  {
+    id: 280508678,
+    URLDemo: null,
+    imgDemo: '/advanced-clock.png',
+  },
+  { id: 250324988, URLDemo: null, imgDemo: '/Ghibli-Studio-WebApp.png' },
 ];
 
 export default customFields;

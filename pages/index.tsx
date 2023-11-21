@@ -17,6 +17,12 @@ interface Props {
   projectsData: [];
 }
 
+interface ObjectTypes2 {
+  id: number;
+  URLDemo: string | null;
+  imgDemo: string;
+}
+
 export const getStaticProps = async () => {
   const res = await fetch(
     'https://api.github.com/users/ajsevillano/repos?sort=created&direction=desc',
@@ -24,7 +30,7 @@ export const getStaticProps = async () => {
   const Data = await res.json();
 
   const arrayGithubProjects = Data;
-  const arrayCustomFields = customFields;
+  const arrayCustomFields: ObjectTypes2[] = customFields;
 
   // Map the github projects array and add the custom fields
   const githubArrayWithCustomFields = arrayGithubProjects.map(

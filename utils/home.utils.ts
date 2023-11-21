@@ -1,12 +1,6 @@
 import FILTERED_PROJECTS from '../config';
 import { ObjectTypes, GithubArrayWithCustomFieldsTypes } from '../types/home';
 
-interface ArrayCustomTypes {
-  id: number;
-  URLDemo: string;
-  imgDemo: string;
-}
-
 export function filteredGithubArray(
   githubArrayWithCustomFields: GithubArrayWithCustomFieldsTypes[],
 ) {
@@ -22,10 +16,10 @@ export function filteredGithubArray(
 
 export function enhanceGithubObject(
   githubObj: ObjectTypes,
-  arrayCustom: ArrayCustomTypes[],
+  arrayCustom: ObjectTypes[],
 ) {
   const customObj = arrayCustom.find(
-    (custom: ArrayCustomTypes) => custom.id === githubObj.id,
+    (custom: ObjectTypes) => custom.id === githubObj.id,
   );
 
   return {

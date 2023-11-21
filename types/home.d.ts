@@ -9,6 +9,6 @@ export interface GithubArrayWithCustomFieldsTypes {
   name: string;
   description: string;
   html_url: string;
-  demoURL: string;
+  demoURL: string | null;
   projectThumbnail: string;
 }
