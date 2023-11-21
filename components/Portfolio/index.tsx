@@ -4,10 +4,10 @@ import styles from './Portfolio.module.scss';
 // Components
 import Card from './Card';
 // Types
-import { GithubArrayWithCustomFieldsTypes as DataProps } from '../../types/home';
+import { ProcessedGithubArrayTypes } from '../../types/home';
 
 interface Props {
-  reposArray: DataProps[] | [];
+  reposArray: ProcessedGithubArrayTypes[];
 }
 
 function Portfolio({ reposArray }: Props) {

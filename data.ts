@@ -1,10 +1,6 @@
-interface ObjectTypes {
-  id: number;
-  URLDemo: string | null;
-  imgDemo: string;
-}
+import { CustomDataArrayTypes } from './types/home.d';
 
-const customFields: ObjectTypes[] = [
+const customFields: CustomDataArrayTypes[] = [
   {
     id: 715777960,
     URLDemo: '',

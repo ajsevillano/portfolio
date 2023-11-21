@@ -11,7 +11,7 @@ interface DataProps {
   description: string;
   gitHubUrl: string;
   demoUrl: string | null;
-  projectThumbnail: string;
+  projectThumbnail: string | null;
 }
 
 function Card({

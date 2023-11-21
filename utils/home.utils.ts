@@ -1,30 +1,65 @@
 import FILTERED_PROJECTS from '../config';
-import { ObjectTypes, GithubArrayWithCustomFieldsTypes } from '../types/home';
+import {
+  CustomDataArrayTypes,
+  OriginalGithubArrayTypes,
+  ProcessedGithubArrayTypes,
+} from '../types/home';
 
-export function filteredGithubArray(
-  githubArrayWithCustomFields: GithubArrayWithCustomFieldsTypes[],
+function removeHyphen(githubObj: ProcessedGithubArrayTypes) {
+  const name = githubObj.name.replace(/-/g, ' ');
+  return {
+    ...githubObj,
+    name,
+  };
+}
+
+function capitalizeName(githubObj: ProcessedGithubArrayTypes) {
+  const name = githubObj.name.charAt(0).toUpperCase() + githubObj.name.slice(1);
+  return {
+    ...githubObj,
+    name,
+  };
+}
+function filteredGithubArray(
+  githubArrayWithCustomFields: ProcessedGithubArrayTypes[],
 ) {
-  const final = githubArrayWithCustomFields.filter(
-    (githubObj: GithubArrayWithCustomFieldsTypes) =>
+  const result = githubArrayWithCustomFields.filter(
+    (githubObj: ProcessedGithubArrayTypes) =>
       // eslint-disable-next-line implicit-arrow-linebreak
       !FILTERED_PROJECTS.some(
         (filteredProject) => filteredProject.id === githubObj.id,
       ),
   );
-  return final;
+
+  return result;
 }
 
-export function enhanceGithubObject(
-  githubObj: ObjectTypes,
-  arrayCustom: ObjectTypes[],
+function enhanceGithubObject(
+  originalGithubArray: OriginalGithubArrayTypes[],
+  customDataArray: CustomDataArrayTypes[],
 ) {
-  const customObj = arrayCustom.find(
-    (custom: ObjectTypes) => custom.id === githubObj.id,
-  );
+  return originalGithubArray.map((githubObj) => {
+    const matchingCustomData = customDataArray.find(
+      (customData) => customData.id === githubObj.id,
+    );
 
-  return {
-    ...githubObj,
-    demoURL: customObj?.URLDemo || null,
-    projectThumbnail: customObj?.imgDemo || null,
-  };
+    return {
+      ...githubObj,
+      demoURL: matchingCustomData?.URLDemo || null,
+      projectThumbnail: matchingCustomData?.imgDemo || null,
+    };
+  });
+}
+
+export default function orchestrateGithubArrayProcessing(
+  originalGithubArray: OriginalGithubArrayTypes[],
+  customDataArray: CustomDataArrayTypes[],
+) {
+  const addCustomFields: ProcessedGithubArrayTypes[] = enhanceGithubObject(
+    originalGithubArray,
+    customDataArray,
+  );
+  const filteredArray = filteredGithubArray(addCustomFields);
+  const finalResult = filteredArray.map(removeHyphen).map(capitalizeName);
+  return finalResult;
 }

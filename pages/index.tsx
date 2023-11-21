@@ -6,46 +6,38 @@ import About from '@components/About';
 import Footer from '@components/Footer';
 import CopyRight from '@components/CopyRight';
 import Wave from '@components/Wave';
+// Types
+import {
+  ProcessedGithubArrayTypes,
+  CustomDataArrayTypes,
+  OriginalGithubArrayTypes,
+} from 'types/home';
 // Utils
-import { filteredGithubArray, enhanceGithubObject } from '../utils/home.utils';
+import orchestrateGithubArrayProcessing from '../utils/home.utils';
 // Data
 import customFields from '../data';
-// Types
-import { ObjectTypes } from '../types/home';
 
 interface Props {
-  projectsData: [];
-}
-
-interface ObjectTypes2 {
-  id: number;
-  URLDemo: string | null;
-  imgDemo: string;
+  projectsData: ProcessedGithubArrayTypes[];
 }
 
 export const getStaticProps = async () => {
   const res = await fetch(
     'https://api.github.com/users/ajsevillano/repos?sort=created&direction=desc',
   );
-  const Data = await res.json();
+  const data = await res.json();
 
-  const arrayGithubProjects = Data;
-  const arrayCustomFields: ObjectTypes2[] = customFields;
+  const originalGithubArray: OriginalGithubArrayTypes[] = data;
+  const customDataArray: CustomDataArrayTypes[] = customFields;
 
-  // Map the github projects array and add the custom fields
-  const githubArrayWithCustomFields = arrayGithubProjects.map(
-    (githubObj: ObjectTypes) =>
-      enhanceGithubObject(githubObj, arrayCustomFields),
-  );
-
-  // After adding the custom fields, filter the projects that I don't want to show
-  const filteredGithubArrayWithCustomFields = filteredGithubArray(
-    githubArrayWithCustomFields,
+  const processedGithubProjects = orchestrateGithubArrayProcessing(
+    originalGithubArray,
+    customDataArray,
   );
 
   return {
     props: {
-      projectsData: filteredGithubArrayWithCustomFields,
+      projectsData: processedGithubProjects,
     },
   };
 };

@@ -1,14 +1,17 @@
-export interface ObjectTypes {
+export interface OriginalGithubArrayTypes {
+  id: number;
+  name: string;
+  description: string;
+  html_url: string;
+}
+
+export interface CustomDataArrayTypes {
   id: number;
   URLDemo?: string | null;
   imgDemo?: string | null;
 }
 
-export interface GithubArrayWithCustomFieldsTypes {
-  id: number;
-  name: string;
-  description: string;
-  html_url: string;
+export interface ProcessedGithubArrayTypes extends OriginalGithubArrayTypes {
   demoURL: string | null;
-  projectThumbnail: string;
+  projectThumbnail: string | null;
 }
