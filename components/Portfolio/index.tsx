@@ -14,7 +14,7 @@ function Portfolio({ reposArray }: Props) {
   return (
     <>
       <div className={styles.WrapperTitle}>
-        <h2>Recent work</h2>
+        <h2>Explore My Portfolio</h2>
       </div>
       <div className={styles.wrapper}>
         {reposArray?.map(

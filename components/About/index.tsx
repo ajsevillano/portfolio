@@ -22,9 +22,17 @@ function About() {
             take my career to the next level and become a software engineer. I
             haven&apos;t stopped learning and working in diferent projects to
             polish my skills since then. Currently, I work as a software
-            engineer for Percayso, a data enrichment company in the insurance
-            sector. I&apos;m the proud dad of a 3 year old 👧🏻 girl called
-            Mireia.
+            engineer for{' '}
+            <a
+              className={styles.link}
+              href="https://www.percayso-inform.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Percayso Inform
+            </a>
+            , a data enrichment company in the insurance sector. I&apos;m the
+            proud dad of a 3 year old 👧🏻 girl called Mire.
           </p>
         </div>
       </div>

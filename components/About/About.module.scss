@@ -17,6 +17,7 @@
     .imgMe {
       max-width: 390px;
       position: relative;
+      align-self: end;
     }
 
     .introText {
@@ -30,6 +31,13 @@
         font-size: 18px;
         line-height: 30px;
         margin: 0;
+
+        .link {
+          color: white;
+          text-decoration-line: underline;
+          text-decoration-style: dashed;
+          text-decoration-thickness: 3px;
+        }
       }
 
       //Desktop
