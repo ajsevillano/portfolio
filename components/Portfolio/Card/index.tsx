@@ -1,27 +1,21 @@
 // Libraries
 import React from 'react';
 import Image from 'next/image';
+// Types
+import { CardDataProps } from 'types/home';
 // Styles
 import styles from './Card.module.scss';
 // Components
 import Button from '../../Button';
 
-interface DataProps {
-  name: string;
-  description: string;
-  gitHubUrl: string;
-  demoUrl: string | null;
-  projectThumbnail: string | null;
-}
-
 function Card({
   name,
   description,
-  gitHubUrl,
-  demoUrl,
+  gitHubURL,
+  demoURL,
   projectThumbnail,
-}: DataProps) {
-  const checkDemoUrlExist = !demoUrl ? null : (
+}: CardDataProps) {
+  const checkDemoUrlExist = !demoURL ? null : (
     <Button variant="secondary">
       <div className={styles.imgWrapper} data-testid="demo-link">
         <img className={styles.buttonImg} src="/link.svg" alt="Demo Link" />
@@ -35,12 +29,12 @@ function Card({
       <div className={styles.imgContainer}>
         <div className={styles.hoverContainer}>
           <div className={styles.hoverContent}>
-            <a href={demoUrl || ''} target="_blank" rel="noreferrer">
+            <a href={demoURL || ''} target="_blank" rel="noreferrer">
               {checkDemoUrlExist}
             </a>
 
             <a
-              href={gitHubUrl}
+              href={gitHubURL}
               target="_blank"
               rel="noreferrer"
               data-testid="code-link"
@@ -65,6 +59,7 @@ function Card({
           width={358}
           height={224}
           layout="responsive"
+          priority
         />
       </div>
 

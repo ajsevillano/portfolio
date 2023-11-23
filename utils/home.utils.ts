@@ -39,14 +39,19 @@ function enhanceGithubObject(
   customDataArray: CustomDataArrayTypes[],
 ) {
   return originalGithubArray.map((githubObj) => {
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    const { id, name, description, html_url } = githubObj;
     const matchingCustomData = customDataArray.find(
       (customData) => customData.id === githubObj.id,
     );
 
     return {
-      ...githubObj,
-      demoURL: matchingCustomData?.URLDemo || null,
-      projectThumbnail: matchingCustomData?.imgDemo || null,
+      id,
+      name,
+      description,
+      html_url,
+      demoURL: matchingCustomData?.demoURL || null,
+      projectThumbnail: matchingCustomData?.projectThumbnail || null,
     };
   });
 }

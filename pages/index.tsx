@@ -8,18 +8,14 @@ import CopyRight from '@components/CopyRight';
 import Wave from '@components/Wave';
 // Types
 import {
-  ProcessedGithubArrayTypes,
   CustomDataArrayTypes,
   OriginalGithubArrayTypes,
+  ReposArrayProps,
 } from 'types/home';
 // Utils
 import orchestrateGithubArrayProcessing from '../utils/home.utils';
 // Data
 import customFields from '../data';
-
-interface Props {
-  projectsData: ProcessedGithubArrayTypes[];
-}
 
 export const getStaticProps = async () => {
   const res = await fetch(
@@ -42,11 +38,11 @@ export const getStaticProps = async () => {
   };
 };
 
-export default function Home({ projectsData }: Props) {
+export default function Home({ projectsData }: ReposArrayProps) {
   return (
     <>
       <Header />
-      <Portfolio reposArray={projectsData} />
+      <Portfolio projectsData={projectsData} />
       <Wave />
       <About />
       <Footer />

@@ -14,8 +14,8 @@ describe('Card', () => {
       <Card
         name={name}
         description={description}
-        gitHubUrl={url}
-        demoUrl={URLDemo}
+        gitHubURL={url}
+        demoURL={URLDemo}
         projectThumbnail={imgDemo}
       />,
     );
@@ -30,8 +30,8 @@ describe('Card', () => {
       <Card
         name={name}
         description={description}
-        gitHubUrl={url}
-        demoUrl={URLDemo}
+        gitHubURL={url}
+        demoURL={URLDemo}
         projectThumbnail={imgDemo}
       />,
     );
@@ -45,8 +45,8 @@ describe('Card', () => {
       <Card
         name={name}
         description={description}
-        gitHubUrl={url}
-        demoUrl={URLDemo}
+        gitHubURL={url}
+        demoURL={URLDemo}
         projectThumbnail={imgDemo}
       />,
     );
@@ -59,8 +59,8 @@ describe('Card', () => {
       <Card
         name={name}
         description={description}
-        gitHubUrl={url}
-        demoUrl={null}
+        gitHubURL={url}
+        demoURL=""
         projectThumbnail={imgDemo}
       />,
     );
@@ -73,8 +73,8 @@ describe('Card', () => {
       <Card
         name={name}
         description={description}
-        gitHubUrl={url}
-        demoUrl={URLDemo}
+        gitHubURL={url}
+        demoURL={URLDemo}
         projectThumbnail={imgDemo}
       />,
     );

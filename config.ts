@@ -1,7 +1,4 @@
-interface FilteredProjects {
-  id: number;
-  name: string;
-}
+import { FilteredProjects } from 'types/home';
 
 const FILTERED_PROJECTS: FilteredProjects[] = [
   { id: 378864454, name: 'izzi-howell.com' },

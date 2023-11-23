@@ -4,27 +4,30 @@ import styles from './Portfolio.module.scss';
 // Components
 import Card from './Card';
 // Types
-import { ProcessedGithubArrayTypes } from '../../types/home';
+import { ReposArrayProps } from '../../types/home';
 
-interface Props {
-  reposArray: ProcessedGithubArrayTypes[];
-}
-
-function Portfolio({ reposArray }: Props) {
+function Portfolio({ projectsData }: ReposArrayProps) {
   return (
     <>
       <div className={styles.WrapperTitle}>
         <h2>Explore My Portfolio</h2>
       </div>
       <div className={styles.wrapper}>
-        {reposArray?.map(
-          ({ id, name, description, html_url, demoURL, projectThumbnail }) => (
+        {projectsData?.map(
+          ({
+            id,
+            name,
+            description,
+            html_url: gitHubURL,
+            demoURL,
+            projectThumbnail,
+          }) => (
             <Card
               key={id}
               name={name}
               description={description}
-              gitHubUrl={html_url}
-              demoUrl={demoURL}
+              gitHubURL={gitHubURL}
+              demoURL={demoURL}
               projectThumbnail={projectThumbnail}
             />
           ),

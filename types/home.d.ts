@@ -7,11 +7,28 @@ export interface OriginalGithubArrayTypes {
 
 export interface CustomDataArrayTypes {
   id: number;
-  URLDemo?: string | null;
-  imgDemo?: string | null;
+  demoURL?: string | null;
+  projectThumbnail?: string | null;
 }
 
 export interface ProcessedGithubArrayTypes extends OriginalGithubArrayTypes {
   demoURL: string | null;
   projectThumbnail: string | null;
+}
+
+export interface CardDataProps {
+  name: string;
+  description: string;
+  gitHubURL: string;
+  demoURL: string | null;
+  projectThumbnail: string | null;
+}
+
+export interface FilteredProjects {
+  id: number;
+  name: string;
+}
+
+export interface ReposArrayProps {
+  projectsData: ProcessedGithubArrayTypes[];
 }
