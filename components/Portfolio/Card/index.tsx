@@ -1,8 +1,9 @@
+// Types
+import { CardDataProps } from 'types/home';
 // Libraries
 import React from 'react';
 import Image from 'next/image';
-// Types
-import { CardDataProps } from 'types/home';
+import generateRandomId from '../../../utils/general.utils';
 // Styles
 import styles from './Card.module.scss';
 // Components
@@ -14,6 +15,7 @@ function Card({
   gitHubURL,
   demoURL,
   projectThumbnail,
+  tags,
 }: CardDataProps) {
   const checkDemoUrlExist = !demoURL ? null : (
     <Button variant="secondary">
@@ -64,6 +66,17 @@ function Card({
       </div>
 
       <h3 className={styles.projectName}>{name}</h3>
+      <div className={styles.tagsContainer}>
+        {tags?.map((tag: string) => {
+          const uniqueId = generateRandomId();
+          const className = `tag-${tag.replace(/\.|\s/g, '_')}`;
+          return (
+            <p key={uniqueId} className={`${styles.tag} ${styles[className]}`}>
+              {tag}
+            </p>
+          );
+        })}
+      </div>
       <span className={styles.project_description}>
         {!description ? 'No description provided yet' : description}
       </span>

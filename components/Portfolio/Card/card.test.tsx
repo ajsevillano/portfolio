@@ -8,6 +8,7 @@ describe('Card', () => {
   const url = 'https://github.com/user/project1';
   const URLDemo = 'https://github.com/user/project';
   const imgDemo = 'https://example.com/image.jpg';
+  const tags = ['React', 'Next.js', 'TypeScript'];
 
   it('renders the project name and description', () => {
     render(
@@ -17,6 +18,7 @@ describe('Card', () => {
         gitHubURL={url}
         demoURL={URLDemo}
         projectThumbnail={imgDemo}
+        tags={tags}
       />,
     );
     const projectName = screen.getByText(name);
@@ -33,6 +35,7 @@ describe('Card', () => {
         gitHubURL={url}
         demoURL={URLDemo}
         projectThumbnail={imgDemo}
+        tags={tags}
       />,
     );
     const projectImage = screen.getByAltText(name);
@@ -48,6 +51,7 @@ describe('Card', () => {
         gitHubURL={url}
         demoURL={URLDemo}
         projectThumbnail={imgDemo}
+        tags={tags}
       />,
     );
     const demoLink = screen.getByTestId('demo-link');
@@ -62,6 +66,7 @@ describe('Card', () => {
         gitHubURL={url}
         demoURL=""
         projectThumbnail={imgDemo}
+        tags={tags}
       />,
     );
     const demoLink = screen.queryByText('See demo');
@@ -76,6 +81,7 @@ describe('Card', () => {
         gitHubURL={url}
         demoURL={URLDemo}
         projectThumbnail={imgDemo}
+        tags={tags}
       />,
     );
     const githubLink = screen.getByTestId('code-link');

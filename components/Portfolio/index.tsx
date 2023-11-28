@@ -21,6 +21,7 @@ function Portfolio({ projectsData }: ReposArrayProps) {
             html_url: gitHubURL,
             demoURL,
             projectThumbnail,
+            tags,
           }) => (
             <Card
               key={id}
@@ -29,6 +30,7 @@ function Portfolio({ projectsData }: ReposArrayProps) {
               gitHubURL={gitHubURL}
               demoURL={demoURL}
               projectThumbnail={projectThumbnail}
+              tags={tags}
             />
           ),
         )}
