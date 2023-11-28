@@ -52,6 +52,7 @@ function enhanceGithubObject(
       html_url,
       demoURL: matchingCustomData?.demoURL || null,
       projectThumbnail: matchingCustomData?.projectThumbnail || null,
+      tags: matchingCustomData?.tags || [],
     };
   });
 }

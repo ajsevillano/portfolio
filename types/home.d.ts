@@ -9,11 +9,20 @@ export interface CustomDataArrayTypes {
   id: number;
   demoURL?: string | null;
   projectThumbnail?: string | null;
+  tags?: any;
 }
 
 export interface ProcessedGithubArrayTypes extends OriginalGithubArrayTypes {
   demoURL: string | null;
   projectThumbnail: string | null;
+  tags: any;
+}
+
+export interface Techno {
+  id: number;
+  name: string;
+  color: string;
+  backgroundColor: string;
 }
 
 export interface CardDataProps {
@@ -22,6 +31,7 @@ export interface CardDataProps {
   gitHubURL: string;
   demoURL: string | null;
   projectThumbnail: string | null;
+  tags: any;
 }
 
 export interface FilteredProjects {
