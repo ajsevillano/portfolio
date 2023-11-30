@@ -23,13 +23,13 @@ function capitalizeName(githubObj: ProcessedGithubArrayTypes) {
 
 function validateTags(tags: any) {
   if (!Array.isArray(tags)) {
-    return ['No tags'];
+    return ['Error_not_array'];
   }
   if (tags.length === 0) {
-    return ['No tags'];
+    return ['Error_empty_array'];
   }
   if (!tags.every((tag) => typeof tag === 'string')) {
-    return ['Error'];
+    return ['Error_wrong_format'];
   }
   return tags;
 }
