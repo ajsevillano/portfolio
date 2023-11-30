@@ -83,6 +83,7 @@ const customFields: CustomDataArrayTypes[] = [
     id: 334662367,
     demoURL: '',
     projectThumbnail: '/firebase-authentication.png',
+    tags: ['React', 'Firebase', 'Sass'],
   },
   {
     id: 322001903,

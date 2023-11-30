@@ -9,7 +9,7 @@ export interface CustomDataArrayTypes {
   id: number;
   demoURL?: string | null;
   projectThumbnail?: string | null;
-  tags?: any;
+  tags: string[];
 }
 
 export interface ProcessedGithubArrayTypes extends OriginalGithubArrayTypes {
