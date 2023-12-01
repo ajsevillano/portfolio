@@ -28,6 +28,6 @@ describe('Tag component', () => {
   test('renders a tag with the default colour', () => {
     render(<Tag tag="wrong tag" />);
     const tagElement = screen.getByText(/wrong tag/i);
-    expect(tagElement).toHaveClass('tag tag-default');
+    expect(tagElement).toHaveClass('tag error');
   });
 });

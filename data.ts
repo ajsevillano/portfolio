@@ -65,7 +65,7 @@ const customFields: CustomDataArrayTypes[] = [
     id: 354868893,
     demoURL: 'https://animated-photographer-portfolio.netlify.app/',
     projectThumbnail: '/animated-portfolio.png',
-    tags: ['React', 'Sass', 'FramerMotion'],
+    tags: ['React', 'Sass', 'Framer Motion'],
   },
   {
     id: 351733523,

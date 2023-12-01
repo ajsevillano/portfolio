@@ -21,7 +21,7 @@ function capitalizeName(githubObj: ProcessedGithubArrayTypes) {
   };
 }
 
-function validateTags(tags: any) {
+function validateTagsArray(tags: any) {
   if (!Array.isArray(tags)) {
     return ['Error_not_array'];
   }
@@ -66,7 +66,7 @@ function enhanceGithubObject(
       html_url,
       demoURL: matchingCustomData?.demoURL || null,
       projectThumbnail: matchingCustomData?.projectThumbnail || null,
-      tags: validateTags(matchingCustomData?.tags),
+      tags: validateTagsArray(matchingCustomData?.tags),
     };
   });
 }

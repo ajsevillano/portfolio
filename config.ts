@@ -37,6 +37,7 @@ export const tagClasses: { [key: string]: string } = {
   PHP: 'tag-PHP',
   MySQL: 'tag-MySQL',
   'Socket IO': 'tag-Socket_IO',
+  'Framer Motion': 'tag-Framer_Motion',
 };
 
 export default FILTERED_PROJECTS;
