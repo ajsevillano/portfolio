@@ -1,4 +1,5 @@
 import React from 'react';
+import { tagClasses } from '../../config';
 import styles from './Tag.module.scss';
 
 interface TagProps {
@@ -6,7 +7,6 @@ interface TagProps {
 }
 
 export default function Tag({ tag }: TagProps) {
-  const className = `tag-${tag.replace(/\.|\s/g, '_')}`;
   const errorMessages: {
     [key: string]: string;
   } = {
@@ -24,5 +24,6 @@ export default function Tag({ tag }: TagProps) {
     );
   }
 
+  const className = tagClasses[tag] || 'tag-default';
   return <p className={`${styles.tag} ${styles[className]}`}>{tag}</p>;
 }
