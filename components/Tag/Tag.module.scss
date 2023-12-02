@@ -1,0 +1,125 @@
+// Tag component
+
+.tag {
+  margin: 0 0 0 0.5rem;
+  padding: 0.3rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  display: inline-block;
+  // background-color: rgb(146, 146, 146);
+  // color: white;
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.tag-Javascript {
+  background-color: #fec96b;
+  color: #634615;
+}
+
+.tag-Next_js {
+  background-color: #313131;
+  color: #ffffff;
+}
+
+.tag-React {
+  background-color: #3998b6;
+  color: #ffffff;
+}
+
+.tag-React_Native {
+  background-color: #3998b6;
+  color: #ffffff;
+}
+
+.tag-Sass {
+  background-color: #cf649a;
+  color: rgb(238, 238, 238);
+}
+
+.tag-PHP {
+  background-color: #7a86b8;
+  color: #ffffff;
+}
+
+.tag-MySQL {
+  background-color: #f29111;
+  color: #ffffff;
+}
+
+.tag-Typescript {
+  background-color: #2d79c7;
+  color: #ffffff;
+}
+
+.tag-HTML {
+  background-color: #e26b4b;
+  color: #ffffff;
+}
+
+.tag-CSS {
+  background-color: #379ad6;
+  color: #ffffff;
+}
+
+.tag-Redux {
+  background-color: #7848bc;
+  color: #ffffff;
+}
+
+.tag-Node_js {
+  background-color: #68a063;
+  color: #ffffff;
+}
+
+.tag-PostgreSQL {
+  background-color: #305d8d;
+  color: #ffffff;
+}
+
+.tag-Auth0 {
+  background-color: #e26b4b;
+  color: #ffffff;
+}
+
+.tag-Next_Auth {
+  background: linear-gradient(to right, #bb4b96, #59529d, #5271b4);
+  color: #ffffff;
+}
+
+.tag-Tailwind_CSS {
+  background-color: #06b6d4;
+  color: #ffffff;
+}
+
+.tag-Express {
+  background-color: #313d48;
+  color: #ffffff;
+}
+
+.tag-Expo {
+  background-color: #313d48;
+  color: #ffffff;
+}
+
+.tag-Framer_Motion {
+  background: linear-gradient(to right, #bb4b96, #59529d, #5271b4);
+  color: #ffffff;
+}
+
+.tag-Socket_IO {
+  background-color: #25c2a0;
+  color: #ffffff;
+}
+
+.tag-default {
+  background-color: #919191;
+  color: #ffffff;
+}
+
+.error {
+  color: #e74c3c;
+  padding-left: 0;
+}

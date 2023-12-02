@@ -3,11 +3,11 @@ import { CardDataProps } from 'types/home';
 // Libraries
 import React from 'react';
 import Image from 'next/image';
-import generateRandomId from '../../../utils/general.utils';
-// Styles
-import styles from './Card.module.scss';
 // Components
 import Button from '../../Button';
+import Tag from '../../Tag';
+// Styles
+import styles from './Card.module.scss';
 
 function Card({
   name,
@@ -67,15 +67,9 @@ function Card({
 
       <h3 className={styles.projectName}>{name}</h3>
       <div className={styles.tagsContainer}>
-        {tags?.map((tag: string) => {
-          const uniqueId = generateRandomId();
-          const className = `tag-${tag.replace(/\.|\s/g, '_')}`;
-          return (
-            <p key={uniqueId} className={`${styles.tag} ${styles[className]}`}>
-              {tag}
-            </p>
-          );
-        })}
+        {tags?.map((tag: string) => (
+          <Tag key={tag} tag={tag} />
+        ))}
       </div>
       <span className={styles.project_description}>
         {!description ? 'No description provided yet' : description}

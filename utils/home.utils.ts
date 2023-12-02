@@ -20,6 +20,20 @@ function capitalizeName(githubObj: ProcessedGithubArrayTypes) {
     name,
   };
 }
+
+function validateTagsArray(tags: any) {
+  if (!Array.isArray(tags)) {
+    return ['Error_not_array'];
+  }
+  if (tags.length === 0) {
+    return ['Error_empty_array'];
+  }
+  if (!tags.every((tag) => typeof tag === 'string')) {
+    return ['Error_wrong_format'];
+  }
+  return tags;
+}
+
 function filteredGithubArray(
   githubArrayWithCustomFields: ProcessedGithubArrayTypes[],
 ) {
@@ -52,7 +66,7 @@ function enhanceGithubObject(
       html_url,
       demoURL: matchingCustomData?.demoURL || null,
       projectThumbnail: matchingCustomData?.projectThumbnail || null,
-      tags: matchingCustomData?.tags || [],
+      tags: validateTagsArray(matchingCustomData?.tags),
     };
   });
 }

@@ -65,7 +65,7 @@ const customFields: CustomDataArrayTypes[] = [
     id: 354868893,
     demoURL: 'https://animated-photographer-portfolio.netlify.app/',
     projectThumbnail: '/animated-portfolio.png',
-    tags: ['React', 'Sass', 'FramerMotion'],
+    tags: ['React', 'Sass', 'Framer Motion'],
   },
   {
     id: 351733523,
@@ -83,6 +83,7 @@ const customFields: CustomDataArrayTypes[] = [
     id: 334662367,
     demoURL: '',
     projectThumbnail: '/firebase-authentication.png',
+    tags: ['React', 'Firebase', 'Sass'],
   },
   {
     id: 322001903,

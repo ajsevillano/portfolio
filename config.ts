@@ -17,4 +17,27 @@ const FILTERED_PROJECTS: FilteredProjects[] = [
   { id: 275840595, name: 'Relax-app' },
 ];
 
+export const tagClasses: { [key: string]: string } = {
+  Javascript: 'tag-Javascript',
+  'Next.js': 'tag-Next_js',
+  React: 'tag-React',
+  Auth0: 'tag-Auth0',
+  'React Native': 'tag-React_Native',
+  'Next Auth': 'tag-Next_Auth',
+  Typescript: 'tag-Typescript',
+  'Tailwind CSS': 'tag-Tailwind_CSS',
+  HTML: 'tag-HTML',
+  Expo: 'tag-Expo',
+  CSS: 'tag-CSS',
+  'Node.js': 'tag-Node_js',
+  Express: 'tag-Express',
+  PostgreSQL: 'tag-PostgreSQL',
+  Sass: 'tag-Sass',
+  Redux: 'tag-Redux',
+  PHP: 'tag-PHP',
+  MySQL: 'tag-MySQL',
+  'Socket IO': 'tag-Socket_IO',
+  'Framer Motion': 'tag-Framer_Motion',
+};
+
 export default FILTERED_PROJECTS;
