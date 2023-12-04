@@ -13,7 +13,7 @@ function Footer() {
           I&apos;m open to frontend jobs and freelance projects
         </p>
         <div className={styles.buttoncontainer}>
-          <Button variant="secundary" text="Get in touch" />
+          <Button variant="secondary" text="Get in touch" />
         </div>
       </div>
       <div className={styles.socialIcons}>
