@@ -9,12 +9,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 181px;
 }
 
 .primary {
   background-color: #e33b4b;
   color: white;
   &:hover {
+    transition: all 0.1s ease-in-out;
     background-color: #f0616f;
   }
   &:active {
@@ -27,6 +29,14 @@
   border: 1px solid #e33b4b;
   color: #e33b4b;
   font-weight: 500;
+  &:active {
+    transform: scale(0.9);
+  }
+  &:hover {
+    transition: all 0.1s ease-in-out;
+    background-color: #e33b4b;
+    color: white;
+  }
 }
 
 .secondary {

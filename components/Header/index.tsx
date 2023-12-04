@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import { IoChevronDownCircleOutline } from 'react-icons/io5';
+import { FaLinkedin } from 'react-icons/fa';
 import styles from './Header.module.scss';
 import Button from '../Button';
 
@@ -35,10 +35,17 @@ function Header() {
           </h2>
           <div className={styles.buttonContainer}>
             <Button variant="primary">Let&apos;s talk!</Button>
-            <Button variant="outline">
-              <IoChevronDownCircleOutline size={30} />
-              <span>See my work</span>
-            </Button>
+            <a
+              className={styles.link}
+              href="https://www.linkedin.com/in/ajsevillano/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="outline">
+                <FaLinkedin size={30} />
+                <span>Linkedin</span>
+              </Button>
+            </a>
           </div>
         </div>
       </section>

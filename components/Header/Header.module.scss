@@ -111,3 +111,10 @@
     flex-direction: column;
   }
 }
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
