@@ -4,17 +4,26 @@
   font-size: 19px;
   padding: 1rem 2.3rem;
   border-radius: 50px;
-  margin: 20px 10px;
+  margin: 20px 0;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 181px;
+  min-width: 184px;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.buttonText {
+  margin: 0 0.5rem;
 }
 
 .primary {
   background-color: #e33b4b;
   color: white;
+  min-height: 64px;
   &:hover {
     transition: all 0.1s ease-in-out;
     background-color: #f0616f;
@@ -29,6 +38,8 @@
   border: 1px solid #e33b4b;
   color: #e33b4b;
   font-weight: 500;
+  min-height: 64px;
+
   &:active {
     transform: scale(0.9);
   }
@@ -44,6 +55,7 @@
   color: #2a2b57;
   font-weight: 600;
   font-size: 1rem;
+  min-height: 54px;
 
   //TODO: take out to make sizes variant
   padding: 0.7rem 2.3rem;

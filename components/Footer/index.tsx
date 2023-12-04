@@ -7,13 +7,13 @@ import styles from './Footer.module.scss';
 function Footer() {
   return (
     <Wrapper background="#292929" justifycontent="space-evenly">
-      <div>
+      <div className={styles.contacMeHeader}>
         <h1 className={styles.contactMe}>Contact me</h1>
         <p className={styles.subTitle}>
           I&apos;m open to frontend jobs and freelance projects
         </p>
         <div className={styles.buttoncontainer}>
-          <Button variant="">Get in touch</Button>
+          <Button variant="secundary" text="Get in touch" />
         </div>
       </div>
       <div className={styles.socialIcons}>

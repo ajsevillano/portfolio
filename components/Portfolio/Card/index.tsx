@@ -4,6 +4,8 @@ import { CardDataProps } from 'types/home';
 import React from 'react';
 import Image from 'next/image';
 // Components
+import { FaGithub, FaLink } from 'react-icons/fa';
+
 import Button from '../../Button';
 import Tag from '../../Tag';
 // Styles
@@ -18,12 +20,7 @@ function Card({
   tags,
 }: CardDataProps) {
   const checkDemoUrlExist = !demoURL ? null : (
-    <Button variant="secondary">
-      <div className={styles.imgWrapper} data-testid="demo-link">
-        <img className={styles.buttonImg} src="/link.svg" alt="Demo Link" />
-        <p className={styles.buttonText}>See demo</p>
-      </div>
-    </Button>
+    <Button variant="secondary" text="See demo" icon={<FaLink size={20} />} />
   );
 
   return (
@@ -31,7 +28,12 @@ function Card({
       <div className={styles.imgContainer}>
         <div className={styles.hoverContainer}>
           <div className={styles.hoverContent}>
-            <a href={demoURL || ''} target="_blank" rel="noreferrer">
+            <a
+              data-testid="demo-link"
+              href={demoURL || ''}
+              target="_blank"
+              rel="noreferrer"
+            >
               {checkDemoUrlExist}
             </a>
 
@@ -41,16 +43,11 @@ function Card({
               rel="noreferrer"
               data-testid="code-link"
             >
-              <Button variant="secondary">
-                <div className={styles.imgWrapper}>
-                  <img
-                    className={styles.buttonImg}
-                    src="/github.svg"
-                    alt="Github"
-                  />
-                  <p className={styles.buttonText}>See code</p>
-                </div>
-              </Button>
+              <Button
+                variant="secondary"
+                text="See code"
+                icon={<FaGithub size={25} />}
+              />
             </a>
           </div>
         </div>

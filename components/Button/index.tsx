@@ -1,16 +1,17 @@
 import React from 'react';
-import cx from 'classnames';
 import styles from './Button.module.scss';
 
 interface Props {
   variant: string;
-  children: JSX.Element | JSX.Element[] | string;
+  icon?: JSX.Element;
+  text?: string;
 }
 
-function Button({ variant, children }: Props) {
+function Button({ variant, icon, text }: Props) {
   return (
-    <button type="button" className={cx(styles.Button, styles[variant])}>
-      {children}
+    <button type="button" className={`${styles.Button} ${styles[variant]}`}>
+      {icon}
+      <span className={styles.buttonText}>{text}</span>
     </button>
   );
 }

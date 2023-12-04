@@ -84,8 +84,8 @@ describe('Card', () => {
         tags={tags}
       />,
     );
-    const githubLink = screen.getByTestId('code-link');
+    const githubLink = screen.getByTestId('demo-link');
     expect(githubLink).toBeInTheDocument();
-    expect(githubLink).toHaveAttribute('href', url);
+    expect(githubLink).toHaveAttribute('href', URLDemo);
   });
 });

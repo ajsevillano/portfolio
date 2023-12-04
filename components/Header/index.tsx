@@ -34,17 +34,18 @@ function Header() {
             about what I do, and always learning something new.
           </h2>
           <div className={styles.buttonContainer}>
-            <Button variant="primary">Let&apos;s talk!</Button>
+            <Button variant="primary" text="Let's talk!" />
             <a
               className={styles.link}
               href="https://www.linkedin.com/in/ajsevillano/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button variant="outline">
-                <FaLinkedin size={30} />
-                <span>Linkedin</span>
-              </Button>
+              <Button
+                variant="outline"
+                icon={<FaLinkedin size={30} />}
+                text="Linkedin"
+              />
             </a>
           </div>
         </div>

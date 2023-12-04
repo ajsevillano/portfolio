@@ -103,6 +103,7 @@
 .buttonContainer {
   display: flex;
   justify-content: center;
+  align-items: center;
   span {
     margin: 0;
     margin-left: 0.5rem;
@@ -117,4 +118,7 @@
   color: inherit;
   display: flex;
   align-items: center;
+  @media screen and (max-width: 768px) {
+    min-width: 100%;
+  }
 }
