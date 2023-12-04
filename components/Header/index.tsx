@@ -33,8 +33,10 @@ function Header() {
             School of code alumni & self-taught 🧔🏻 Software Engineer, passionate
             about what I do, and always learning something new.
           </h2>
-          <div className={styles.buttonContainer}>
-            <Button variant="primary" text="Let's talk!" />
+          <div className={styles.buttonsContainer}>
+            <div className={styles.link}>
+              <Button variant="primary" text="Let's talk!" />
+            </div>
             <a
               className={styles.link}
               href="https://www.linkedin.com/in/ajsevillano/"
