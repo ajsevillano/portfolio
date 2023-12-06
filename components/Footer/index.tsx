@@ -1,5 +1,11 @@
 import React from 'react';
-import { FaGithub, FaEnvelope, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import {
+  FaGithub,
+  FaEnvelope,
+  FaTwitter,
+  FaLinkedin,
+  FaRegClipboard,
+} from 'react-icons/fa';
 import Button from '../Button';
 import Wrapper from '../Layouts/Wrapper';
 import styles from './Footer.module.scss';
@@ -7,13 +13,17 @@ import styles from './Footer.module.scss';
 function Footer() {
   return (
     <Wrapper background="#292929" justifycontent="space-evenly">
-      <div>
+      <div className={styles.contacMeHeader}>
         <h1 className={styles.contactMe}>Contact me</h1>
         <p className={styles.subTitle}>
           I&apos;m open to frontend jobs and freelance projects
         </p>
         <div className={styles.buttoncontainer}>
-          <Button variant="">Get in touch</Button>
+          <Button
+            variant="secondary"
+            text="Get in touch"
+            icon={<FaRegClipboard size={25} />}
+          />
         </div>
       </div>
       <div className={styles.socialIcons}>
@@ -29,7 +39,7 @@ function Footer() {
             className={styles.emailLaptop}
             href="mailto:correo@ajsevillano.com"
           >
-            contacto@ajsevillano.com
+            By email
           </a>
         </div>
         <div className={styles.github}>

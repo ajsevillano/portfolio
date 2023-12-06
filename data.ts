@@ -117,7 +117,7 @@ const customFields: CustomDataArrayTypes[] = [
   },
   {
     id: 250324988,
-    demoURL: null,
+    demoURL: 'https://ghibli-web-app.netlify.app/',
     projectThumbnail: '/Ghibli-Studio-WebApp.png',
     tags: ['Javascript', 'HTML', 'CSS'],
   },

@@ -100,14 +100,26 @@
   color: #66328e;
 }
 
-.buttonContainer {
+.buttonsContainer {
   display: flex;
   justify-content: center;
+  align-items: center;
   span {
     margin: 0;
     margin-left: 0.5rem;
   }
   @media screen and (max-width: 768px) {
     flex-direction: column;
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+  @media screen and (max-width: 768px) {
+    min-width: 100%;
   }
 }

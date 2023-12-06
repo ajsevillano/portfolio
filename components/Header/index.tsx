@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import { IoChevronDownCircleOutline } from 'react-icons/io5';
+import { FaLinkedin } from 'react-icons/fa';
 import styles from './Header.module.scss';
 import Button from '../Button';
 
@@ -33,12 +33,22 @@ function Header() {
             School of code alumni & self-taught 🧔🏻 Software Engineer, passionate
             about what I do, and always learning something new.
           </h2>
-          <div className={styles.buttonContainer}>
-            <Button variant="primary">Let&apos;s talk!</Button>
-            <Button variant="outline">
-              <IoChevronDownCircleOutline size={30} />
-              <span>See my work</span>
-            </Button>
+          <div className={styles.buttonsContainer}>
+            <div className={styles.link}>
+              <Button variant="primary" text="Let's talk!" />
+            </div>
+            <a
+              className={styles.link}
+              href="https://www.linkedin.com/in/ajsevillano/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="outline"
+                icon={<FaLinkedin size={30} />}
+                text="Linkedin"
+              />
+            </a>
           </div>
         </div>
       </section>
