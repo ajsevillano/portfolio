@@ -1,6 +1,8 @@
+@use 'styles/colours' as *;
+
 .worktogether,
 .socialIcons {
-  color: white;
+  color: $white-font-color;
   padding: 3rem 0;
 
   @media screen and (max-width: 768px) {
@@ -44,7 +46,7 @@
 .emailLaptop,
 .githubText,
 .twitterText {
-  color: white;
+  color: $white-font-color;
   text-decoration: none;
   font-size: 1.5rem;
   margin: 1.5rem 0 1.5rem 1rem;
@@ -71,7 +73,7 @@
 
 .subTitle {
   font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: #ffffff80;
   padding: 0 0 1rem 0;
   @media screen and (max-width: 768px) {
     padding: 0 1rem;

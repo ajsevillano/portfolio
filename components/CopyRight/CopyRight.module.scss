@@ -1,4 +1,6 @@
+@use 'styles/colours' as *;
+
 .copyrightText {
-  color: white;
+  color: $white-font-color;
   padding: 2rem 0;
 }

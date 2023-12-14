@@ -1,2 +1,29 @@
-$h1-gradient-colors: #753387 40%, #e33b4b 50%, #b14a92 60%, #fa5959 75%,
-  #753387 100%;
+$purple: #753387;
+$pink: #b14a92;
+$red-100: #f0616f;
+$red-200: #fa5959;
+$red-300: #e33b4b;
+$grey-600: #30363a;
+$grey-500: #8b8b8b;
+$grey-100: #f0f0f0;
+$grey-200: #eeeeee;
+$white: #ffffff;
+$blue-500: #2a2b57;
+
+$primary-text-color: $blue-500;
+$secondary-text-color: $grey-600;
+$white-font-color: $white;
+
+$body-background-color: $grey-100;
+$background-color-light: $white;
+$background-color-neutral: $grey-200;
+$background-color-dark: $grey-500;
+$accent-color: $red-300;
+$accent-color-medium: $red-200;
+$accent-color-light: $red-100;
+$highlight-color-js: #634615;
+$highlight-color-other: #30363a;
+$brand-color: #2a2b57;
+
+$h1-gradient-colors: $purple 40%, $accent-color 50%, $pink 60%,
+  $accent-color-medium 75%, #753387 100%;
