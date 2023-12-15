@@ -5,6 +5,7 @@ interface Props {
   variant?: 'primary' | 'secondary' | 'outline';
   icon?: JSX.Element | null;
   text: string;
+  onclick?: () => void;
 }
 
 const defaultProps: Props = {
@@ -17,10 +18,12 @@ function Button({
   variant = defaultProps.variant,
   icon = defaultProps.icon,
   text = defaultProps.text,
+  onclick,
 }: Props) {
   return (
     <button
       type="button"
+      onClick={onclick}
       className={`${styles.Button} ${styles[variant as keyof typeof styles]}`}
     >
       {icon}

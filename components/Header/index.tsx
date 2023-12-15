@@ -1,10 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Head from 'next/head';
+import Modal from '@components/Modal';
 import { FaLinkedin } from 'react-icons/fa';
 import styles from './Header.module.scss';
 import Button from '../Button';
 
 function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+  const modalRef = useRef(null);
+
+  const closeDialog = () => {
+    setIsOpen(false);
+  };
+  const openDialog = () => {
+    setIsOpen(true);
+  };
+
+  useEffect(() => {
+    const modalElement = modalRef.current;
+    if (modalElement) {
+      if (isOpen) {
+        (modalElement as HTMLDialogElement).showModal();
+        document.body.style.overflow = 'hidden';
+      } else {
+        (modalElement as HTMLDialogElement).close();
+        document.body.style.overflow = 'auto';
+      }
+    }
+  }, [isOpen]);
+
   return (
     <>
       <Head>
@@ -20,6 +44,7 @@ function Header() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className={styles.header}>
+        <Modal closeDialog={closeDialog} ref={modalRef} />
         <div className={styles.container}>
           <div className={styles.imgContainer}>
             <img className={styles.image} src="./profile.png" alt="Me" />
@@ -35,7 +60,11 @@ function Header() {
           </h2>
           <div className={styles.buttonsContainer}>
             <div className={styles.link}>
-              <Button variant="primary" text="Let's talk!" />
+              <Button
+                variant="primary"
+                text="Let's talk!"
+                onclick={openDialog}
+              />
             </div>
             <a
               className={styles.link}
