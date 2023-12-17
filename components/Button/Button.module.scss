@@ -33,6 +33,14 @@
   &:active {
     transform: scale(0.9);
   }
+  &:disabled {
+    background-color: $accent-color-light;
+    color: $white-font-color;
+    cursor: not-allowed;
+    &:active {
+      transform: none;
+    }
+  }
 }
 
 .outline {
