@@ -6,7 +6,7 @@ interface Props {
   icon?: JSX.Element | null;
   text: string;
   disabled?: boolean;
-  onclick?: () => void;
+  onclick?: (e: any) => void;
 }
 
 const defaultProps: Props = {

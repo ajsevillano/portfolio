@@ -1,7 +1,8 @@
 import React, { forwardRef, useState } from 'react';
 import Image from 'next/image';
-import { FaPaperPlane } from 'react-icons/fa';
-import Button from '@components/Button';
+
+import ContactForm from '@components/ContactForm';
+
 import styles from './Modal.module.scss';
 
 interface Props {
@@ -36,37 +37,7 @@ const Modal = forwardRef<HTMLDialogElement, Props>(({ closeDialog }, ref) => {
                 Please fill out the form below and I&apos;ll get back to you as
                 soon as possible.
               </p>
-              <div className={styles.formContainer}>
-                <input
-                  className={styles.input}
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="Your name"
-                />
-                <input
-                  className={styles.input}
-                  type="text"
-                  name="email"
-                  id="email"
-                  placeholder="email@company.com"
-                />
-                <textarea
-                  className={styles.input}
-                  style={{ resize: 'none', overflow: 'hidden', height: '70px' }}
-                  name="subject"
-                  id="subject"
-                  placeholder="Your message"
-                />
-              </div>
-              <div className={styles.buttonContainer}>
-                <Button
-                  text="Send form"
-                  onclick={() => setSent(true)}
-                  icon={<FaPaperPlane />}
-                  disabled
-                />
-              </div>
+              <ContactForm setSent={setSent} closeDialog={closeDialog} />
             </>
           )}
         </div>
