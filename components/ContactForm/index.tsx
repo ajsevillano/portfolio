@@ -1,11 +1,16 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useState } from 'react';
 import Button from '@components/Button';
 import { FaPaperPlane } from 'react-icons/fa';
 import { formReducer, initialState, Action } from '@reducers/formReducer';
 import styles from './ContactForm.module.scss';
 
-export default function ContactForm({ setSent, closeDialog }: any) {
+export default function ContactForm({
+  setSent,
+  closeDialog,
+  setErrorStatus,
+}: any) {
   const [state, dispatch] = useReducer(formReducer, initialState);
+  const [buttonText, setButtonText] = useState('Send form');
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -23,9 +28,31 @@ export default function ContactForm({ setSent, closeDialog }: any) {
     });
   };
 
-  const sendForm = (e: React.FormEvent) => {
+  const sendForm = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSent(true);
+    setButtonText('Sending...');
+    try {
+      const response = await fetch('/api/sendMail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: state.email,
+          name: state.name,
+          subject: state.subject,
+        }),
+      });
+
+      if (response.ok) {
+        setSent(true);
+      } else {
+        setErrorStatus(true);
+      }
+    } catch (error) {
+      setErrorStatus(true);
+    }
+
     // Clear the form
     dispatch({
       type: 'CLEAR_FORM',
@@ -68,7 +95,7 @@ export default function ContactForm({ setSent, closeDialog }: any) {
       />
       <div className={styles.buttonContainer}>
         <Button
-          text="Send form"
+          text={buttonText}
           onclick={(e) => sendForm(e)}
           icon={<FaPaperPlane />}
           disabled={!state.name || !state.email || !state.subject}
