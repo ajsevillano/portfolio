@@ -65,7 +65,7 @@ export default function ContactForm({
       setSent(false);
       setErrorStatus(false);
       closeDialog();
-    }, 3000);
+    }, 4000);
   };
 
   return (
