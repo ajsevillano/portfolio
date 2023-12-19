@@ -31,8 +31,10 @@ export default async function handler(
   try {
     await transporter.sendMail(mailOptions);
     res.status(200).json({ message: 'Form successfully sent' });
-  } catch (error) {
-    res.status(500).json({ message: 'Error sending the form' });
+  } catch (error: any) {
+    res
+      .status(500)
+      .json({ message: 'Error sending the form', error: error.message });
   }
   return Promise.resolve();
 }

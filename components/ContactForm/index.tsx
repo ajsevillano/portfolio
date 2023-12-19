@@ -47,10 +47,12 @@ export default function ContactForm({
       if (response.ok) {
         setSent(true);
       } else {
-        setErrorStatus(true);
+        const data = await response.json();
+        setErrorStatus(data.error);
+        throw new Error(data.error);
       }
     } catch (error) {
-      setErrorStatus(true);
+      setErrorStatus((error as Error).message);
     }
 
     // Clear the form
@@ -61,8 +63,9 @@ export default function ContactForm({
 
     setTimeout(() => {
       setSent(false);
+      setErrorStatus(false);
       closeDialog();
-    }, 4000);
+    }, 3000);
   };
 
   return (

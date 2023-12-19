@@ -1,8 +1,8 @@
 import React, { forwardRef, useState } from 'react';
 import Image from 'next/image';
-
+import { FcHighPriority, FcOk } from 'react-icons/fc';
 import ContactForm from '@components/ContactForm';
-
+import Button from '@components/Button';
 import styles from './Modal.module.scss';
 
 interface Props {
@@ -28,16 +28,33 @@ const Modal = forwardRef<HTMLDialogElement, Props>(({ closeDialog }, ref) => {
         </div>
         <div className={styles.textContainer}>
           {errorStatus && (
-            <h1>
-              Oops, there was an error sending your message. Please try again
-              later.
-            </h1>
+            <>
+              <FcHighPriority size={70} />
+              <h2 className={styles.errorMessage}>
+                Oops, It looks like something went wrong in my end. Please try
+                again later.
+              </h2>
+              <p className={styles.errorMessageSubtitle}>
+                <span className={styles.redText}>{errorStatus}.</span>
+              </p>
+              <p className={styles.errorMessageSubtitle}>
+                Unable to send the form due to a problem on the backend.
+              </p>
+            </>
           )}
           {sent && !errorStatus && (
-            <h1>
-              Thank you for contacting me. I&apos;ll be back to you as soon as
-              possible!
-            </h1>
+            <>
+              <FcOk size={70} />
+              <h2 className={styles.errorMessage}>
+                Thank you for your message! I&apos;ll get back to you as soon as
+                possible.
+              </h2>
+              <Button
+                onclick={closeDialog}
+                variant="outline"
+                text="Close modal"
+              />
+            </>
           )}
           {!sent && !errorStatus && (
             <>
