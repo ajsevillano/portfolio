@@ -6,7 +6,7 @@ import styles from './ContactFormModalContent.module.scss';
 // Components
 import SubmitErrorContent from './SubmitErrorContent';
 import SubmitSuccessContent from './SubmitSuccessContent';
-import ContactFormContent from './ContactFormContent';
+import ContactFormContent from './MainContent';
 
 export default function ContactFormModalContent({ closeDialog }: any) {
   const [sent, setSent] = useState(false);
