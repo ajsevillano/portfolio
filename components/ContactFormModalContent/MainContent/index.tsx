@@ -1,6 +1,6 @@
 import React from 'react';
 import ContactForm from '@components/ContactForm';
-import styles from './ContactFormContent.module.scss';
+import styles from './MainContent.module.scss';
 
 interface Props {
   setSent: (arg0: boolean) => void;

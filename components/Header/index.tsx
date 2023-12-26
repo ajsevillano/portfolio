@@ -55,8 +55,8 @@ function Header() {
 
           <h1 className={styles.h1}>Software Engineer</h1>
           <h2 className={styles.h2}>
-            School of code alumni & self-taught 🧔🏻 Software Engineer, passionate
-            about what I do, and always learning something new.
+            School of code alumnus & self-taught 🧔🏻 Software Engineer,
+            passionate about what I do, and always learning something new.
           </h2>
           <div className={styles.buttonsContainer}>
             <div className={styles.link}>

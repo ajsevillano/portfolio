@@ -11,6 +11,7 @@ export default function ContactForm({
 }: any) {
   const [state, dispatch] = useReducer(formReducer, initialState);
   const [buttonText, setButtonText] = useState('Send form');
+  const [isValidEmail, setIsValidEmail] = useState(true);
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -30,6 +31,13 @@ export default function ContactForm({
 
   const sendForm = async (e: React.FormEvent) => {
     e.preventDefault();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const isValid = emailRegex.test(state.email);
+    setIsValidEmail(isValid);
+
+    if (!isValid) {
+      return;
+    }
     setButtonText('Sending...');
     try {
       const response = await fetch('/api/sendMail', {
@@ -79,8 +87,11 @@ export default function ContactForm({
         value={state.name}
         onChange={handleInputChange}
       />
+      <span className={styles.errorText}>
+        {!isValidEmail ? 'Please enter a valid email' : ''}
+      </span>
       <input
-        className={styles.input}
+        className={!isValidEmail ? styles.inputError : styles.input}
         type="email"
         name="email"
         id="email"
