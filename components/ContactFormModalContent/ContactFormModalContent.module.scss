@@ -3,6 +3,11 @@
 .content {
   display: flex;
   height: 100%;
+  @media screen and (max-width: 646px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
   .image {
     width: 40%;
@@ -13,6 +18,9 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    @media screen and (max-width: 646px) {
+      display: none;
+    }
   }
   .textContainer {
     display: flex;
@@ -21,5 +29,8 @@
     justify-content: center;
     width: 60%;
     height: 100%;
+    @media screen and (max-width: 646px) {
+      width: 100%;
+    }
   }
 }

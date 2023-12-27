@@ -36,6 +36,10 @@
     transition: all 0.1s ease-in-out;
     background-color: rgba(0, 0, 0, 0.3);
   }
+  @media screen and (max-width: 646px) {
+    left: 46%;
+    top: 1rem;
+  }
 }
 
 .modal::backdrop {
