@@ -1,3 +1,5 @@
+@use 'styles/colours' as *;
+
 .Button {
   position: relative;
   border: none;
@@ -10,6 +12,7 @@
   justify-content: center;
   align-items: center;
   min-width: 184px;
+  outline: none;
 
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -21,22 +24,30 @@
 }
 
 .primary {
-  background-color: #e33b4b;
-  color: white;
+  background-color: $accent-color;
+  color: $white-font-color;
   min-height: 64px;
   &:hover {
     transition: all 0.1s ease-in-out;
-    background-color: #f0616f;
+    background-color: $accent-color-light;
   }
   &:active {
     transform: scale(0.9);
+  }
+  &:disabled {
+    background-color: $accent-color-light;
+    color: $white-font-color;
+    cursor: not-allowed;
+    &:active {
+      transform: none;
+    }
   }
 }
 
 .outline {
   background-color: transparent;
-  border: 1px solid #e33b4b;
-  color: #e33b4b;
+  border: 1px solid $accent-color;
+  color: $accent-color;
   font-weight: 500;
   min-height: 64px;
 
@@ -45,14 +56,14 @@
   }
   &:hover {
     transition: all 0.1s ease-in-out;
-    background-color: #e33b4b;
-    color: white;
+    background-color: $accent-color;
+    color: $white-font-color;
   }
 }
 
 .secondary {
-  background-color: #ffffff;
-  color: #2a2b57;
+  background-color: $white-font-color;
+  color: $primary-text-color;
   font-weight: 600;
   font-size: 1rem;
   min-height: 54px;
@@ -68,11 +79,11 @@
     height: 120%;
     background: linear-gradient(
       45deg,
-      #753387 40%,
-      #e33b4b 50%,
-      #b14a92 60%,
-      #fa5959 75%,
-      #753387 100%
+      $purple 40%,
+      $accent-color 50%,
+      $pink 60%,
+      $accent-color-medium 75%,
+      $purple 100%
     );
     background-size: 800%;
     z-index: -1;

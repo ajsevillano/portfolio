@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Head from 'next/head';
+import Modal from '@components/Modal';
+import { ModalContext } from 'contexts/ModalContext';
 import { FaLinkedin } from 'react-icons/fa';
 import styles from './Header.module.scss';
 import Button from '../Button';
 
 function Header() {
+  const { openDialog, closeDialog, modalRef } = useContext(ModalContext);
+
   return (
     <>
       <Head>
@@ -20,6 +24,7 @@ function Header() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className={styles.header}>
+        <Modal closeDialog={closeDialog} ref={modalRef} />
         <div className={styles.container}>
           <div className={styles.imgContainer}>
             <img className={styles.image} src="./profile.png" alt="Me" />
@@ -30,12 +35,16 @@ function Header() {
 
           <h1 className={styles.h1}>Software Engineer</h1>
           <h2 className={styles.h2}>
-            School of code alumni & self-taught 🧔🏻 Software Engineer, passionate
-            about what I do, and always learning something new.
+            School of code alumnus & self-taught 🧔🏻 Software Engineer,
+            passionate about what I do, and always learning something new.
           </h2>
           <div className={styles.buttonsContainer}>
             <div className={styles.link}>
-              <Button variant="primary" text="Let's talk!" />
+              <Button
+                variant="primary"
+                text="Let's talk!"
+                onclick={openDialog}
+              />
             </div>
             <a
               className={styles.link}

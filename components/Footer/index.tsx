@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
   FaGithub,
   FaEnvelope,
@@ -6,13 +6,17 @@ import {
   FaLinkedin,
   FaRegClipboard,
 } from 'react-icons/fa';
+import Modal from '@components/Modal';
+import { ModalContext } from '../../contexts/ModalContext';
 import Button from '../Button';
 import Wrapper from '../Layouts/Wrapper';
 import styles from './Footer.module.scss';
 
 function Footer() {
+  const { openDialog, closeDialog, modalRef } = useContext(ModalContext);
   return (
     <Wrapper background="#292929" justifycontent="space-evenly">
+      <Modal closeDialog={closeDialog} ref={modalRef} />
       <div className={styles.contacMeHeader}>
         <h1 className={styles.contactMe}>Contact me</h1>
         <p className={styles.subTitle}>
@@ -22,6 +26,7 @@ function Footer() {
           <Button
             variant="secondary"
             text="Get in touch"
+            onclick={openDialog}
             icon={<FaRegClipboard size={25} />}
           />
         </div>

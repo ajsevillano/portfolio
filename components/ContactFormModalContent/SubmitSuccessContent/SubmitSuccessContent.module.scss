@@ -1,0 +1,8 @@
+@use 'styles/colours' as *;
+.successMessage {
+  color: $primary-text-color;
+  width: 90%;
+  margin: 1rem 0;
+  margin-top: 0.5rem;
+  text-align: center;
+}

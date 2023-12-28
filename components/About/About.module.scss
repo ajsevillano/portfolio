@@ -1,6 +1,8 @@
+@use 'styles/colours' as *;
+
 .sectionBlock {
-  background-color: #e33b4b;
-  color: white;
+  background-color: $accent-color;
+  color: $white-font-color;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,7 +35,7 @@
         margin: 0;
 
         .link {
-          color: white;
+          color: $white-font-color;
           text-decoration-line: underline;
           text-decoration-style: dashed;
           text-decoration-thickness: 3px;
