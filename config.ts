@@ -36,6 +36,7 @@ export const tagClasses: { [key: string]: string } = {
   Redux: 'tag-Redux',
   PHP: 'tag-PHP',
   MySQL: 'tag-MySQL',
+  'Styled Components': 'tag-Styled_Components',
   'Socket IO': 'tag-Socket_IO',
   'Framer Motion': 'tag-Framer_Motion',
 };

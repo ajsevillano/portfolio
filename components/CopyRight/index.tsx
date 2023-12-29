@@ -7,7 +7,7 @@ function CopyRight() {
   return (
     <Wrapper background="#101114" justifycontent="center">
       <p className={styles.copyrightText}>
-        © {year} Antonio Sevillano - This project is under MIT license
+        © 2021 - {year} Antonio Sevillano - This project is under MIT license
       </p>
     </Wrapper>
   );
