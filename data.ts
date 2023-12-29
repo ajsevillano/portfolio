@@ -9,7 +9,7 @@ const customFields: CustomDataArrayTypes[] = [
   },
   {
     id: 709445731,
-    demoURL: '',
+    demoURL: 'https://ajs-block-game.netlify.app/',
     projectThumbnail: '/project-progress.png',
     tags: ['Typescript', 'HTML', 'CSS'],
   },
@@ -65,7 +65,7 @@ const customFields: CustomDataArrayTypes[] = [
     id: 354868893,
     demoURL: 'https://animated-photographer-portfolio.netlify.app/',
     projectThumbnail: '/animated-portfolio.png',
-    tags: ['React', 'Sass', 'Framer Motion'],
+    tags: ['React', 'Styled Components', 'Framer Motion'],
   },
   {
     id: 351733523,

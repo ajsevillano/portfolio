@@ -14,7 +14,7 @@ function About() {
         <div className={styles.introText}>
           <h1 className={styles.header}>The guy behind the beard</h1>
 
-          <p className={styles.text}>
+          <div className={styles.text}>
             My name is Antonio, although most people know me as Sevi. I&apos;m a
             self-taught spanish software engineer who has been living in the UK
             for the past 10 years. Coming from a IT background I had some
@@ -32,8 +32,18 @@ function About() {
               Percayso Inform
             </a>
             , a data enrichment company in the insurance sector. I&apos;m the
-            proud dad of a 3 year old 👧🏻 girl called Mire.
-          </p>
+            proud dad of a 3 year old{' '}
+            <div className={styles.emoji}>
+              👧🏻
+              <div className={styles.tooltip}>
+                <p className={styles.word}> why?</p>
+                <p className={styles.word}> why?</p>
+
+                <p className={styles.word}> WHY?</p>
+              </div>
+            </div>{' '}
+            girl.
+          </div>
         </div>
       </div>
     </section>
