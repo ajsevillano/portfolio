@@ -15,7 +15,7 @@ import styles from './Footer.module.scss';
 function Footer() {
   const { openDialog, closeDialog, modalRef } = useContext(ModalContext);
   return (
-    <Wrapper background="#292929" justifycontent="center">
+    <Wrapper background="#19202D" justifycontent="center">
       <section className={styles.sectionContainer}>
         <Modal closeDialog={closeDialog} ref={modalRef} />
         <div className={styles.contacMeHeader}>
