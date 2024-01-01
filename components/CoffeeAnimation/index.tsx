@@ -1,6 +1,9 @@
+// Libs
 import React, { useEffect, useRef } from 'react';
 import lottie from 'lottie-web';
+// Coffee animation
 import animationData from '../../public/coffee.json';
+// Styles
 import styles from './CoffeeAnimation.module.scss';
 
 function CoffeAnimation() {

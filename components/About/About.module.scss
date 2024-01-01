@@ -1,6 +1,6 @@
 @use 'styles/colours' as *;
 
-.sectionBlock {
+.aboutSectionBlock {
   background-color: $accent-color;
   color: $white-font-color;
   display: flex;
@@ -16,6 +16,11 @@
     align-items: center;
     text-align: center;
 
+    //Desktop
+    @media screen and (min-width: 1000px) {
+      text-align: left;
+    }
+
     .imgMe {
       max-width: 390px;
       position: relative;
@@ -23,6 +28,11 @@
     }
 
     .introText {
+      //Desktop
+      @media screen and (min-width: 1000px) {
+        max-width: 800px;
+      }
+
       .header {
         font-weight: 600;
         font-size: 40px;
@@ -40,93 +50,84 @@
           text-decoration-style: dashed;
           text-decoration-thickness: 3px;
         }
-      }
 
-      //Desktop
-      @media screen and (min-width: 1000px) {
-        max-width: 800px;
+        .emoji {
+          position: relative;
+          display: inline-block;
+          cursor: pointer;
+
+          &:hover .tooltip {
+            opacity: 1;
+            pointer-events: auto;
+
+            .word {
+              opacity: 0;
+              animation: fadeIn 1s ease-in-out forwards;
+
+              &:nth-child(2) {
+                animation-delay: 0.3s;
+              }
+
+              &:nth-child(3) {
+                animation: fadeIn 1s ease-in-out forwards,
+                  wordWhyShaking 0.15s infinite;
+                animation-delay: 0.5s;
+              }
+            }
+          }
+
+          .tooltip {
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+            pointer-events: none;
+            transition: opacity 0.3s;
+            font-family: 'Lato', sans-serif;
+            width: 120px;
+            background-color: #ffffff;
+            color: $primary-text-color;
+            text-align: center;
+            border-radius: 50%;
+            padding: 12px 0;
+            position: absolute;
+            z-index: 1;
+            font-size: 0.8rem;
+            font-weight: 900;
+            line-height: 20px;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -60px;
+            transition: opacity 0.3s;
+            &::after {
+              content: '';
+              position: absolute;
+              top: 100%;
+              left: 50%;
+              margin-left: -5px;
+              border-width: 5px;
+              border-style: solid;
+              border-color: #ffffff transparent transparent transparent;
+            }
+            .word {
+              width: 35px;
+              margin: 0.2rem 0;
+            }
+            .word:nth-child(3) {
+              width: 100px;
+              font-size: 1.2rem;
+              font-weight: 900;
+            }
+          }
+        }
       }
     }
-
-    //Desktop
-    @media screen and (min-width: 1000px) {
-      text-align: left;
-    }
   }
 }
 
-.emoji {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.tooltip {
-  opacity: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-  pointer-events: none;
-  transition: opacity 0.3s;
-  font-family: 'Lato', sans-serif;
-  width: 120px;
-  background-color: #ffffff;
-  color: $primary-text-color;
-  text-align: center;
-  border-radius: 50%;
-  padding: 12px 0;
-  position: absolute;
-  z-index: 1;
-  font-size: 0.8rem;
-  font-weight: 900;
-  line-height: 20px;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -60px;
-  transition: opacity 0.3s;
-  &::after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #ffffff transparent transparent transparent;
-  }
-
-  .word {
-    width: 35px;
-    margin: 0.2rem 0;
-  }
-  .word:nth-child(3) {
-    width: 100px;
-    font-size: 1.2rem;
-    font-weight: 900;
-  }
-}
-
-.emoji:hover .tooltip {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.emoji:hover .tooltip .word {
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards;
-}
-
-.emoji:hover .tooltip .word:nth-child(2) {
-  animation-delay: 0.3s;
-}
-
-.emoji:hover .tooltip .word:nth-child(3) {
-  animation: fadeIn 1s ease-in-out forwards, shaking 0.15s infinite;
-  animation-delay: 0.5s;
-}
-
+// Animations
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -136,7 +137,7 @@
   }
 }
 
-@keyframes shaking {
+@keyframes wordWhyShaking {
   0% {
     transform: rotate(0deg);
   }

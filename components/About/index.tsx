@@ -1,11 +1,14 @@
-import Image from 'next/image';
-import CoffeAnimation from '@components/CoffeeAnimation';
+// Libs
 import React from 'react';
+import Image from 'next/image';
+// Components
+import CoffeAnimation from '@components/CoffeeAnimation';
+// Styles
 import styles from './About.module.scss';
 
 function About() {
   return (
-    <section className={styles.sectionBlock}>
+    <section className={styles.aboutSectionBlock}>
       <div className={styles.container}>
         <div className={styles.imgMe}>
           <Image src="/me.png" alt="Picture of me" width={600} height={450} />
@@ -13,7 +16,6 @@ function About() {
         </div>
         <div className={styles.introText}>
           <h1 className={styles.header}>The guy behind the beard</h1>
-
           <div className={styles.text}>
             My name is Antonio, although most people know me as Sevi. I&apos;m a
             self-taught spanish software engineer who has been living in the UK
