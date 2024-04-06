@@ -1,0 +1,34 @@
+@use 'styles/colours' as *;
+.input {
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 12px;
+  border: 1px solid #d9d9d9;
+  margin-bottom: 1.5rem;
+  padding: 0 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+  color: #30363a;
+  font-weight: 400;
+  &:first-child {
+    margin-bottom: 0;
+  }
+  &:focus {
+    outline: none;
+    border: 1px solid $secondary-text-color;
+  }
+}
+
+.inputError {
+  border: 1px solid $accent-color;
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 12px;
+  background-color: $red-50;
+  margin-bottom: 1.5rem;
+  padding: 0 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+  color: #30363a;
+  font-weight: 400;
+}
