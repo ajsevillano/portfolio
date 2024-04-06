@@ -8,7 +8,7 @@ import { ReposArrayProps } from '../../types/home';
 
 function Portfolio({ projectsData }: ReposArrayProps) {
   return (
-    <>
+    <section>
       <div className={styles.WrapperTitle}>
         <h2>Explore My Portfolio</h2>
       </div>
@@ -35,7 +35,7 @@ function Portfolio({ projectsData }: ReposArrayProps) {
           ),
         )}
       </div>
-    </>
+    </section>
   );
 }
 

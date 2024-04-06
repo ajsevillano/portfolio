@@ -23,7 +23,7 @@ function Header() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className={styles.header}>
+      <header className={styles.header}>
         <Modal closeDialog={closeDialog} ref={modalRef} />
         <div className={styles.container}>
           <div className={styles.imgContainer}>
@@ -60,7 +60,7 @@ function Header() {
             </a>
           </div>
         </div>
-      </section>
+      </header>
     </>
   );
 }
