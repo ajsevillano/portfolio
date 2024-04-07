@@ -43,8 +43,10 @@ export default function Home({ projectsData }: ReposArrayProps) {
     <>
       <Header />
       <Portfolio projectsData={projectsData} />
-      <Wave />
-      <About />
+      <section id="about">
+        <Wave />
+        <About />
+      </section>
       <Footer />
       <CopyRight />
     </>

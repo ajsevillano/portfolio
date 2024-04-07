@@ -5,7 +5,7 @@ import styles from './CopyRight.module.scss';
 function CopyRight() {
   const year = new Date().getFullYear();
   return (
-    <Wrapper background="#101114" justifycontent="center">
+    <Wrapper elementType="footer" background="#101114" justifycontent="center">
       <p className={styles.copyrightText}>
         © 2021 - {year} Antonio Sevillano - This project is under MIT license
       </p>

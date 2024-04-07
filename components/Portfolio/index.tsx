@@ -8,7 +8,7 @@ import { ReposArrayProps } from '../../types/home';
 
 function Portfolio({ projectsData }: ReposArrayProps) {
   return (
-    <section>
+    <section id="portfolio">
       <div className={styles.WrapperTitle}>
         <h2>Explore My Portfolio</h2>
       </div>

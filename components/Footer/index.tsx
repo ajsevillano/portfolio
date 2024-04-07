@@ -15,8 +15,13 @@ import styles from './Footer.module.scss';
 function Footer() {
   const { openDialog, closeDialog, modalRef } = useContext(ModalContext);
   return (
-    <Wrapper background="#19202D" justifycontent="center">
-      <section className={styles.sectionContainer}>
+    <Wrapper
+      elementType="section"
+      id="contact"
+      background="#19202D"
+      justifycontent="center"
+    >
+      <div className={styles.sectionContainer}>
         <Modal closeDialog={closeDialog} ref={modalRef} />
         <div className={styles.contacMeHeader}>
           <h1 className={styles.contactMe}>Contact me</h1>
@@ -87,7 +92,7 @@ function Footer() {
             </a>
           </div>
         </div>
-      </section>
+      </div>
     </Wrapper>
   );
 }

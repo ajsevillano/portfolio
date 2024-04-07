@@ -8,7 +8,7 @@ import styles from './About.module.scss';
 
 function About() {
   return (
-    <section className={styles.aboutSectionBlock}>
+    <div className={styles.aboutSectionBlock}>
       <div className={styles.container}>
         <div className={styles.imgMe}>
           <Image src="/me.png" alt="Picture of me" width={600} height={450} />
@@ -48,7 +48,7 @@ function About() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 
