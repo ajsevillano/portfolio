@@ -9,10 +9,10 @@ import { ReposArrayProps } from '../../types/home';
 function Portfolio({ projectsData }: ReposArrayProps) {
   return (
     <section id="portfolio">
-      <div className={styles.WrapperTitle}>
-        <h2>Explore My Portfolio</h2>
+      <div className={styles.TitleWrapper}>
+        <h2>Explore my portfolio</h2>
       </div>
-      <div className={styles.wrapper}>
+      <div className={styles.grid}>
         {projectsData?.map(
           ({
             id,

@@ -24,7 +24,7 @@ function Footer() {
       <div className={styles.sectionContainer}>
         <Modal closeDialog={closeDialog} ref={modalRef} />
         <div className={styles.contacMeHeader}>
-          <h1 className={styles.contactMe}>Contact me</h1>
+          <h2 className={styles.contactMe}>Contact me</h2>
           <p className={styles.subTitle}>
             I&apos;d love connecting with you and exploring innovative ideas.
             Whether you have a specific project in mind or simply want to

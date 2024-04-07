@@ -15,7 +15,7 @@ function About() {
           <CoffeAnimation />
         </div>
         <div className={styles.introText}>
-          <h1 className={styles.header}>The guy behind the beard</h1>
+          <h2 className={styles.header}>The guy behind the beard</h2>
           <div className={styles.text}>
             My name is Antonio, although most people know me as Sevi. I&apos;m a
             self-taught spanish software engineer who has been living in the UK

@@ -15,9 +15,9 @@ export default function ContactFormContent({
 }: Props) {
   return (
     <>
-      <h1 className={styles.modalContentTitle}>
+      <h2 className={styles.modalContentTitle}>
         🧔🏻 I&apos;d Love to Hear From You!
-      </h1>
+      </h2>
       <p className={styles.subtitle}>
         Please fill out the form below and I&apos;ll get back to you as soon as
         possible.
