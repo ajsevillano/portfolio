@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaGithub, FaEnvelope, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaEnvelope, FaLinkedin } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 import styles from './Footer.module.scss';
 
 interface Link {
@@ -65,13 +66,13 @@ const contactLinks: ContactLink[] = [
   {
     id: 4,
     className: styles.twitter,
-    icon: () => <FaTwitter size="2rem" />,
+    icon: () => <FaXTwitter size="2rem" />,
     links: [
       {
         id: 1,
         className: styles.twitterText,
         href: 'http://www.twitter.com/ajsevillano',
-        text: 'On twitter',
+        text: 'On X',
       },
     ],
   },
