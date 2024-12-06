@@ -1,18 +1,13 @@
 import React from 'react';
 import ContactForm from '@components/ContactForm';
 import styles from './MainContent.module.scss';
-
-interface Props {
-  setSent: (arg0: boolean) => void;
-  closeDialog: () => void;
-  setErrorStatus: (arg0: boolean) => void;
-}
+import { MainContentProps } from './MainContent';
 
 export default function ContactFormContent({
   setSent,
   closeDialog,
   setErrorStatus,
-}: Props) {
+}: MainContentProps) {
   return (
     <>
       <h2 className={styles.modalContentTitle}>

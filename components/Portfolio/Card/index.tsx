@@ -1,13 +1,13 @@
-// Types
-import { CardDataProps } from 'types/home';
 // Libraries
 import React from 'react';
 import Image from 'next/image';
 // Components
 import { FaGithub, FaLink } from 'react-icons/fa';
-
 import Button from '../../Button';
 import Tag from '../../Tag';
+// Types
+import { CardDataProps } from './Card';
+
 // Styles
 import styles from './Card.module.scss';
 

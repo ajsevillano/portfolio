@@ -1,15 +1,8 @@
 import React from 'react';
 import styles from './Button.module.scss';
+import { ButtonProps } from './Button.interface';
 
-interface Props {
-  variant?: 'primary' | 'secondary' | 'outline';
-  icon?: JSX.Element | null;
-  text: string;
-  disabled?: boolean;
-  onclick?: (e: any) => void;
-}
-
-const defaultProps: Props = {
+const defaultProps: ButtonProps = {
   variant: 'primary',
   icon: null,
   text: 'default',
@@ -22,7 +15,7 @@ function Button({
   text = defaultProps.text,
   disabled = defaultProps.disabled,
   onclick,
-}: Props) {
+}: ButtonProps) {
   return (
     <button
       type="button"
