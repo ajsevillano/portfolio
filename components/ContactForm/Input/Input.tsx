@@ -1,15 +1,6 @@
 import React from 'react';
 import styles from './Input.module.scss';
-
-interface InputProps {
-  type: string;
-  name: string;
-  id: string;
-  placeholder: string;
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  isValidEmail: boolean;
-}
+import { InputProps } from './Input.interface';
 
 function Input({
   type,
