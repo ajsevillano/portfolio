@@ -1,13 +1,6 @@
 import React from 'react';
 import styles from './Wrapper.module.scss';
-
-interface Props {
-  elementType?: React.ElementType;
-  id?: string;
-  background: string;
-  justifycontent: string;
-  children: JSX.Element | JSX.Element[] | string;
-}
+import { WrapperProps } from './Wrapper.interface';
 
 function Wrapper({
   elementType,
@@ -15,7 +8,7 @@ function Wrapper({
   children,
   background,
   justifycontent = 'center',
-}: Props) {
+}: WrapperProps) {
   const Element = elementType || 'div';
 
   return (
