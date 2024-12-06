@@ -18,13 +18,6 @@ export interface ProcessedGithubArrayTypes extends OriginalGithubArrayTypes {
   tags: any;
 }
 
-export interface Techno {
-  id: number;
-  name: string;
-  color: string;
-  backgroundColor: string;
-}
-
 export interface FilteredProjects {
   id: number;
   name: string;

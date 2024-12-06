@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Wrapper.module.scss';
-import { WrapperProps } from './Wrapper.interface';
+import { WrapperProps } from './Wrapper.d';
 
 function Wrapper({
   elementType,

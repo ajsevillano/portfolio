@@ -1,7 +1,7 @@
 import React from 'react';
 import ContactForm from '@components/ContactForm';
 import styles from './MainContent.module.scss';
-import { MainContentProps } from './MainContent.interface';
+import { MainContentProps } from './MainContent';
 
 export default function ContactFormContent({
   setSent,

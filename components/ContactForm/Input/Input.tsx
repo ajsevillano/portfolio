@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Input.module.scss';
-import { InputProps } from './Input.interface';
+import { InputProps } from './Input.d';
 
 function Input({
   type,

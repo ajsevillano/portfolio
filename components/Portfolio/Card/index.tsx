@@ -6,7 +6,7 @@ import { FaGithub, FaLink } from 'react-icons/fa';
 import Button from '../../Button';
 import Tag from '../../Tag';
 // Types
-import { CardDataProps } from './Card.interface';
+import { CardDataProps } from './Card';
 
 // Styles
 import styles from './Card.module.scss';
