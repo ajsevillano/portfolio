@@ -1,16 +1,11 @@
 import React, { useContext } from 'react';
-import {
-  FaGithub,
-  FaEnvelope,
-  FaTwitter,
-  FaLinkedin,
-  FaRegClipboard,
-} from 'react-icons/fa';
+import { FaRegClipboard } from 'react-icons/fa';
 import Modal from '@components/Modal';
 import { ModalContext } from '../../contexts/ModalContext';
 import Button from '../Button';
 import Wrapper from '../Layouts/Wrapper';
 import styles from './Footer.module.scss';
+import contactLinks from './Footer.data';
 
 function Footer() {
   const { openDialog, closeDialog, modalRef } = useContext(ModalContext);
@@ -41,56 +36,22 @@ function Footer() {
           </div>
         </div>
         <div className={styles.socialIcons}>
-          <div className={styles.email}>
-            <FaEnvelope size="2rem" />
-            <a
-              className={styles.emailMobile}
-              href="mailto:websitecontactform@ajsevillano.com"
-            >
-              contact
-            </a>
-            <a
-              className={styles.emailLaptop}
-              href="mailto:websitecontactform@ajsevillano.com"
-            >
-              By email
-            </a>
-          </div>
-          <div className={styles.github}>
-            <FaGithub size="2rem" />
-
-            <a
-              className={styles.githubText}
-              href="http://www.github.com/ajsevillano"
-              target="_blank"
-              rel="noreferrer"
-            >
-              My github
-            </a>
-          </div>
-          <div className={styles.github}>
-            <FaLinkedin size="2rem" />
-
-            <a
-              className={styles.githubText}
-              href="https://www.linkedin.com/in/ajsevillano/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Linkedin
-            </a>
-          </div>
-          <div className={styles.twitter}>
-            <FaTwitter size="2rem" />
-            <a
-              className={styles.twitterText}
-              href="http://www.twitter.com/ajsevillano"
-              target="_blank"
-              rel="noreferrer"
-            >
-              On twitter
-            </a>
-          </div>
+          {contactLinks.map((contact) => (
+            <div key={contact.id} className={contact.className}>
+              {contact.icon()}
+              {contact.links.map((link) => (
+                <a
+                  key={link.id}
+                  className={link.className}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {link.text}
+                </a>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
     </Wrapper>
