@@ -25,15 +25,6 @@ export interface Techno {
   backgroundColor: string;
 }
 
-export interface CardDataProps {
-  name: string;
-  description: string;
-  gitHubURL: string;
-  demoURL: string | null;
-  projectThumbnail: string | null;
-  tags: any;
-}
-
 export interface FilteredProjects {
   id: number;
   name: string;
