@@ -1,6 +1,7 @@
 // Libs
 import React from 'react';
 import Image from 'next/image';
+import { getMage } from '@utils/dates.utils';
 // Components
 import CoffeAnimation from '@components/CoffeeAnimation';
 // Styles
@@ -34,7 +35,7 @@ function About() {
               Percayso Inform
             </a>
             , a data enrichment company in the insurance sector. I&apos;m the
-            proud dad of a 3 year old{' '}
+            proud dad of a {getMage()} years old{' '}
             <div className={styles.emoji}>
               👧🏻
               <div className={styles.tooltip}>
