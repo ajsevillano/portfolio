@@ -1,5 +1,5 @@
 import React from 'react';
-import { currentYear } from '../../utils/dates.utils';
+import currentYear from '../../utils/dates.utils';
 import Wrapper from '../Layouts/Wrapper';
 import styles from './CopyRight.module.scss';
 
