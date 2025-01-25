@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaGithub, FaEnvelope, FaLinkedin } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
+import { FaBluesky } from 'react-icons/fa6';
 import styles from './Footer.module.scss';
 
 interface Link {
@@ -20,7 +20,7 @@ interface ContactLink {
 const contactLinks: ContactLink[] = [
   {
     id: 1,
-    className: styles.email,
+    className: styles.social,
     icon: () => <FaEnvelope size="2rem" />,
     links: [
       {
@@ -39,12 +39,12 @@ const contactLinks: ContactLink[] = [
   },
   {
     id: 2,
-    className: styles.github,
+    className: styles.social,
     icon: () => <FaGithub size="2rem" />,
     links: [
       {
         id: 1,
-        className: styles.githubText,
+        className: styles.socialText,
         href: 'http://www.github.com/ajsevillano',
         text: 'My github',
       },
@@ -52,12 +52,12 @@ const contactLinks: ContactLink[] = [
   },
   {
     id: 3,
-    className: styles.linkedin,
+    className: styles.social,
     icon: () => <FaLinkedin size="2rem" />,
     links: [
       {
         id: 1,
-        className: styles.githubText,
+        className: styles.socialText,
         href: 'https://www.linkedin.com/in/ajsevillano/',
         text: 'Linkedin',
       },
@@ -65,14 +65,14 @@ const contactLinks: ContactLink[] = [
   },
   {
     id: 4,
-    className: styles.twitter,
-    icon: () => <FaXTwitter size="2rem" />,
+    className: styles.social,
+    icon: () => <FaBluesky size="2rem" />,
     links: [
       {
         id: 1,
-        className: styles.twitterText,
-        href: 'http://www.twitter.com/ajsevillano',
-        text: 'On X',
+        className: styles.socialText,
+        href: 'https://bsky.app/profile/ajsevillano.bsky.social',
+        text: 'On Bluesky',
       },
     ],
   },

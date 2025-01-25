@@ -38,18 +38,14 @@
   }
 }
 
-.email,
-.github,
-.twitter,
-.linkedin {
+.social {
   display: flex;
   align-items: center;
 }
 
+.socialText,
 .emailMobile,
-.emailLaptop,
-.githubText,
-.twitterText {
+.emailLaptop {
   color: $white-font-color;
   text-decoration: none;
   font-size: 1.5rem;
