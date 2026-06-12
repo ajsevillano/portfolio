@@ -14,7 +14,13 @@ export default function ContactFormModalContent({ closeDialog }: any) {
   return (
     <div className={styles.content}>
       <div className={styles.image}>
-        <Image src="/me.png" alt="Picture of me" width={650} height={500} />
+        <Image
+          src="/me.png"
+          alt="Picture of me"
+          width={650}
+          height={500}
+          style={{ maxWidth: '100%', height: 'auto' }}
+        />
       </div>
       <div className={styles.textContainer}>
         {/* If nodemailer return an error, show the error screen component. */}

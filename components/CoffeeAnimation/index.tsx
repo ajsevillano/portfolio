@@ -1,6 +1,5 @@
 // Libs
 import React, { useEffect, useRef } from 'react';
-import lottie from 'lottie-web';
 // Coffee animation
 import animationData from '../../public/coffee.json';
 // Styles
@@ -10,23 +9,29 @@ function CoffeAnimation() {
   const lottieContainer = useRef(null);
 
   useEffect(() => {
-    let anim: any;
-    if (lottieContainer.current) {
-      anim = lottie.loadAnimation({
-        container: lottieContainer.current,
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        animationData,
-      });
-    }
+    let anim: { destroy: () => void } | undefined;
+    let cancelled = false;
+
+    // lottie-web touches `document` on import, so load it client-side only.
+    import('lottie-web').then(({ default: lottie }) => {
+      if (lottieContainer.current && !cancelled) {
+        anim = lottie.loadAnimation({
+          container: lottieContainer.current,
+          renderer: 'svg',
+          loop: true,
+          autoplay: true,
+          animationData,
+        });
+      }
+    });
 
     return () => {
+      cancelled = true;
       if (anim) {
         anim.destroy();
       }
     };
-  }, [lottieContainer.current]);
+  }, []);
 
   return <div className={styles.animation} ref={lottieContainer} />;
 }
