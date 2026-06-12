@@ -18,11 +18,11 @@ function About() {
           <h2 className={styles.header}>The guy behind the beard</h2>
           <div className={styles.text}>
             My name is Antonio, although most people know me as Sevi. I&apos;m a
-            self-taught spanish software engineer who has been living in the UK
-            for the past 10 years. Coming from a IT background I had some
-            knwoledge of coding but It was during the pandemic when I decided to
+            self-taught Spanish software engineer who has been living in the UK
+            for the past 10 years. Coming from an IT background I had some
+            knowledge of coding, but it was during the pandemic when I decided to
             take my career to the next level and become a software engineer. I
-            haven&apos;t stopped learning and working in diferent projects to
+            haven&apos;t stopped learning and working on different projects to
             polish my skills since then. Currently, I work as a software
             engineer for{' '}
             <a
