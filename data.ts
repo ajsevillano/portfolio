@@ -20,12 +20,6 @@ const customFields: CustomDataArrayTypes[] = [
     tags: ['React Native', 'Typescript', 'Expo'],
   },
   {
-    id: 472492763,
-    demoURL: '',
-    projectThumbnail: '/project-progress.png',
-    tags: ['Typescript'],
-  },
-  {
     id: 455672935,
     demoURL: '',
     projectThumbnail: '/quiz-app.png',
@@ -36,12 +30,6 @@ const customFields: CustomDataArrayTypes[] = [
     demoURL: '',
     projectThumbnail: '/users-CRUD.png',
     tags: ['Node.js', 'Express', 'Javascript', 'PostgreSQL'],
-  },
-  {
-    id: 378864454,
-    demoURL: '',
-    projectThumbnail: '/project-progress.png',
-    tags: ['Typescript'],
   },
   {
     id: 362217174,
@@ -106,7 +94,7 @@ const customFields: CustomDataArrayTypes[] = [
   {
     id: 296066823,
     demoURL: null,
-    projectThumbnail: '/project-progress.png',
+    projectThumbnail: '/solar-system.png',
     tags: ['React', 'Sass'],
   },
   {
