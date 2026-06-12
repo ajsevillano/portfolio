@@ -82,7 +82,7 @@ function Header() {
               <Button
                 variant="primary"
                 text="Let's talk!"
-                onclick={openDialog}
+                onClick={openDialog}
               />
             </div>
             <a

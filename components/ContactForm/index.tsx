@@ -3,12 +3,13 @@ import Button from '@components/Button';
 import { FaPaperPlane } from 'react-icons/fa';
 import { formReducer, initialState, Action } from '@reducers/formReducer';
 import styles from './ContactForm.module.scss';
+import { ContactFormProps } from './ContactForm';
 
 export default function ContactForm({
   setSent,
   closeDialog,
   setErrorStatus,
-}: any) {
+}: ContactFormProps) {
   const [state, dispatch] = useReducer(formReducer, initialState);
   const [buttonText, setButtonText] = useState('Send form');
   const [isValidEmail, setIsValidEmail] = useState(true);

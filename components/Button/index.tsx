@@ -14,14 +14,14 @@ function Button({
   icon = defaultProps.icon,
   text = defaultProps.text,
   disabled = defaultProps.disabled,
-  onclick,
+  onClick,
   type = 'button',
 }: ButtonProps) {
   return (
     <button
       // eslint-disable-next-line react/button-has-type
       type={type}
-      onClick={onclick}
+      onClick={onClick}
       className={`${styles.Button} ${styles[variant as keyof typeof styles]}`}
       disabled={disabled}
     >

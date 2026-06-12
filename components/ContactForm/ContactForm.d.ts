@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from 'react';
 
-export interface MainContentProps {
+export interface ContactFormProps {
   setSent: Dispatch<SetStateAction<boolean>>;
-  closeDialog: () => void;
   setErrorStatus: Dispatch<SetStateAction<boolean | string>>;
+  closeDialog: () => void;
 }
