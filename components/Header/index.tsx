@@ -10,7 +10,8 @@ const SITE_URL = 'https://www.ajsevillano.com';
 const SITE_TITLE = 'Antonio Sevillano - Software Engineer';
 const SITE_DESCRIPTION =
   'Portfolio of Antonio Sevillano, a self-taught software engineer based in the UK building web apps with React, TypeScript, Next.js and Node.js.';
-const OG_IMAGE = `${SITE_URL}/me.png`;
+const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
+const PROFILE_IMAGE = `${SITE_URL}/me.png`;
 
 const personJsonLd = {
   '@context': 'https://schema.org',
@@ -18,7 +19,7 @@ const personJsonLd = {
   name: 'Antonio Sevillano',
   alternateName: 'Sevi',
   url: SITE_URL,
-  image: OG_IMAGE,
+  image: PROFILE_IMAGE,
   jobTitle: 'Software Engineer',
   sameAs: [
     'https://www.linkedin.com/in/ajsevillano/',
@@ -44,6 +45,8 @@ function Header() {
         <meta property="og:description" content={SITE_DESCRIPTION} />
         <meta property="og:url" content={`${SITE_URL}/`} />
         <meta property="og:image" content={OG_IMAGE} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
