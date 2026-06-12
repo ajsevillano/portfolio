@@ -57,8 +57,8 @@ function Card({
           className={styles.img}
           width={358}
           height={224}
-          layout="responsive"
-          priority
+          style={{ width: '100%', height: 'auto' }}
+          sizes="(max-width: 768px) 100vw, 358px"
         />
       </div>
 

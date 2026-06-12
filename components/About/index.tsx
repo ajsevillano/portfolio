@@ -11,7 +11,13 @@ function About() {
     <div className={styles.aboutSectionBlock}>
       <div className={styles.container}>
         <div className={styles.imgMe}>
-          <Image src="/me.png" alt="Picture of me" width={600} height={450} />
+          <Image
+            src="/me.png"
+            alt="Picture of me"
+            width={600}
+            height={450}
+            style={{ maxWidth: '100%', height: 'auto' }}
+          />
           <CoffeAnimation />
         </div>
         <div className={styles.introText}>
