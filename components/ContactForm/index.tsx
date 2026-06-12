@@ -92,31 +92,42 @@ export default function ContactForm({
         aria-hidden="true"
         style={{ display: 'none' }}
       />
+      <label className={styles.label} htmlFor="name">
+        Your name
+      </label>
       <input
         className={styles.input}
+        id="name"
         type="text"
         name="name"
-        aria-label="Your name"
         placeholder="Your name"
         value={state.name}
         onChange={handleInputChange}
       />
-      <span className={styles.errorText}>
-        {!isValidEmail ? 'Please enter a valid email' : ''}
-      </span>
+      <label className={styles.label} htmlFor="email">
+        Your email
+      </label>
       <input
         className={!isValidEmail ? styles.inputError : styles.input}
+        id="email"
         type="email"
         name="email"
-        aria-label="Your email"
         placeholder="email@company.com"
         value={state.email}
         onChange={handleInputChange}
+        aria-invalid={!isValidEmail}
+        aria-describedby="email-error"
       />
+      <span className={styles.errorText} id="email-error" role="alert">
+        {!isValidEmail ? 'Please enter a valid email' : ''}
+      </span>
+      <label className={styles.label} htmlFor="message">
+        Your message
+      </label>
       <textarea
         className={styles.textArea}
+        id="message"
         name="subject"
-        aria-label="Your message"
         placeholder="Your message"
         value={state.subject}
         onChange={handleInputChange}
