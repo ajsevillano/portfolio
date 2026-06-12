@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { FaRegClipboard } from 'react-icons/fa';
-import Modal from '@components/Modal';
 import { ModalContext } from '../../contexts/ModalContext';
 import Button from '../Button';
 import Wrapper from '../Layouts/Wrapper';
@@ -8,7 +7,7 @@ import styles from './Footer.module.scss';
 import contactLinks from './Footer.data';
 
 function Footer() {
-  const { openDialog, closeDialog, modalRef } = useContext(ModalContext);
+  const { openDialog } = useContext(ModalContext);
   return (
     <Wrapper
       elementType="section"
@@ -17,7 +16,6 @@ function Footer() {
       justifycontent="center"
     >
       <div className={styles.sectionContainer}>
-        <Modal closeDialog={closeDialog} ref={modalRef} />
         <div className={styles.contactMeHeader}>
           <h2 className={styles.contactMe}>Contact me</h2>
           <p className={styles.subTitle}>

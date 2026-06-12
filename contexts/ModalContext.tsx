@@ -7,6 +7,7 @@ import React, {
   ReactNode,
   useMemo,
 } from 'react';
+import Modal from '@components/Modal';
 
 interface ModalContextProps {
   openDialog: () => void;
@@ -46,6 +47,9 @@ export function ModalProvider({ children }: { children: ReactNode }) {
   );
 
   return (
-    <ModalContext.Provider value={value}>{children}</ModalContext.Provider>
+    <ModalContext.Provider value={value}>
+      {children}
+      <Modal closeDialog={closeDialog} ref={modalRef} />
+    </ModalContext.Provider>
   );
 }

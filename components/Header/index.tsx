@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import Head from 'next/head';
-import Modal from '@components/Modal';
 import { ModalContext } from 'contexts/ModalContext';
 import { FaLinkedin } from 'react-icons/fa';
 import styles from './Header.module.scss';
@@ -29,7 +28,7 @@ const personJsonLd = {
 };
 
 function Header() {
-  const { openDialog, closeDialog, modalRef } = useContext(ModalContext);
+  const { openDialog } = useContext(ModalContext);
 
   return (
     <>
@@ -66,7 +65,6 @@ function Header() {
         />
       </Head>
       <header className={styles.header}>
-        <Modal closeDialog={closeDialog} ref={modalRef} />
         <div className={styles.container}>
           <div className={styles.imgContainer}>
             <img className={styles.image} src="./profile.png" alt="Me" />
