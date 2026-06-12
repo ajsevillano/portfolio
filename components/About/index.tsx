@@ -1,6 +1,7 @@
 // Libs
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 // Components
 import CoffeeAnimation from '@components/CoffeeAnimation';
 // Styles
@@ -24,23 +25,17 @@ function About() {
           <h2 className={styles.header}>The guy behind the beard</h2>
           <div className={styles.text}>
             My name is Antonio, although most people know me as Sevi. I&apos;m a
-            self-taught Spanish software engineer who has been living in the UK
-            for the past 10 years. Coming from an IT background I had some
-            knowledge of coding, but it was during the pandemic when I decided to
-            take my career to the next level and become a software engineer. I
-            haven&apos;t stopped learning and working on different projects to
-            polish my skills since then. Currently, I work as a software
-            engineer for{' '}
-            <a
-              className={styles.link}
-              href="https://www.percayso-inform.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Percayso Inform
-            </a>
-            , a data enrichment company in the insurance sector. I&apos;m the
-            proud dad of a very curious little{' '}
+  Spanish software engineer who has called the UK home for the past 10
+  years, with over 20 years working in IT behind me. During the pandemic
+  I made the switch to what had always been my favourite part of the
+  job — building software — and I haven&apos;t looked back since. These
+    past years I&apos;ve worked in insurtech at Percayso Inform, built and
+  maintained production systems for long-term clients (a product
+  catalogue platform and its API among them), and built side projects
+  of my own, like a <Link href="https://jupiter-moons.netlify.app/" legacyBehavior><a className={styles.link} target="_blank" rel="noopener noreferrer">Jupiter moon tracker</a></Link>{' '}for fellow amateur
+  astronomers. I&apos;m now looking for the next chapter. Away from the
+  keyboard, you&apos;ll find me behind a telescope chasing Jupiter, and
+  being the proud dad of a very curious little{' '}
             <div className={styles.emoji}>
               👧🏻
               <div className={styles.tooltip}>

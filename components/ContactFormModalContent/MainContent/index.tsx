@@ -14,8 +14,7 @@ export default function ContactFormContent({
         🧔🏻 I&apos;d Love to Hear From You!
       </h2>
       <p className={styles.subtitle}>
-        Please fill out the form below and I&apos;ll get back to you as soon as
-        possible.
+        Tell me about the role, your project, or just say hi, I read everything!.
       </p>
       <ContactForm
         setSent={setSent}

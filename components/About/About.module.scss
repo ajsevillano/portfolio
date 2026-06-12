@@ -46,6 +46,9 @@
           text-decoration-line: underline;
           text-decoration-style: dashed;
           text-decoration-thickness: 3px;
+          &:visited {
+            color: $white-font-color;
+          }
         }
 
         .emoji {

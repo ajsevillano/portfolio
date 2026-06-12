@@ -17,12 +17,9 @@ function Footer() {
     >
       <div className={styles.sectionContainer}>
         <div className={styles.contactMeHeader}>
-          <h2 className={styles.contactMe}>Contact me</h2>
+          <h2 className={styles.contactMe}>Let's work together</h2>
           <p className={styles.subTitle}>
-            I&apos;d love connecting with you and exploring innovative ideas.
-            Whether you have a specific project in mind or simply want to
-            discuss potential collaborations, I&apos;m here to have insightful
-            conversations and explore exciting possibilities with you.
+            I'm currently looking for my next role, frontend or fullstack, remote in the UK. If you're hiring, or know someone who is, the form below is the fastest way to reach me: I reply within a day. You can also find me on LinkedIn, or dig into my code on GitHub.
           </p>
           <div className={styles.buttoncontainer}>
             <Button
