@@ -1,6 +1,9 @@
 import { FilteredProjects } from 'types/home';
 
 const FILTERED_PROJECTS: FilteredProjects[] = [
+  { id: 1248521603, name: 'agin-music-mobile' },
+  { id: 1101917853, name: 'nextjs-auth0-prisma-starter' },
+  { id: 998372342, name: 'Image-sorter' },
   { id: 378864454, name: 'izzi-howell.com' },
   { id: 642080564, name: 'pokemon.app.vanilla.js.soc' },
   { id: 518827884, name: 'reddit-clone-next12-amplify-youtube-task3' },
