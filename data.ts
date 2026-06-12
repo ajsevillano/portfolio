@@ -86,12 +86,6 @@ const customFields: CustomDataArrayTypes[] = [
     tags: ['PHP', 'MySQL'],
   },
   {
-    id: 280508678,
-    demoURL: 'https://javascript-advanced-clock.netlify.app/',
-    projectThumbnail: '/advanced-clock.png',
-    tags: ['Javascript', 'HTML', 'CSS'],
-  },
-  {
     id: 296066823,
     demoURL: null,
     projectThumbnail: '/solar-system.png',
@@ -102,12 +96,6 @@ const customFields: CustomDataArrayTypes[] = [
     demoURL: null,
     projectThumbnail: '/socketIO.png',
     tags: ['Node.js', 'Express', 'Javascript', 'Socket IO'],
-  },
-  {
-    id: 250324988,
-    demoURL: 'https://ghibli-web-app.netlify.app/',
-    projectThumbnail: '/Ghibli-Studio-WebApp.png',
-    tags: ['Javascript', 'HTML', 'CSS'],
   },
 ];
 

@@ -18,6 +18,8 @@ const FILTERED_PROJECTS: FilteredProjects[] = [
   { id: 334662367, name: 'firebase-authentication' },
   { id: 257976180, name: 'Pig-dice-game' },
   { id: 275840595, name: 'Relax-app' },
+  { id: 280508678, name: 'advanced-clock' },
+  { id: 250324988, name: 'Ghibli-Studio-WebApp' },
 ];
 
 export const tagClasses: { [key: string]: string } = {
