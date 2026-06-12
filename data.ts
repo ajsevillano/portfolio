@@ -93,7 +93,7 @@ const customFields: CustomDataArrayTypes[] = [
   },
   {
     id: 302134704,
-    demoURL: 'http://api.uniondistribuidora.com/',
+    demoURL: 'https://api.uniondistribuidora.com/',
     projectThumbnail: '/api.uniondistribuidora.com.png',
     tags: ['PHP', 'MySQL'],
   },

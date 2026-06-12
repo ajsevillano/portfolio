@@ -8,9 +8,13 @@ import SubmitErrorContent from './SubmitErrorContent';
 import SubmitSuccessContent from './SubmitSuccessContent';
 import ContactFormContent from './MainContent';
 
-export default function ContactFormModalContent({ closeDialog }: any) {
+export default function ContactFormModalContent({
+  closeDialog,
+}: {
+  closeDialog: () => void;
+}) {
   const [sent, setSent] = useState(false);
-  const [errorStatus, setErrorStatus] = useState(false);
+  const [errorStatus, setErrorStatus] = useState<boolean | string>(false);
   return (
     <div className={styles.content}>
       <div className={styles.image}>

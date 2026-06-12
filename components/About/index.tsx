@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 // Components
-import CoffeAnimation from '@components/CoffeeAnimation';
+import CoffeeAnimation from '@components/CoffeeAnimation';
 // Styles
 import styles from './About.module.scss';
 
@@ -18,7 +18,7 @@ function About() {
             height={450}
             style={{ maxWidth: '100%', height: 'auto' }}
           />
-          <CoffeAnimation />
+          <CoffeeAnimation />
         </div>
         <div className={styles.introText}>
           <h2 className={styles.header}>The guy behind the beard</h2>

@@ -5,7 +5,7 @@ import animationData from '../../public/coffee.json';
 // Styles
 import styles from './CoffeeAnimation.module.scss';
 
-function CoffeAnimation() {
+function CoffeeAnimation() {
   const lottieContainer = useRef(null);
 
   useEffect(() => {
@@ -36,4 +36,4 @@ function CoffeAnimation() {
   return <div className={styles.animation} ref={lottieContainer} />;
 }
 
-export default CoffeAnimation;
+export default CoffeeAnimation;

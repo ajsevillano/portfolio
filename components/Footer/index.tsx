@@ -18,7 +18,7 @@ function Footer() {
     >
       <div className={styles.sectionContainer}>
         <Modal closeDialog={closeDialog} ref={modalRef} />
-        <div className={styles.contacMeHeader}>
+        <div className={styles.contactMeHeader}>
           <h2 className={styles.contactMe}>Contact me</h2>
           <p className={styles.subTitle}>
             I&apos;d love connecting with you and exploring innovative ideas.
@@ -30,7 +30,7 @@ function Footer() {
             <Button
               variant="secondary"
               text="Get in touch"
-              onclick={openDialog}
+              onClick={openDialog}
               icon={<FaRegClipboard size={25} />}
             />
           </div>

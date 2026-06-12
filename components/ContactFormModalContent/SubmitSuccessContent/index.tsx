@@ -15,7 +15,7 @@ export default function SubmitSuccessContent({
         Thank you for your message! I&apos;ll get back to you as soon as
         possible.
       </h2>
-      <Button onclick={closeDialog} variant="outline" text="Close modal" />
+      <Button onClick={closeDialog} variant="outline" text="Close modal" />
     </>
   );
 }
