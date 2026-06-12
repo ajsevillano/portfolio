@@ -15,10 +15,12 @@ function Button({
   text = defaultProps.text,
   disabled = defaultProps.disabled,
   onclick,
+  type = 'button',
 }: ButtonProps) {
   return (
     <button
-      type="button"
+      // eslint-disable-next-line react/button-has-type
+      type={type}
       onClick={onclick}
       className={`${styles.Button} ${styles[variant as keyof typeof styles]}`}
       disabled={disabled}
