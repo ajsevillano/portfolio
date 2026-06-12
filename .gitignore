@@ -45,3 +45,5 @@ tsconfig.tsbuildinfo
 
 #Husky
 .husky/
+# WSL download metadata
+*:Zone.Identifier
