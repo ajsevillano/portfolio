@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from 'react';
+import React, { useReducer, useRef, useState } from 'react';
 import Button from '@components/Button';
 import { FaPaperPlane } from 'react-icons/fa';
 import { formReducer, initialState, Action } from '@reducers/formReducer';
@@ -12,6 +12,8 @@ export default function ContactForm({
   const [state, dispatch] = useReducer(formReducer, initialState);
   const [buttonText, setButtonText] = useState('Send form');
   const [isValidEmail, setIsValidEmail] = useState(true);
+  // Honeypot: stays empty for real users, bots tend to fill every field.
+  const honeypotRef = useRef<HTMLInputElement>(null);
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -49,6 +51,7 @@ export default function ContactForm({
           email: state.email,
           name: state.name,
           subject: state.subject,
+          website: honeypotRef.current?.value ?? '',
         }),
       });
 
@@ -56,8 +59,8 @@ export default function ContactForm({
         setSent(true);
       } else {
         const data = await response.json();
-        setErrorStatus(data.error);
-        throw new Error(data.error);
+        setErrorStatus(data.message);
+        throw new Error(data.message);
       }
     } catch (error) {
       setErrorStatus((error as Error).message);
@@ -78,6 +81,16 @@ export default function ContactForm({
 
   return (
     <form className={styles.formContainer}>
+      {/* Honeypot: hidden from users and assistive tech, bots fill it in. */}
+      <input
+        ref={honeypotRef}
+        type="text"
+        name="website"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        style={{ display: 'none' }}
+      />
       <input
         className={styles.input}
         type="text"
