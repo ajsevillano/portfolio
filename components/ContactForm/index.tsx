@@ -80,7 +80,7 @@ export default function ContactForm({
   };
 
   return (
-    <form className={styles.formContainer}>
+    <form className={styles.formContainer} onSubmit={sendForm}>
       {/* Honeypot: hidden from users and assistive tech, bots fill it in. */}
       <input
         ref={honeypotRef}
@@ -95,7 +95,7 @@ export default function ContactForm({
         className={styles.input}
         type="text"
         name="name"
-        id="name"
+        aria-label="Your name"
         placeholder="Your name"
         value={state.name}
         onChange={handleInputChange}
@@ -107,7 +107,7 @@ export default function ContactForm({
         className={!isValidEmail ? styles.inputError : styles.input}
         type="email"
         name="email"
-        id="email"
+        aria-label="Your email"
         placeholder="email@company.com"
         value={state.email}
         onChange={handleInputChange}
@@ -115,15 +115,15 @@ export default function ContactForm({
       <textarea
         className={styles.textArea}
         name="subject"
-        id="subject"
+        aria-label="Your message"
         placeholder="Your message"
         value={state.subject}
         onChange={handleInputChange}
       />
       <div className={styles.buttonContainer}>
         <Button
+          type="submit"
           text={buttonText}
-          onclick={(e) => sendForm(e)}
           icon={<FaPaperPlane />}
           disabled={!state.name || !state.email || !state.subject}
         />

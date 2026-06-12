@@ -26,6 +26,7 @@ const Modal = forwardRef<HTMLDialogElement, Props>(({ closeDialog }, ref) => {
     <dialog ref={ref} className={styles.modal}>
       <button
         type="button"
+        aria-label="Close contact form"
         className={styles.closeButton}
         onClick={closeDialog}
       >

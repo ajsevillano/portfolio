@@ -19,23 +19,25 @@ function Card({
   projectThumbnail,
   tags,
 }: CardDataProps) {
-  const checkDemoUrlExist = !demoURL ? null : (
-    <Button variant="secondary" text="See demo" icon={<FaLink size={20} />} />
-  );
-
   return (
     <div className={styles.card}>
       <div className={styles.imgContainer}>
         <div className={styles.hoverContainer}>
           <div className={styles.hoverContent}>
-            <a
-              data-testid="demo-link"
-              href={demoURL || ''}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {checkDemoUrlExist}
-            </a>
+            {demoURL && (
+              <a
+                data-testid="demo-link"
+                href={demoURL}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Button
+                  variant="secondary"
+                  text="See demo"
+                  icon={<FaLink size={20} />}
+                />
+              </a>
+            )}
 
             <a
               href={gitHubURL}
