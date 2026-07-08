@@ -3,6 +3,7 @@ import {
   CustomDataArrayTypes,
   OriginalGithubArrayTypes,
   ProcessedGithubArrayTypes,
+  ManualProjectTypes,
 } from '../types/home';
 
 function removeHyphen(githubObj: ProcessedGithubArrayTypes) {

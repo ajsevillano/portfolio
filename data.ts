@@ -1,4 +1,4 @@
-import { CustomDataArrayTypes } from './types/home.d';
+import { CustomDataArrayTypes, ManualProjectTypes } from './types/home.d';
 
 const customFields: CustomDataArrayTypes[] = [
   {
@@ -99,4 +99,19 @@ const customFields: CustomDataArrayTypes[] = [
   },
 ];
 
+
+// This array contents projects that are not in the GitHub API response, but I want to display them in my portfolio.
+const manualProjects: ManualProjectTypes[] = [
+ {
+    id: 1,
+    name: 'school-menu-app',
+    description: 'A PWA that shows the daily school lunch menu and sends a push notification at 07:00 AM',
+    html_url: '',
+    demoURL: 'https://school-menu.ajsevillano.com',
+    projectThumbnail: '/menu-app.jpg',
+    tags: ['Next.js', 'Auth0', 'Next Auth', 'Typescript', 'Tailwind CSS'],
+  },
+  ]
+
 export default customFields;
+export { manualProjects };

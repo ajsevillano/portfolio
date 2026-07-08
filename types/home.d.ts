@@ -12,11 +12,14 @@ export interface CustomDataArrayTypes {
   tags: string[];
 }
 
-export interface ProcessedGithubArrayTypes extends OriginalGithubArrayTypes {
+export interface BaseProjectData extends OriginalGithubArrayTypes {
   demoURL: string | null;
   projectThumbnail: string | null;
-  tags: any;
+  tags: string[];
 }
+
+export type ProcessedGithubArrayTypes = BaseProjectData;
+export type ManualProjectTypes = BaseProjectData;
 
 export interface FilteredProjects {
   id: number;
@@ -26,3 +29,4 @@ export interface FilteredProjects {
 export interface ReposArrayProps {
   projectsData: ProcessedGithubArrayTypes[];
 }
+

@@ -10,12 +10,13 @@ import Wave from '@components/Wave';
 import {
   CustomDataArrayTypes,
   OriginalGithubArrayTypes,
+  ProcessedGithubArrayTypes,
   ReposArrayProps,
 } from 'types/home';
 // Utils
 import orchestrateGithubArrayProcessing from '../utils/home.utils';
 // Data
-import customFields from '../data';
+import customFields, { manualProjects } from '../data';
 
 export const getStaticProps = async () => {
   const res = await fetch(
@@ -49,9 +50,15 @@ export const getStaticProps = async () => {
     customDataArray,
   );
 
+  const projectsData: ProcessedGithubArrayTypes[] = [
+    ...manualProjects,
+    ...processedGithubProjects,
+
+  ];
+
   return {
     props: {
-      projectsData: processedGithubProjects,
+      projectsData,
     },
     revalidate: 3600,
   };
