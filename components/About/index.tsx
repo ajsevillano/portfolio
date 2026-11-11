@@ -1,7 +1,6 @@
 // Libs
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 // Components
 import CoffeeAnimation from '@components/CoffeeAnimation';
 // Styles
@@ -32,7 +31,7 @@ function About() {
     past years I&apos;ve worked in insurtech at Percayso Inform, built and
   maintained production systems for long-term clients (a product
   catalogue platform and its API among them), and built side projects
-  of my own, like a <Link href="https://jupiter-moons.netlify.app/" legacyBehavior><a className={styles.link} target="_blank" rel="noopener noreferrer">Jupiter moon tracker</a></Link>{' '}for fellow amateur
+  of my own, like a <a className={styles.link} href="https://jupiter-moons.netlify.app/" target="_blank" rel="noopener noreferrer">Jupiter moon tracker</a>{' '}for fellow amateur
   astronomers. I&apos;m now looking for the next chapter. Away from the
   keyboard, you&apos;ll find me behind a telescope chasing Jupiter, and
   being the proud dad of a very curious little{' '}

@@ -67,7 +67,7 @@ function Header() {
       <header className={styles.header}>
         <div className={styles.container}>
           <div className={styles.imgContainer}>
-            <img className={styles.image} src="./profile.png" alt="Me" />
+            <img className={styles.image} src="/profile.png" alt="Me" />
             <p className={styles.presentation}>
               Hello there! I&apos;m Antonio Sevillano
             </p>
