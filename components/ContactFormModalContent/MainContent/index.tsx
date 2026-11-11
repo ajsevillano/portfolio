@@ -5,7 +5,6 @@ import { MainContentProps } from './MainContent';
 
 export default function ContactFormContent({
   setSent,
-  closeDialog,
   setErrorStatus,
 }: MainContentProps) {
   return (
@@ -18,7 +17,6 @@ export default function ContactFormContent({
       </p>
       <ContactForm
         setSent={setSent}
-        closeDialog={closeDialog}
         setErrorStatus={setErrorStatus}
       />
     </>

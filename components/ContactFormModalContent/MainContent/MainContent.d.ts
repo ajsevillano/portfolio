@@ -2,6 +2,5 @@ import { Dispatch, SetStateAction } from 'react';
 
 export interface MainContentProps {
   setSent: Dispatch<SetStateAction<boolean>>;
-  closeDialog: () => void;
   setErrorStatus: Dispatch<SetStateAction<boolean | string>>;
 }

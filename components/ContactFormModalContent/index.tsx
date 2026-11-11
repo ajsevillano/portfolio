@@ -1,5 +1,5 @@
 // Libs
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 // Styles
 import styles from './ContactFormModalContent.module.scss';
@@ -15,8 +15,28 @@ export default function ContactFormModalContent({
 }) {
   const [sent, setSent] = useState(false);
   const [errorStatus, setErrorStatus] = useState<boolean | string>(false);
+  const rootRef = useRef<HTMLDivElement>(null);
+
+  // However the dialog gets closed (X, Escape, button, timer), go back to the form.
+  useEffect(() => {
+    const dialog = rootRef.current?.closest('dialog');
+    const reset = () => {
+      setSent(false);
+      setErrorStatus(false);
+    };
+    dialog?.addEventListener('close', reset);
+    return () => dialog?.removeEventListener('close', reset);
+  }, []);
+
+  // Auto-close the success/error screen; cancelled if the dialog closes first.
+  useEffect(() => {
+    if (!sent && !errorStatus) return undefined;
+    const timer = setTimeout(closeDialog, 4000);
+    return () => clearTimeout(timer);
+  }, [sent, errorStatus, closeDialog]);
+
   return (
-    <div className={styles.content}>
+    <div className={styles.content} ref={rootRef}>
       <div className={styles.image}>
         <Image
           src="/me.png"
@@ -33,14 +53,15 @@ export default function ContactFormModalContent({
         {sent && !errorStatus && (
           <SubmitSuccessContent closeDialog={closeDialog} />
         )}
-        {/* Default form screen. */}
-        {!sent && !errorStatus && (
+        {/* Kept mounted (just hidden) so a failed send keeps what the user typed. */}
+        <div
+          style={{ display: sent || errorStatus ? 'none' : 'contents' }}
+        >
           <ContactFormContent
             setSent={setSent}
             setErrorStatus={setErrorStatus}
-            closeDialog={closeDialog}
           />
-        )}
+        </div>
       </div>
     </div>
   );

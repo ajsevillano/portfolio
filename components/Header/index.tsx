@@ -67,7 +67,7 @@ function Header() {
       <header className={styles.header}>
         <div className={styles.container}>
           <div className={styles.imgContainer}>
-            <img className={styles.image} src="./profile.png" alt="Me" />
+            <img className={styles.image} src="/profile.png" alt="Me" />
             <p className={styles.presentation}>
               Hello there! I&apos;m Antonio Sevillano
             </p>
@@ -75,7 +75,10 @@ function Header() {
 
           <h1 className={styles.h1}>Software Engineer</h1>
           <h2 className={styles.h2}>
-           4+ years of professional experience in insurtech and e-commerce, building data products, internal tools and customer-facing apps with React, TypeScript and Node. Based in the UK · Open to frontend & fullstack roles.
+            4+ years of professional experience in insurtech and e-commerce,
+            building data products, internal tools and customer-facing apps with
+            React, TypeScript and Node. Based in the UK · Open to frontend &
+            fullstack roles.
           </h2>
           <div className={styles.buttonsContainer}>
             <div className={styles.link}>

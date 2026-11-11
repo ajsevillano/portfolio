@@ -1,16 +1,15 @@
-import React, { useReducer, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Button from '@components/Button';
 import { FaPaperPlane } from 'react-icons/fa';
-import { formReducer, initialState, Action } from '@reducers/formReducer';
 import styles from './ContactForm.module.scss';
 import { ContactFormProps } from './ContactForm';
 
 export default function ContactForm({
   setSent,
-  closeDialog,
   setErrorStatus,
 }: ContactFormProps) {
-  const [state, dispatch] = useReducer(formReducer, initialState);
+  const emptyForm = { name: '', email: '', subject: '' };
+  const [state, setState] = useState(emptyForm);
   const [buttonText, setButtonText] = useState('Send form');
   const [isValidEmail, setIsValidEmail] = useState(true);
   // Honeypot: stays empty for real users, bots tend to fill every field.
@@ -18,19 +17,7 @@ export default function ContactForm({
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
-    const actionTypeMap: { [key: string]: Action['type'] } = {
-      name: 'UPDATE_NAME',
-      email: 'UPDATE_EMAIL',
-      subject: 'UPDATE_SUBJECT',
-      clearForm: 'CLEAR_FORM',
-    };
-
-    dispatch({
-      type: actionTypeMap[e.target.name],
-      payload: e.target.value,
-    });
-  };
+  ) => setState({ ...state, [e.target.name]: e.target.value });
 
   const sendForm = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -58,26 +45,15 @@ export default function ContactForm({
 
       if (response.ok) {
         setSent(true);
+        setState(emptyForm);
       } else {
         const data = await response.json();
         setErrorStatus(data.message);
-        throw new Error(data.message);
       }
     } catch (error) {
       setErrorStatus((error as Error).message);
     }
-
-    // Clear the form
-    dispatch({
-      type: 'CLEAR_FORM',
-      payload: '',
-    });
-
-    setTimeout(() => {
-      setSent(false);
-      setErrorStatus(false);
-      closeDialog();
-    }, 4000);
+    setButtonText('Send form');
   };
 
   return (

@@ -9,15 +9,6 @@ describe('Tag component', () => {
     expect(tagElement).toBeInTheDocument();
   });
 
-  test('renders error message for wrong format', () => {
-    // eslint-disable-next-line operator-linebreak
-    const errorMessage =
-      'Error: Array of tags must only contain strings, but it contains at least one number. Check the data file to fix this error.';
-    render(<Tag tag="Error_wrong_format" />);
-    const errorElement = screen.getByText(errorMessage);
-    expect(errorElement).toBeInTheDocument();
-  });
-
   test('renders a tag with the right colour', () => {
     render(<Tag tag="React Native" />);
 

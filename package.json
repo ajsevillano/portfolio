@@ -7,7 +7,6 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "sass": "sass --watch ./styles/App.scss ./styles/App.css",
     "test": "jest",
     "prepare": "husky install"
   },

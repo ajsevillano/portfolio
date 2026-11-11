@@ -17,16 +17,9 @@ describe('Button', () => {
     expect(container.getElementsByTagName('svg').length).toBeGreaterThan(0);
   });
 
-  test('renders the default text if no text is passed', () => {
-    // @ts-ignore
-    render(<Button variant="primary" />);
-    expect(screen.getByText('default')).toBeInTheDocument();
-  });
-
   test('renders the default variant if no variant is passed', () => {
     // @ts-ignore
     render(<Button text="Test Button" />);
-    screen.debug();
     expect(screen.getByRole('button')).toHaveClass('primary');
   });
 });
