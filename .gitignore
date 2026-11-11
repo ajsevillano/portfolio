@@ -33,8 +33,6 @@ yarn-error.log*
 # vercel
 .vercel
 
-# css map
-styles/App.css.map
 
 #Scripts
 acp.sh
