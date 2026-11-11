@@ -7,7 +7,6 @@ import { ContactFormProps } from './ContactForm';
 
 export default function ContactForm({
   setSent,
-  closeDialog,
   setErrorStatus,
 }: ContactFormProps) {
   const [state, dispatch] = useReducer(formReducer, initialState);
@@ -58,26 +57,15 @@ export default function ContactForm({
 
       if (response.ok) {
         setSent(true);
+        dispatch({ type: 'CLEAR_FORM', payload: '' });
       } else {
         const data = await response.json();
         setErrorStatus(data.message);
-        throw new Error(data.message);
       }
     } catch (error) {
       setErrorStatus((error as Error).message);
     }
-
-    // Clear the form
-    dispatch({
-      type: 'CLEAR_FORM',
-      payload: '',
-    });
-
-    setTimeout(() => {
-      setSent(false);
-      setErrorStatus(false);
-      closeDialog();
-    }, 4000);
+    setButtonText('Send form');
   };
 
   return (

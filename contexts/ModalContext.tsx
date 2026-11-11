@@ -6,27 +6,26 @@ import React, {
   useRef,
   ReactNode,
   useMemo,
+  useCallback,
 } from 'react';
 import Modal from '@components/Modal';
 
 interface ModalContextProps {
   openDialog: () => void;
   closeDialog: () => void;
-  modalRef: React.RefObject<HTMLDialogElement>;
 }
 
 export const ModalContext = createContext<ModalContextProps>({
   openDialog: () => {},
   closeDialog: () => {},
-  modalRef: { current: null },
 });
 
 export function ModalProvider({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
   const modalRef = useRef<HTMLDialogElement>(null);
 
-  const closeDialog = () => setIsOpen(false);
-  const openDialog = () => setIsOpen(true);
+  const closeDialog = useCallback(() => setIsOpen(false), []);
+  const openDialog = useCallback(() => setIsOpen(true), []);
 
   useEffect(() => {
     const modalElement = modalRef.current;
@@ -42,8 +41,8 @@ export function ModalProvider({ children }: { children: ReactNode }) {
   }, [isOpen]);
 
   const value = useMemo(
-    () => ({ openDialog, closeDialog, modalRef }),
-    [openDialog, closeDialog, modalRef],
+    () => ({ openDialog, closeDialog }),
+    [openDialog, closeDialog],
   );
 
   return (
