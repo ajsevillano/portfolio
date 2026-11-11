@@ -1,5 +1,4 @@
 import React from 'react';
-import validateProps from './tag.validate';
 import { tagClasses } from '../../config';
 import styles from './Tag.module.scss';
 
@@ -8,16 +7,16 @@ interface TagProps {
 }
 
 export default function Tag({ tag }: TagProps) {
-  const validation = validateProps(tag);
+  const className = tagClasses[tag];
 
-  if (!validation.isValid) {
+  // Flags a typo in data.ts; TypeScript already guarantees tags is a string[].
+  if (!className) {
     return (
       <p className={`${styles.tag} ${styles.error}`}>
-        {validation.errorMessage}
+        {`Error: Unknown tag "${tag}".`}
       </p>
     );
   }
 
-  const className = tagClasses[tag];
   return <p className={`${styles.tag} ${styles[className]}`}>{tag}</p>;
 }
