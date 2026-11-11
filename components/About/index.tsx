@@ -24,17 +24,17 @@ function About() {
           <h2 className={styles.header}>The guy behind the beard</h2>
           <div className={styles.text}>
             My name is Antonio, although most people know me as Sevi. I&apos;m a
-  Spanish software engineer who has called the UK home for the past 10
-  years, with over 20 years working in IT behind me. During the pandemic
-  I made the switch to what had always been my favourite part of the
-  job — building software — and I haven&apos;t looked back since. These
-    past years I&apos;ve worked in insurtech at Percayso Inform, built and
-  maintained production systems for long-term clients (a product
-  catalogue platform and its API among them), and built side projects
-  of my own, like a <a className={styles.link} href="https://jupiter-moons.netlify.app/" target="_blank" rel="noopener noreferrer">Jupiter moon tracker</a>{' '}for fellow amateur
-  astronomers. I&apos;m now looking for the next chapter. Away from the
-  keyboard, you&apos;ll find me behind a telescope chasing Jupiter, and
-  being the proud dad of a very curious little{' '}
+            Spanish software engineer who has called the UK home for the past 10
+            years, with over 20 years working in IT behind me. During the pandemic
+            I made the switch to what had always been my favourite part of the
+            job — building software — and I haven&apos;t looked back since. These
+            past years I&apos;ve worked in insurtech at Percayso Inform, built and
+            maintained production systems for long-term clients (a product
+            catalogue platform and its API among them), and built side projects
+            of my own, like a <a className={styles.link} href="https://jupiter-moons.netlify.app/" target="_blank" rel="noopener noreferrer">Jupiter moon tracker</a>{' '}for fellow amateur
+            astronomers. I&apos;m now looking for the next chapter. Away from the
+            keyboard, you&apos;ll find me behind a telescope chasing Jupiter, and
+            being the proud dad of a very curious little{' '}
             <div className={styles.emoji}>
               👧🏻
               <div className={styles.tooltip}>

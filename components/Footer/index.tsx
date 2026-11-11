@@ -17,9 +17,12 @@ function Footer() {
     >
       <div className={styles.sectionContainer}>
         <div className={styles.contactMeHeader}>
-          <h2 className={styles.contactMe}>Let's work together</h2>
+          <h2 className={styles.contactMe}>Let&apos;s work together</h2>
           <p className={styles.subTitle}>
-            I'm currently looking for my next role, frontend or fullstack, remote in the UK. If you're hiring, or know someone who is, the form below is the fastest way to reach me: I reply within a day. You can also find me on LinkedIn, or dig into my code on GitHub.
+            I&apos;m currently looking for my next role, frontend or fullstack,
+            remote in the UK. If you&apos;re hiring, or know someone who is, the
+            form below is the fastest way to reach me: I reply within a day. You
+            can also find me on LinkedIn, or dig into my code on GitHub.
           </p>
           <div className={styles.buttoncontainer}>
             <Button

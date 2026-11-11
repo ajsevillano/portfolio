@@ -29,4 +29,3 @@ export interface FilteredProjects {
 export interface ReposArrayProps {
   projectsData: ProcessedGithubArrayTypes[];
 }
-
