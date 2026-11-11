@@ -28,18 +28,16 @@ export const getStaticProps = async () => {
     },
   );
 
+  // Throw instead of rendering an empty portfolio: a failed build keeps the
+  // previous deployment, and a failed ISR revalidation keeps the last good page.
   if (!res.ok) {
-    // eslint-disable-next-line no-console
-    console.error(`GitHub API error: ${res.status}`);
-    return { props: { projectsData: [] }, revalidate: 3600 };
+    throw new Error(`GitHub API error: ${res.status}`);
   }
 
   const data = await res.json();
 
   if (!Array.isArray(data)) {
-    // eslint-disable-next-line no-console
-    console.error('GitHub API did not return an array');
-    return { props: { projectsData: [] }, revalidate: 3600 };
+    throw new Error('GitHub API did not return an array');
   }
 
   const originalGithubArray: OriginalGithubArrayTypes[] = data;
@@ -53,7 +51,6 @@ export const getStaticProps = async () => {
   const projectsData: ProcessedGithubArrayTypes[] = [
     ...manualProjects,
     ...processedGithubProjects,
-
   ];
 
   return {
