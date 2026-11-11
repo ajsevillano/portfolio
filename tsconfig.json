@@ -7,9 +7,6 @@
       ],
       "@utils/*": [
         "utils/*"
-      ],
-      "@reducers/*": [
-        "reducers/*"
       ]
     },
     "target": "es6",
