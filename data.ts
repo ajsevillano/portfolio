@@ -44,12 +44,6 @@ const customFields: CustomDataArrayTypes[] = [
     tags: ['Next.js', 'Sass'],
   },
   {
-    id: 357897050,
-    demoURL: 'https://button-component-display.netlify.app/',
-    projectThumbnail: '/button-component.png',
-    tags: ['React', 'Sass'],
-  },
-  {
     id: 354868893,
     demoURL: 'https://animated-photographer-portfolio.netlify.app/',
     projectThumbnail: '/animated-portfolio.png',
@@ -99,10 +93,10 @@ const customFields: CustomDataArrayTypes[] = [
   },
 ];
 
-
-// This array contents projects that are not in the GitHub API response, but I want to display them in my portfolio.
+// Projects that aren't in the GitHub API response (e.g. private repos) but should
+// still be displayed in the portfolio.
 const manualProjects: ManualProjectTypes[] = [
- {
+  {
     id: 1,
     name: 'school-menu-app',
     description: 'A PWA that shows the daily school lunch menu and sends a push notification at 07:00 AM',
@@ -111,7 +105,17 @@ const manualProjects: ManualProjectTypes[] = [
     projectThumbnail: '/menu-app.jpg',
     tags: ['Next.js', 'Auth0', 'Next Auth', 'Typescript', 'Tailwind CSS'],
   },
-  ]
+  {
+    id: 2,
+    name: 'catalogue-management-portal',
+    description:
+      'A web application that allows users to manage a catalogue of products, including adding, editing, and deleting products.',
+    html_url: '',
+    demoURL: 'https://catalogue-management-portal.netlify.app/',
+    projectThumbnail: '/catalogue-management-app.png',
+    tags: ['React', 'Typescript', 'Sass'],
+  },
+];
 
 export default customFields;
 export { manualProjects };

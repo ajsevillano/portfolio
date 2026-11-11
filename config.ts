@@ -20,6 +20,7 @@ const FILTERED_PROJECTS: FilteredProjects[] = [
   { id: 275840595, name: 'Relax-app' },
   { id: 280508678, name: 'advanced-clock' },
   { id: 250324988, name: 'Ghibli-Studio-WebApp' },
+  { id: 357897050, name: 'button-component-display' },
 ];
 
 export const tagClasses: { [key: string]: string } = {

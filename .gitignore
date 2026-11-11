@@ -45,3 +45,6 @@ tsconfig.tsbuildinfo
 .husky/
 # WSL download metadata
 *:Zone.Identifier
+
+# Claude Code local settings
+.claude/settings.local.json
